@@ -18,7 +18,8 @@ html, body {
 }
 
 header, footer {
-  background: linear-gradient(to right, #bcc78e, #7b835a);
+  background: linear-gradient(to right, #e0e0e0, #e0e0e0
+  );
   padding: 1rem;
   text-align: center;
   font-weight: bold;
@@ -44,7 +45,7 @@ button {
   color: white;
   border-radius: 24px;
   padding: 12px 24px;
-  margin-top: 20px;
+  margin: 20px; /* เพิ่มระยะห่างรอบๆ ปุ่ม */
   transition: background-color 0.3s;
 }
 
@@ -91,7 +92,8 @@ nav {
   position: sticky;
   top: 0;
   z-index: 1000; /* Ensure it stays above other content */
-  background: linear-gradient(to right, #bcc78e, #7b835a);
+  background: linear-gradient(to right, #e0e0e0, #e0e0e0
+  );
   color: white;
   padding: 1.5rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -144,9 +146,10 @@ nav .font-extrabold {
   background-color: #fff;
   border-radius: 1rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 2rem auto;
-  max-width: 800px;
+  margin: 2rem 0 2rem auto;
+  width: 100%; /* Set width to 75% */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: right;
 }
 
 .route-content:hover {
@@ -163,11 +166,21 @@ p {
   text-align: center; /* Center align text */
 }
 
+
+
 .upload-container {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 2rem; /* Space between the sections */
+  /* ลบ margin-top และ margin-left ออกถ้าไม่จำเป็น */
+  margin: 0;
+  margin-top: 13.5rem;
+}
+
+.design-container {
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0; /* เปลี่ยนจาก auto เป็น 0 เพื่อให้ติดซ้ายสุด */
   margin-top: 2rem;
 }
 
@@ -178,15 +191,6 @@ p {
   height: 8%; /* Ensure the image takes full height */
 }
 
-.design-container {
-  background-color: #fff;
-  border-radius: 1rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 2rem;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
 .design-button {
   transition: background-color 0.3s;
 }
@@ -195,10 +199,61 @@ p {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
+  margin-top: 5rem;
 }
 
 .design-image {
   width: 100%;
   border-radius: 0.5rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.upload-container, .design-container {
+  flex: 0.5; /* ให้แต่ละองค์ประกอบมีขนาดเท่ากัน */
+  min-width: 350px; /* ป้องกันไม่ให้ขนาดเล็กเกินไป */
+  max-width: 600px; /* จำกัดขนาดสูงสุด */
+}
+
+
+
+.design-images {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.design-image {
+  width: 70%;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.parent-container {
+  display: flex; /* ให้กล่องเรียงในแนวนอน */
+  justify-content: center; /* จัดให้อยู่ตรงกลาง */
+  align-items: flex-start; /* จัดให้อยู่ด้านบนเท่ากัน */
+  gap: 2rem; /* เว้นระยะห่างระหว่างกล่อง */
+  margin-top: 5rem;
+  width: 100%; /* ป้องกันการเกินขอบของหน้า */
+}
+
+.design-container,
+.upload-container {
+  flex: 1; /* ให้ขนาดกล่องเท่ากัน */
+  min-width: 400px; /* ป้องกันไม่ให้กล่องเล็กเกินไป */
+  max-width: 500px; /* กำหนดขนาดสูงสุดให้พอดี */
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  text-align: center;
+}
+
+.upload-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
