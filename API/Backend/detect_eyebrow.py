@@ -11,7 +11,7 @@ def detect_eyebrow_mask(image_bytes):
     image = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
     
     # โหลดโมเดล YOLOv8 ที่ฝึกมาแล้ว
-    model = YOLO('model/best.pt')
+    model = YOLO('best.pt')
 
     # รันโมเดลและรับผลลัพธ์
     results = model.predict(source=image, conf=0.6)
