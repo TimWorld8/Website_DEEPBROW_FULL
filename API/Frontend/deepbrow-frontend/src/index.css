@@ -1,0 +1,204 @@
+/* index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #E3D5C7; /* สีพื้นหลังชมพูอ่อน */
+  color: #333;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header, footer {
+  background: linear-gradient(to right, #bcc78e, #7b835a);
+  padding: 1rem;
+  text-align: center;
+  font-weight: bold;
+  color: #C2185B; /* สีชมพูเข้ม */
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #C2185B;
+}
+
+button {
+  background-color: #C2185B;
+  color: white;
+  border-radius: 24px;
+  padding: 12px 24px;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #AD1457;
+}
+
+.upload-box {
+  background-color: #F5F5F5;
+  color: #333;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.upload-box:hover {
+  border-color: #704214;
+}
+
+.image-preview {
+  max-width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 1rem;
+}
+
+.result-container {
+  background: white;
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  color: black;
+  background-color: #F5F5F5; /* พื้นหลังของผลลัพธ์ */
+  color: #333; /* สีตัวอักษรของผลลัพธ์ */
+}
+
+.result-container img {
+  max-width: 100%;
+  border-radius: 1rem;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Ensure it stays above other content */
+  background: linear-gradient(to right, #bcc78e, #7b835a);
+  color: white;
+  padding: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+nav::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('/path/to/your/background-image.jpg') center/cover no-repeat;
+  opacity: 0.2; /* Adjust opacity for visibility */
+  z-index: -1;
+}
+
+nav .nav-links {
+  margin-left: auto; /* Push links to the right */
+  display: flex;
+  justify-content: flex-end; /* Align links to the right */
+  gap: 1rem; /* Space between links */
+}
+
+nav a {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #333; /* Text color */
+  margin-right: 1rem; /* Add space between links */
+  transition: color 0.3s ease;
+}
+
+nav a:last-child {
+  margin-right: 0; /* Remove margin from the last link */
+}
+
+nav a:hover {
+  color: #CFC0A6; /* Hover color */
+}
+
+nav .font-extrabold {
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.route-content {
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 2rem auto;
+  max-width: 800px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.route-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+p {
+  max-width: 600px; /* Increase max width for better readability */
+  margin: 0 auto 2rem; /* Center and add bottom margin */
+  color: #555; /* Slightly darker text color */
+  font-size: 1.125rem; /* Increase font size */
+  line-height: 1.6; /* Improve line spacing */
+  text-align: center; /* Center align text */
+}
+
+.upload-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem; /* Space between the sections */
+  margin-top: 2rem;
+}
+
+.logo-circle {
+  border-radius: 50%; /* Make the logo circular */
+  object-fit: cover; /* Ensure the image covers the circle */
+  width: 8%; /* Ensure the image takes full width */
+  height: 8%; /* Ensure the image takes full height */
+}
+
+.design-container {
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.design-button {
+  transition: background-color 0.3s;
+}
+
+.design-images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.design-image {
+  width: 100%;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
