@@ -144,32 +144,30 @@ function Design() {
   );
 }
 
-
-
-function Navbar() {
+function Navbar({ isAccepted }) {
   return (
     <nav className="relative bg-gradient-to-r from-pink-500 via-red-500 to-pink-500 text-white p-6 shadow-lg">
       <div className="absolute inset-0 bg-cover bg-center opacity-20" style={{ backgroundImage: "url('/path/to/your/background-image.jpg')" }}></div>
       <div className="relative max-w-6xl mx-auto flex justify-between items-center">
         <div className="flex items-center">
-          <Link to="/" className="font-extrabold text-3xl hover:text-white transition-colors">
+          <Link to="/" className={`font-extrabold text-3xl hover:text-white transition-colors ${!isAccepted ? 'pointer-events-none opacity-50' : ''}`}>
             DEEP BROW
           </Link>
         </div>
         <div className="nav-links flex gap-6">
-          <Link to="/" className="hover:text-white transition-colors text-lg">
+          <Link to="/" className={`hover:text-white transition-colors text-lg ${!isAccepted ? 'pointer-events-none opacity-50' : ''}`}>
             Home
           </Link>
-          <Link to="/technology" className="hover:text-white transition-colors text-lg">
+          <Link to="/technology" className={`hover:text-white transition-colors text-lg ${!isAccepted ? 'pointer-events-none opacity-50' : ''}`}>
             Our Technology
           </Link>
-          <Link to="/tips" className="hover:text-white transition-colors text-lg">
+          <Link to="/tips" className={`hover:text-white transition-colors text-lg ${!isAccepted ? 'pointer-events-none opacity-50' : ''}`}>
             Beauty Tips
           </Link>
-          <Link to="/contact" className="hover:text-white transition-colors text-lg">
+          <Link to="/contact" className={`hover:text-white transition-colors text-lg ${!isAccepted ? 'pointer-events-none opacity-50' : ''}`}>
             Contact
           </Link>
-          <Link to="/design" className="hover:text-white transition-colors text-lg">
+          <Link to="/design" className={`hover:text-white transition-colors text-lg ${!isAccepted ? 'pointer-events-none opacity-50' : ''}`}>
             Design
           </Link>
         </div>
@@ -187,13 +185,15 @@ function Footer() {
 }
 
 export default function App() {
+  const [isAccepted, setIsAccepted] = React.useState(false);
+
   return (
     <Router>
       <div className="flex flex-col min-h-screen">
-        <Navbar />
+        <Navbar isAccepted={isAccepted} />
         <div className="flex-grow">
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Home setIsAccepted={setIsAccepted} />} />
             <Route path="/technology" element={<OurTechnology />} />
             <Route path="/tips" element={<BeautyTips />} />
             <Route path="/contact" element={<Contact />} />

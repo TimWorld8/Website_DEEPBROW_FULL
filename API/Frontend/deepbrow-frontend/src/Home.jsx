@@ -2,10 +2,14 @@ import React, { useState } from "react";
 import { UploadCloud } from "lucide-react";
 import axios from "axios";
 import { ImgComparisonSlider } from '@img-comparison-slider/react';
-export default function Home() {
+import TermsModal from "./components/TermsModal";
+
+export default function Home({ setIsAccepted }) {
   const [selectedImage, setSelectedImage] = useState(null);
   const [processedImage, setProcessedImage] = useState(null);
   const [isProcessing, setIsProcessing] = useState(false);
+
+  const [showTerms, setShowTerms] = useState(true);
 
   const handleImageUpload = (event) => {
     const file = event.target.files[0];
@@ -44,10 +48,20 @@ export default function Home() {
   };
 
   return (
-    
     <div className="route-content">
+      {showTerms && (
+        <TermsModal
+          onAccept={() => {
+            setIsAccepted(true);
+            setShowTerms(false);
+          }}
+          onReject={() => alert("คุณต้องยอมรับเงื่อนไขก่อนใช้บริการ")}
+        />
+      )}
+     
+      
       <main className="flex flex-col items-center justify-center text-center p-4 bg-gradient-to-b from-pink-100 to-white min-h-screen">
-        <h1 className="text-5xl font-extrabold text-pink-700 mt-8 animate-bounce">
+      <h1 className="text-5xl font-extrabold text-pink-700 mt-8 animate-bounce">
           Discover Your Perfect Eyebrow Shape
         </h1>
         <p className="max-w-md mx-auto mb-8 text-gray-700 text-lg">
@@ -101,6 +115,8 @@ export default function Home() {
                 <img src="/src/image/style/style06.jpg" alt="Style 6" className="design-image" />
                 <img src="/src/image/style/style07.jpg" alt="Style 7" className="design-image" />
                 <img src="/src/image/style/style08.jpg" alt="Style 8" className="design-image" />
+                <img src="/src/image/style/style09.jpg" alt="Style 9" className="design-image" />
+                <img src="/src/image/style/style10.jpg" alt="Style 10" className="design-image" />
               </div>
              
             </div>

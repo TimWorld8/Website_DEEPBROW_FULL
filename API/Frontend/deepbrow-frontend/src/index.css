@@ -257,3 +257,41 @@ p {
   flex-direction: column;
   align-items: center;
 }
+/* Terms Modal */
+.terms-modal__overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1000; /* Ensure it stays above other content */
+}
+
+.terms-modal-container {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+} 
+
+.terms-modal-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #C2185B;
+  margin-bottom: 1rem;
+} 
+
+.terms-modal-content {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.disabled-header {
+  pointer-events: none; /* Prevents clicks */
+  opacity: 0.5; /* Makes it look disabled */
+  cursor: not-allowed; /* Changes cursor to indicate non-interactivity */
+}
+  
