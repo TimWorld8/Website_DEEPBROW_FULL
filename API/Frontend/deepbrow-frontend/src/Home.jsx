@@ -8,8 +8,36 @@ export default function Home({ setIsAccepted }) {
   const [selectedImage, setSelectedImage] = useState(null);
   const [processedImage, setProcessedImage] = useState(null);
   const [isProcessing, setIsProcessing] = useState(false);
-
   const [showTerms, setShowTerms] = useState(true);
+  const [selectedStyle, setSelectedStyle] = useState('makeup');
+  const [selectedMakeupImage, setSelectedMakeupImage] = useState(null);
+  const [selectedEyebrowImage, setSelectedEyebrowImage] = useState(null);
+
+  const makeupStyles = [
+    '/src/image/style/style.jpg',
+    '/src/image/style/Teardrop-Eyes-Korean-Makeup.png',
+    '/src/image/style/style03.jpg',
+    '/src/image/style/style04.jpg',
+    '/src/image/style/style05.jpg',
+    '/src/image/style/style06.jpg',
+    '/src/image/style/style07.jpg',
+    '/src/image/style/style08.jpg',
+    '/src/image/style/style09.jpg',
+    '/src/image/style/style10.jpg',
+  ];
+
+  const eyebrowStyles = [
+    '/src/image/eyebrow/eyebrow1.jpg',
+    '/src/image/eyebrow/eyebrow2.jpg',
+    '/src/image/eyebrow/eyebrow3.jpg',
+    '/src/image/eyebrow/eyebrow4.jpg',
+    '/src/image/eyebrow/eyebrow5.jpg',
+    '/src/image/eyebrow/eyebrow6.jpg',
+    '/src/image/eyebrow/eyebrow7.jpg',
+    '/src/image/eyebrow/eyebrow8.jpg',
+    '/src/image/eyebrow/eyebrow9.jpg',
+    '/src/image/eyebrow/eyebrow10.jpg',
+  ];
 
   const handleImageUpload = (event) => {
     const file = event.target.files[0];
@@ -99,24 +127,44 @@ export default function Home({ setIsAccepted }) {
             <div className="design-container">
               <h2 className="text-2xl font-bold text-pink-700 mb-4">DESIGN</h2>
               <div className="flex gap-4">
-                <button className="bg-yellow-600 text-white px-4 py-2 rounded hover:bg-yellow-700">
+                <button 
+                  className={`${
+                    selectedStyle === 'makeup' ? 'bg-yellow-700' : 'bg-yellow-600'
+                  } text-white px-4 py-2 rounded hover:bg-yellow-700`}
+                  onClick={() => setSelectedStyle('makeup')}
+                >
                   MAKEUP STYLE
                 </button>
-                <button className="bg-brown-600 text-white px-4 py-2 rounded hover:bg-brown-700">
+                <button 
+                  className={`${
+                    selectedStyle === 'eyebrow' ? 'bg-brown-700' : 'bg-brown-600'
+                  } text-white px-4 py-2 rounded hover:bg-brown-700`}
+                  onClick={() => setSelectedStyle('eyebrow')}
+                >
                   EYEBROW STYLE
                 </button>
               </div>
               <div className="design-images grid grid-cols-2 gap-4 mt-4">
-                <img src="/src/image/style/style.jpg" alt="Style 1" className="design-image" />
-                <img src="/src/image/style/Teardrop-Eyes-Korean-Makeup.png" alt="Style 2" className="design-image" />
-                <img src="/src/image/style/style03.jpg" alt="Style 3" className="design-image" />
-                <img src="/src/image/style/style04.jpg" alt="Style 4" className="design-image" />
-                <img src="/src/image/style/style05.jpg" alt="Style 5" className="design-image" />
-                <img src="/src/image/style/style06.jpg" alt="Style 6" className="design-image" />
-                <img src="/src/image/style/style07.jpg" alt="Style 7" className="design-image" />
-                <img src="/src/image/style/style08.jpg" alt="Style 8" className="design-image" />
-                <img src="/src/image/style/style09.jpg" alt="Style 9" className="design-image" />
-                <img src="/src/image/style/style10.jpg" alt="Style 10" className="design-image" />
+                {(selectedStyle === 'makeup' ? makeupStyles : eyebrowStyles).map((image, index) => (
+                  <img 
+                    key={index}
+                    src={image} 
+                    alt={`Style ${index + 1}`} 
+                    className={`design-image ${
+                      (selectedStyle === 'makeup' && selectedMakeupImage === image) ||
+                      (selectedStyle === 'eyebrow' && selectedEyebrowImage === image)
+                        ? 'selected-image'
+                        : ''
+                    }`} 
+                    onClick={() => {
+                      if (selectedStyle === 'makeup') {
+                        setSelectedMakeupImage(image);
+                      } else {
+                        setSelectedEyebrowImage(image);
+                      }
+                    }}
+                  />
+                ))}
               </div>
              
             </div>
@@ -149,6 +197,14 @@ export default function Home({ setIsAccepted }) {
           
         
       </main>
+
+      {/* Add CSS for the glow effect */}
+      <style jsx>{`
+        .selected-image {
+          box-shadow: 0 0 10px 5px rgba(255, 105, 180, 0.8);
+          border-radius: 8px;
+        }
+      `}</style>
     </div>
   );
 }
