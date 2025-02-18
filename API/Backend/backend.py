@@ -1,5 +1,5 @@
 import logging
-from fastapi import FastAPI, UploadFile, File, HTTPException
+from fastapi import FastAPI, UploadFile, File, HTTPException, Form
 from fastapi.responses import Response
 import cv2
 import numpy as np
@@ -8,26 +8,11 @@ import io
 from fastapi.middleware.cors import CORSMiddleware
 import asyncio
 import detect_eyebrow
+import httpx
+from typing import Union
 
-# ตั้งค่า logging (ให้กำหนดครั้งเดียว)
-logging.basicConfig(level=logging.INFO)
-
-# ซ่อน Error [WinError 10054]
-class IgnoreWinErrorFilter(logging.Filter):
-    def filter(self, record: logging.LogRecord) -> bool:
-        return "WinError 10054" not in record.getMessage()
-
-# Apply logging filter to asyncio & uvicorn
-asyncio_logger = logging.getLogger("asyncio")
-asyncio_logger.addFilter(IgnoreWinErrorFilter())
-
-uvicorn_logger = logging.getLogger("uvicorn.error")
-uvicorn_logger.addFilter(IgnoreWinErrorFilter())
-
-# สร้าง FastAPI app
 app = FastAPI()
 
-# เพิ่ม CORS middleware
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -36,52 +21,95 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# ฟังก์ชันสำหรับลบคิ้ว
-def remove_eyebrow(image_array):
-    if not image_array:
-        raise ValueError("Empty image array received.")
+async def switch_model(file: UploadFile, style: str, eyebrow: str, model: int) -> Union[bytes, None]:
+    # Read file content
+    file_content = await file.read()
     
-    # เรียกใช้ detect_eyebrow_mask เพื่อได้ภาพและมาสก์
-    image, eyebrow_mask = detect_eyebrow.detect_eyebrow_mask(image_array)
+    # สร้าง form data สำหรับส่งไฟล์
+    files = {
+        'file': (file.filename, file_content, file.content_type)
+    }
+    data = {
+        'style': style,
+        'eyebrow': eyebrow
+    }
     
-    if image is None:
-        raise ValueError("Failed to decode image. The image data might be corrupted or not in a valid format.")
+    # เลือก URL ตามโมเดล
+    if model == 0:
+        url = 'http://127.0.0.1:9000/model1/'
+    elif model == 1:
+        url = 'http://127.0.0.1:9002/model2/'
+    elif model == 2:
+        url = 'http://127.0.0.1:9004/model3/'
+    else:
+        raise HTTPException(status_code=400, detail="Invalid model selection")
     
-    # แปลง mask เป็น 3 channels สำหรับ inpainting
-    eyebrow_mask = cv2.cvtColor(eyebrow_mask, cv2.COLOR_GRAY2BGR)
-    
-    # ปรับแต่ง mask
-    kernel = np.ones((2,2), np.uint8)
-    eyebrow_mask = cv2.dilate(eyebrow_mask, kernel, iterations=1)
-
-    # ทำ inpainting
-    result1 = cv2.inpaint(image, eyebrow_mask[:,:,0], inpaintRadius=5, flags=cv2.INPAINT_TELEA)
-    result2 = cv2.inpaint(image, eyebrow_mask[:,:,0], inpaintRadius=7, flags=cv2.INPAINT_NS)
-    result = cv2.addWeighted(result1, 0.8, result2, 0.2, 0)
-
-    return result
-
-# API สำหรับลบคิ้ว
-@app.post("/remove-eyebrow/")
-async def api_remove_eyebrow(file: UploadFile = File(...)):
-    # ตรวจสอบขนาดไฟล์ (จำกัดที่ 10MB)
-    MAX_FILE_SIZE = 10 * 1024 * 1024  # 10MB
-    
-    # อ่านไฟล์และตรวจสอบขนาด
-    contents = await file.read()
-    if len(contents) > MAX_FILE_SIZE:
-        raise HTTPException(status_code=413, detail="File too large")
-    
-    if not contents:
-        raise HTTPException(status_code=400, detail="No image data received.")
-
     try:
-        processed_image = remove_eyebrow(contents)
-        _, encoded_img = cv2.imencode(".jpg", processed_image, [cv2.IMWRITE_JPEG_QUALITY, 90])
-        return Response(content=encoded_img.tobytes(), media_type="image/jpeg")
+        async with httpx.AsyncClient() as client:
+            try:
+                # Set proper headers for multipart form data
+                headers = {
+                    'Accept': 'image/*'
+                }
+                response = await client.post(
+                    url,
+                    files=files,
+                    data=data,
+                    headers=headers,
+                    timeout=30.0
+                )
+                
+                # Check if response is an image
+                content_type = response.headers.get('content-type', '')
+                if not content_type.startswith('image/'):
+                    raise HTTPException(
+                        status_code=500,
+                        detail=f"Expected image response, got {content_type}"
+                    )
+                
+                return response.content
+                
+            except httpx.ConnectError:
+                raise HTTPException(
+                    status_code=503,
+                    detail=f"Model service is not running at {url}. Please ensure the model server is started."
+                )
+            except httpx.TimeoutException:
+                raise HTTPException(
+                    status_code=504,
+                    detail=f"Request to model service timed out. The service at {url} is not responding."
+                )
+            except httpx.HTTPError as e:
+                raise HTTPException(
+                    status_code=500,
+                    detail=f"Model service error: {str(e)}"
+                )
     except Exception as e:
-        logging.error(f"Error processing image: {e}")
-        raise HTTPException(status_code=500, detail=str(e))
+        # Seek file pointer back to start in case we need to retry
+        await file.seek(0)
+        raise HTTPException(
+            status_code=500,
+            detail=f"Unexpected error while calling model API: {str(e)}"
+        )
+
+@app.post("/remove-eyebrow/")
+async def remove_eyebrow(
+    file: UploadFile = File(...),
+    style: str = Form(...),
+    eyebrow: str = Form(...),
+    model: int = Form(...)
+):
+    # เพิ่ม logging เพื่อดูข้อมูลที่ได้รับ
+    logging.info(f"Received request - File: {file.filename}, Style: {style}, Eyebrow: {eyebrow}, Model: {model}")
+    
+    # Validate model value
+    if not isinstance(model, int) or model not in [0, 1, 2]:
+        raise HTTPException(status_code=400, detail="Model must be 0, 1, or 2")
+    
+    result = await switch_model(file, style, eyebrow, model)
+    if result:
+        return Response(content=result, media_type="image/png")
+    raise HTTPException(status_code=500, detail="Failed to process image")
 
 # Simple GET Endpoint
 @app.get("/")

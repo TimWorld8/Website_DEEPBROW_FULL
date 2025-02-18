@@ -47,13 +47,33 @@ export default function Home({ setIsAccepted }) {
   };
 
   const handleProcessImage = async () => {
-    if (!selectedImage) return;
+    if (!selectedImage) {
+      alert("Please select an image first");
+      return;
+    }
+    if (!selectedMakeupImage) {
+      alert("Please select a makeup style");
+      return;
+    }
+    if (!selectedEyebrowImage) {
+      alert("Please select an eyebrow style");
+      return;
+    }
+
     setIsProcessing(true);
     const formData = new FormData();
     formData.append("file", selectedImage);
     formData.append("style", selectedMakeupImage);
     formData.append("eyebrow", selectedEyebrowImage);
-    formData.append("model", 0);
+    formData.append("model", Number(0));
+
+    console.log("Sending request with:", {
+      file: selectedImage.name,
+      style: selectedMakeupImage,
+      eyebrow: selectedEyebrowImage,
+      model: 0
+    });
+
     try {
       const response = await axios.post(
         "http://127.0.0.1:8000/remove-eyebrow/",
@@ -69,9 +89,11 @@ export default function Home({ setIsAccepted }) {
       setProcessedImage(URL.createObjectURL(blob));
     } catch (error) {
       console.error("Processing failed:", error);
-      alert(
-        `Processing failed! ${error.response?.data?.detail || error.message}`
-      );
+      const errorMessage = error.response?.data instanceof Blob 
+        ? await error.response.data.text() 
+        : error.response?.data?.detail || error.message;
+      console.error("Error details:", errorMessage);
+      alert(`Processing failed! ${errorMessage}`);
     } finally {
       setIsProcessing(false);
     }
