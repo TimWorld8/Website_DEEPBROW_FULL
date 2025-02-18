@@ -51,7 +51,9 @@ export default function Home({ setIsAccepted }) {
     setIsProcessing(true);
     const formData = new FormData();
     formData.append("file", selectedImage);
-
+    formData.append("style", selectedMakeupImage);
+    formData.append("eyebrow", selectedEyebrowImage);
+    formData.append("model", 0);
     try {
       const response = await axios.post(
         "http://127.0.0.1:8000/remove-eyebrow/",

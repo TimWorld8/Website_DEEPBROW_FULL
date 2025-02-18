@@ -122,6 +122,7 @@ function Design() {
       title: "Glamour Look",
       description: "Bold and dramatic makeup for special occasions",
       image: "/src/image/style/Teardrop-Eyes-Korean-Makeup.png"
+    },
     {
       title: "Korean Style",
       description: "Fresh and dewy makeup inspired by K-beauty",
