@@ -27,16 +27,14 @@ export default function Home({ setIsAccepted }) {
   ];
 
   const eyebrowStyles = [
-    '/src/image/eyebrow/eyebrow1.jpg',
-    '/src/image/eyebrow/eyebrow2.jpg',
-    '/src/image/eyebrow/eyebrow3.jpg',
-    '/src/image/eyebrow/eyebrow4.jpg',
-    '/src/image/eyebrow/eyebrow5.jpg',
-    '/src/image/eyebrow/eyebrow6.jpg',
-    '/src/image/eyebrow/eyebrow7.jpg',
-    '/src/image/eyebrow/eyebrow8.jpg',
-    '/src/image/eyebrow/eyebrow9.jpg',
-    '/src/image/eyebrow/eyebrow10.jpg',
+    'src/image/eyebrow/flat-rmbg.png',
+    'src/image/eyebrow/hardtangle-rmbg.png',
+    'src/image/eyebrow/rounded-rmbg.png',
+    'src/image/eyebrow/softangle-rmbg.png',
+    'src/image/eyebrow/steep_arch-rmbg.png',
+    'src/image/eyebrow/straight-rmbg.png',
+    'src/image/eyebrow/generate.png',
+
   ];
 
   const handleImageUpload = (event) => {

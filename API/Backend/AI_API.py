@@ -82,7 +82,7 @@ def detect_face_shape(model_instance, image_array):
 
     # ทำนายผล
     predictions = model_instance.predict(img_array)
-    class_names = ["Heart", "Oblong", "Oval", "Round", "Square"]
+    class_names = ["Heart", "Oblong", "Oval", "Round", "Square"] #หัวใจ สี่เหลี่ยม ใบหน้ารูปไข่ หน้ากลม ใบหน้าสี่เหลี่ยม
     predicted_class = class_names[np.argmax(predictions)]
     print(f"Predicted Face Shape: {predicted_class}")
     return predicted_class
@@ -101,32 +101,42 @@ def add_eyebrow(image_array, face_shape):
         for face_landmarks in results.multi_face_landmarks:
             ih, iw, _ = image_array.shape
 
-            # Determine eyebrow positions
-            left_brow_x = int(face_landmarks.landmark[107].x * iw) + 5
+            # Determine eyebrow positions (ปรับตำแหน่งตามที่ต้องการ)
+            left_brow_x = int(face_landmarks.landmark[107].x * iw)
             left_brow_y = int(face_landmarks.landmark[107].y * ih)
-            right_brow_x = int(face_landmarks.landmark[336].x * iw) - 5
+            right_brow_x = int(face_landmarks.landmark[336].x * iw)
             right_brow_y = int(face_landmarks.landmark[336].y * ih)
 
-            # Select eyebrow image based on face shape
+            # เลือก eyebrow image ตาม face shape (ในตัวอย่างใช้ภาพเดียวกัน)
             if face_shape == "Heart":
-                eyebrow_path = "C:/Users/Chits/Documents/pensook/Github/Website_DEEPBROW/API/Backend/add_eyebrow/style/eyesbrow-1-rmbg.png"
-            else:
-                eyebrow_path = "C:/Users/Chits/Documents/pensook/Github/Website_DEEPBROW/API/Backend/add_eyebrow/style/eyesbrow-1-rmbg.png"
-
+                eyebrow_path = "C:/Users/Chits/Documents/pensook/Github/Website_DEEPBROW/API/Frontend/deepbrow-frontend/src/image/eyebrow/rounded-rmbg.png"
+                x = 1.45
+            elif face_shape == "Round":
+                eyebrow_path = "C:/Users/Chits/Documents/pensook/Github/Website_DEEPBROW/API/Frontend/deepbrow-frontend/src/image/eyebrow/hardtangle-rmbg.png"
+                x = 1.45
+            elif face_shape == "Oblong":
+                eyebrow_path = "C:/Users/Chits/Documents/pensook/Github/Website_DEEPBROW/API/Frontend/deepbrow-frontend/src/image/eyebrow/Oblong.png"
+                x = 1.45
+            elif face_shape == "Square":
+                eyebrow_path = "C:/Users/Chits/Documents/pensook/Github/Website_DEEPBROW/API/Frontend/deepbrow-frontend/src/image/eyebrow/Square.png"
+                x = 1.45
+            
             # Load the eyebrow image with transparency
             eyebrow = cv2.imread(eyebrow_path, cv2.IMREAD_UNCHANGED)
 
-            # Resize eyebrows
-            scale_factor = 0.25
-            eyebrow_width = int(eyebrow.shape[1] * scale_factor)
-            eyebrow_height = int(eyebrow.shape[0] * scale_factor)
+            # คำนวณระยะห่างระหว่าง landmark ทั้งสองเพื่อใช้เป็นตัวอ้างอิง
+            face_width = abs(right_brow_x - left_brow_x)
+            # กำหนด multiplier (0.4 ในที่นี้) เพื่อปรับขนาด eyebrow ให้เหมาะสมกับใบหน้า
+            dynamic_scale = (face_width * x) / eyebrow.shape[1]
+            eyebrow_width = int(eyebrow.shape[1] * dynamic_scale)
+            eyebrow_height = int(eyebrow.shape[0] * dynamic_scale)
 
-            # Create mirrored left eyebrow
+            # สร้าง eyebrow สำหรับซ้ายโดยการ mirror จาก eyebrow image
             left_eyebrow = cv2.flip(eyebrow, 1)
 
-            # Resize eyebrows
-            right_eyebrow_resized = cv2.resize(eyebrow, (eyebrow_width, eyebrow_height), interpolation=cv2.INTER_AREA)
-            left_eyebrow_resized = cv2.resize(left_eyebrow, (eyebrow_width, eyebrow_height), interpolation=cv2.INTER_AREA)
+            # Resize eyebrows ด้วย dynamic_scale
+            right_eyebrow_resized = cv2.resize(left_eyebrow, (eyebrow_width, eyebrow_height), interpolation=cv2.INTER_AREA)
+            left_eyebrow_resized = cv2.resize(eyebrow, (eyebrow_width, eyebrow_height), interpolation=cv2.INTER_AREA)
 
             # Apply Gaussian Blur to alpha channel
             right_eyebrow_resized[:, :, 3] = cv2.GaussianBlur(right_eyebrow_resized[:, :, 3], (3, 3), 2)

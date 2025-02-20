@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 
 # โหลดภาพ
-image = cv2.imread("API/Backend/add_eyebrow/style/eyesbrow-1.jpg", cv2.IMREAD_UNCHANGED)
+image = cv2.imread('C:/Users/Chits/Documents/pensook/Github/Website_DEEPBROW/remove_backgournd/steep_arch.png', cv2.IMREAD_UNCHANGED)
 
 # ตรวจสอบว่าโหลดภาพสำเร็จหรือไม่
 if image is None:
@@ -21,13 +21,23 @@ mask_inv = cv2.bitwise_not(mask)
 # แยกเฉพาะส่วนของภาพที่ไม่ใช่พื้นหลัง
 result = cv2.bitwise_and(image, image, mask=mask_inv)
 
-# แปลงให้เป็น PNG ที่มี Transparency (Alpha Channel)
-b, g, r = cv2.split(result)
-alpha = mask_inv  # ช่อง Alpha ใช้ Mask ที่สร้าง
+# Check the number of channels in the result image
+num_channels = result.shape[2] if len(result.shape) == 3 else 1
+
+# Split the channels accordingly
+if num_channels == 3:
+    b, g, r = cv2.split(result)
+    alpha = mask_inv  # Use the mask as the alpha channel
+elif num_channels == 4:
+    b, g, r, alpha = cv2.split(result)
+else:
+    print("Unexpected number of channels in the result image.")
+    exit()
+
 output = cv2.merge([b, g, r, alpha])
 
 # บันทึกภาพเป็น PNG โปร่งใส
-cv2.imwrite("API/Backend/add_eyebrow/style/eyesbrow-1-rmbg.png", output)
+cv2.imwrite("API/Frontend/deepbrow-frontend/src/image/eyebrow/steep_arch-rmbg.png", output)
 
 # แสดงผลลัพธ์
 cv2.imshow("Transparent Image", output)
