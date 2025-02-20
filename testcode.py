@@ -1,5 +1,5 @@
 import logging
-from fastapi import FastAPI, UploadFile, File, HTTPException
+from fastapi import FastAPI, UploadFile, File, HTTPException, Form
 from fastapi.responses import Response
 import cv2
 import numpy as np
@@ -8,14 +8,10 @@ import io
 from fastapi.middleware.cors import CORSMiddleware
 import asyncio
 import detect_eyebrow
-
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
 from tensorflow.keras.applications.inception_v3 import preprocess_input
-
 import mediapipe as mp
-
-model = load_model("C:/Users/Chits/Documents/pensook/Github/Website_DEEPBROW/model/shape_face.h5")
 # ตั้งค่า logging (ให้กำหนดครั้งเดียว)
 logging.basicConfig(level=logging.INFO)
 
@@ -42,34 +38,9 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
-# ฟังก์ชันสำหรับลบคิ้ว
-def remove_eyebrow(image_array):
-    if not image_array:
-        raise ValueError("Empty image array received.")
-    
-    # เรียกใช้ detect_eyebrow_mask เพื่อได้ภาพและมาสก์
-    image, eyebrow_mask = detect_eyebrow.detect_eyebrow_mask(image_array)
-    
-    if image is None:
-        raise ValueError("Failed to decode image. The image data might be corrupted or not in a valid format.")
-    
-    # แปลง mask เป็น 3 channels สำหรับ inpainting
-    eyebrow_mask = cv2.cvtColor(eyebrow_mask, cv2.COLOR_GRAY2BGR)
-    
-    # ปรับแต่ง mask
-    kernel = np.ones((2,2), np.uint8)
-    eyebrow_mask = cv2.dilate(eyebrow_mask, kernel, iterations=1)
-
-    # ทำ inpainting
-    result1 = cv2.inpaint(image, eyebrow_mask[:,:,0], inpaintRadius=5, flags=cv2.INPAINT_TELEA)
-    result2 = cv2.inpaint(image, eyebrow_mask[:,:,0], inpaintRadius=7, flags=cv2.INPAINT_NS)
-    result = cv2.addWeighted(result1, 0.8, result2, 0.2, 0)
-
-    return result
+model = load_model("C:/Users/Chits/Documents/pensook/Github/Website_DEEPBROW/model/shape_face.h5")
 
 def detect_face_shape(model_instance, image_array):
-    image_array = cv2.resize(image_array, (299, 299))
     if image_array is None or image_array.size == 0:
         raise ValueError("Empty image array received.")
     print(f"Debug - Image shape: {image_array.shape}")
@@ -109,7 +80,7 @@ def add_eyebrow(image_array, face_shape):
 
             # Select eyebrow image based on face shape
             if face_shape == "Heart":
-                eyebrow_path = "C:/Users/Chits/Documents/pensook/Github/Website_DEEPBROW/API/Backend/add_eyebrow/style/eyesbrow-1-rmbg.png"
+                eyebrow_path = "C:/Users/Chits/Documents/pensook/Github/Website_DEEPBROW/API/Backend/add_eyebrow/style/heart_eyebrow.png"
             else:
                 eyebrow_path = "C:/Users/Chits/Documents/pensook/Github/Website_DEEPBROW/API/Backend/add_eyebrow/style/eyesbrow-1-rmbg.png"
 
@@ -158,13 +129,44 @@ def add_eyebrow(image_array, face_shape):
                 )
 
     return image_array
+    
 
+
+# ฟังก์ชันสำหรับลบคิ้ว
+def remove_eyebrow(image_array):
+    if image_array is None or image_array.size == 0:
+        raise ValueError("Empty image array received.")
+    
+    image, eyebrow_mask = detect_eyebrow.detect_eyebrow_mask(image_array)
+    
+    if image is None or image.size == 0:
+        raise ValueError("Failed to decode image. The image data might be corrupted or not in a valid format.")
+    
+    print(f"Debug - Image shape after decoding: {image.shape}")
+    
+    eyebrow_mask = cv2.cvtColor(eyebrow_mask, cv2.COLOR_GRAY2BGR)
+    kernel = np.ones((2,2), np.uint8)
+    eyebrow_mask = cv2.dilate(eyebrow_mask, kernel, iterations=1)
+
+    result1 = cv2.inpaint(image, eyebrow_mask[:,:,0], inpaintRadius=5, flags=cv2.INPAINT_TELEA)
+    result2 = cv2.inpaint(image, eyebrow_mask[:,:,0], inpaintRadius=7, flags=cv2.INPAINT_NS)
+    result = cv2.addWeighted(result1, 0.8, result2, 0.2, 0)
+
+    print(f"Debug - Result image shape: {result.shape}")
+    return result
 
 # API สำหรับลบคิ้ว
 @app.post("/model1/")
-async def api_remove_eyebrow(file: UploadFile = File(...)):
+async def api_remove_eyebrow(
+    file: UploadFile = File(...),
+    style: str = Form(...),
+    eyebrow: str = Form(...),
+    model_type: str = Form(...)  # Renamed from model to model_type
+):
     # ตรวจสอบขนาดไฟล์ (จำกัดที่ 10MB)
     MAX_FILE_SIZE = 10 * 1024 * 1024  # 10MB
+    
+    print(f"Debug - Received request - Style: {style}, Eyebrow: {eyebrow}, Model Type: {model_type}")
     
     # อ่านไฟล์และตรวจสอบขนาด
     contents = await file.read()
@@ -175,9 +177,27 @@ async def api_remove_eyebrow(file: UploadFile = File(...)):
         raise HTTPException(status_code=400, detail="No image data received.")
 
     try:
-        processed_image = remove_eyebrow(contents)
-        face_shape = detect_face_shape(model, processed_image)
-        final_image = add_eyebrow(processed_image, face_shape)
+        # แปลงไฟล์รูปภาพเป็น numpy array
+        nparr = np.frombuffer(contents, np.uint8)
+        image_array = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
+        if image_array is None:
+            raise HTTPException(status_code=400, detail="Invalid image format")
+
+        print("Debug - Image loaded successfully")
+        
+        # Step 1: Remove eyebrow
+        no_eyebrow_image = remove_eyebrow(image_array)
+        print("Debug - Eyebrow removed")
+        final_image = no_eyebrow_image
+
+        # # Step 2: Detect face shape using the global model instance
+        # face_shape = detect_face_shape(model, no_eyebrow_image)
+        # print(f"Debug - Face shape detected: {face_shape}")
+        
+        # # Step 3: Add new eyebrow
+        # final_image = add_eyebrow(no_eyebrow_image, face_shape)
+        # print("Debug - New eyebrow added")
+
         _, encoded_img = cv2.imencode(".jpg", final_image, [cv2.IMWRITE_JPEG_QUALITY, 90])
         return Response(content=encoded_img.tobytes(), media_type="image/jpeg")
     except Exception as e:

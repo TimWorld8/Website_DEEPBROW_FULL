@@ -10,8 +10,12 @@ def detect_eyebrow_mask(image_bytes):
     nparr = np.frombuffer(image_bytes, np.uint8)
     image = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
     
+    # ตรวจสอบว่าภาพถูกถอดรหัสสำเร็จหรือไม่
+    if image is None:
+        raise ValueError("Failed to decode image. Please check the input image bytes.")
+    
     # โหลดโมเดล YOLOv8 ที่ฝึกมาแล้ว
-    model = YOLO('best.pt')
+    model = YOLO('C:/Users/Chits/Documents/pensook/Github/Website_DEEPBROW/API/Backend/best.pt')
 
     # รันโมเดลและรับผลลัพธ์
     results = model.predict(source=image, conf=0.6)
