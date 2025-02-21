@@ -1,19 +1,31 @@
 import logging
-from fastapi import FastAPI, UploadFile, File, HTTPException
-from fastapi.responses import Response
-import cv2
-import numpy as np
 import os
-import io
-from fastapi.middleware.cors import CORSMiddleware
 import asyncio
-import detect_eyebrow
+import io
 
+import numpy as np
+import cv2
+from PIL import Image
+
+import torch
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
 from tensorflow.keras.applications.inception_v3 import preprocess_input
 
 import mediapipe as mp
+from diffusers import StableDiffusionInpaintPipeline
+
+from fastapi import FastAPI, UploadFile, File, HTTPException, Form
+from fastapi.responses import Response
+from fastapi.middleware.cors import CORSMiddleware
+
+import detect_eyebrow
+
+# โหลดโมเดล Inpainting
+pipe = StableDiffusionInpaintPipeline.from_pretrained(
+    "stabilityai/stable-diffusion-2-inpainting",
+    torch_dtype=torch.float16
+).to("cuda")  # ใช้ GPU เพื่อให้เร็วขึ้น
 
 model = load_model("C:/Users/Chits/Documents/pensook/Github/Website_DEEPBROW/model/shape_face.h5")
 # ตั้งค่า logging (ให้กำหนดครั้งเดียว)
@@ -42,101 +54,215 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+def generate_eyebrow(init_image,mask_image):
+    # Resize images to 512x512 as required by Stable Diffusion
+    # init_image = init_image.resize((512, 512))
+    # mask_image = mask_image.resize((512, 512))
+
+    # ใช้ Stable Diffusion Inpainting เติมคิ้ว
+    prompt = "A face with natural and realistic eyebrows, high quality, photorealistic"
+    output = pipe(prompt=prompt, image=init_image, mask_image=mask_image).images[0]
+
+    return output
 
 # ฟังก์ชันสำหรับลบคิ้ว
 def remove_eyebrow(image_array):
-    if not image_array:
-        raise ValueError("Empty image array received.")
-    
-    # เรียกใช้ detect_eyebrow_mask เพื่อได้ภาพและมาสก์
-    image, eyebrow_mask = detect_eyebrow.detect_eyebrow_mask(image_array)
-    
-    if image is None:
-        raise ValueError("Failed to decode image. The image data might be corrupted or not in a valid format.")
-    
-    # แปลง mask เป็น 3 channels สำหรับ inpainting
-    eyebrow_mask = cv2.cvtColor(eyebrow_mask, cv2.COLOR_GRAY2BGR)
-    
-    # ปรับแต่ง mask
-    kernel = np.ones((2,2), np.uint8)
-    eyebrow_mask = cv2.dilate(eyebrow_mask, kernel, iterations=1)
+    try:
+        if image_array is None or len(image_array) == 0:
+            raise ValueError("Empty image array received.")
+        
+        # Decode image with error handling
+        try:
+            nparr = np.frombuffer(image_array, np.uint8)
+            image = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
+        except Exception as decode_error:
+            logging.error(f"Image decoding error: {decode_error}")
+            raise ValueError(f"Failed to decode image: {decode_error}")
+        
+        if image is None or image.size == 0:
+            raise ValueError("Decoded image is empty or invalid.")
+        
+        # Ensure image is in color
+        if len(image.shape) < 3:
+            image = cv2.cvtColor(image, cv2.COLOR_GRAY2BGR)
+        
+        # Convert image to bytes for detect_eyebrow_mask
+        try:
+            _, image_bytes = cv2.imencode('.png', image)
+            image_bytes = image_bytes.tobytes()
+        except Exception as conversion_error:
+            logging.error(f"Image conversion to bytes error: {conversion_error}")
+            raise ValueError(f"Failed to convert image to bytes: {conversion_error}")
+        
+        # Detect eyebrow mask with error handling
+        try:
+            image, eyebrow_mask = detect_eyebrow.detect_eyebrow_mask(image_bytes)
+        except Exception as eyebrow_error:
+            logging.error(f"Eyebrow detection error: {eyebrow_error}")
+            # Log the image details for debugging
+            logging.error(f"Image shape: {image.shape if 'image' in locals() else 'N/A'}")
+            logging.error(f"Image dtype: {image.dtype if 'image' in locals() else 'N/A'}")
+            raise ValueError(f"Failed to detect eyebrow mask: {eyebrow_error}")
+        
+        if image is None or eyebrow_mask is None:
+            raise ValueError("Failed to process eyebrow mask.")
+        
+        # Ensure mask is grayscale and convert to 3 channels
+        if len(eyebrow_mask.shape) > 2:
+            eyebrow_mask = cv2.cvtColor(eyebrow_mask, cv2.COLOR_BGR2GRAY)
+        eyebrow_mask = cv2.cvtColor(eyebrow_mask, cv2.COLOR_GRAY2BGR)
+        
+        # Adjust mask
+        kernel = np.ones((2,2), np.uint8)
+        eyebrow_mask = cv2.dilate(eyebrow_mask, kernel, iterations=1)
 
-    # ทำ inpainting
-    result1 = cv2.inpaint(image, eyebrow_mask[:,:,0], inpaintRadius=5, flags=cv2.INPAINT_TELEA)
-    result2 = cv2.inpaint(image, eyebrow_mask[:,:,0], inpaintRadius=7, flags=cv2.INPAINT_NS)
-    result = cv2.addWeighted(result1, 0.8, result2, 0.2, 0)
+        # Inpainting with multiple methods
+        result1 = cv2.inpaint(image, eyebrow_mask[:,:,0], inpaintRadius=5, flags=cv2.INPAINT_TELEA)
+        result2 = cv2.inpaint(image, eyebrow_mask[:,:,0], inpaintRadius=7, flags=cv2.INPAINT_NS)
+        result = cv2.addWeighted(result1, 0.8, result2, 0.2, 0)
 
-    return result
+        return result, eyebrow_mask
+    
+    except Exception as e:
+        logging.error(f"Comprehensive error in remove_eyebrow: {e}")
+        raise
 
 def detect_face_shape(model_instance, image_array):
-    image_array = cv2.resize(image_array, (299, 299))
-    if image_array is None or image_array.size == 0:
-        raise ValueError("Empty image array received.")
-    print(f"Debug - Image shape: {image_array.shape}")
-    print(f"Debug - Image dtype: {image_array.dtype}")
-
+    try:
+        # Validate input
+        if image_array is None or image_array.size == 0:
+            raise ValueError("Empty image array received.")
+        
+        # Ensure image is in color and has 3 channels
+        if len(image_array.shape) < 3:
+            image_array = cv2.cvtColor(image_array, cv2.COLOR_GRAY2BGR)
+        
+        # Resize and preprocess image
+        try:
+            image_resized = cv2.resize(image_array, (299, 299), interpolation=cv2.INTER_AREA)
+        except Exception as resize_error:
+            logging.error(f"Image resize error: {resize_error}")
+            raise ValueError(f"Failed to resize image: {resize_error}")
+        
+        # Debug logging
+        logging.info(f"Image shape after resize: {image_resized.shape}")
+        logging.info(f"Image dtype: {image_resized.dtype}")
+        
+        # Convert to float and preprocess
+        try:
+            img_array = image.img_to_array(image_resized)
+            img_array = np.expand_dims(img_array, axis=0)
+            img_array = preprocess_input(img_array)
+        except Exception as preprocess_error:
+            logging.error(f"Image preprocessing error: {preprocess_error}")
+            raise ValueError(f"Failed to preprocess image: {preprocess_error}")
+        
+        # Predict face shape with error handling
+        try:
+            predictions = model_instance.predict(img_array)
+            class_names = ["Heart", "Oblong", "Oval", "Round", "Square"]
+            predicted_class = class_names[np.argmax(predictions)]
+            
+            # Log prediction confidence
+            confidence = np.max(predictions)
+            logging.info(f"Predicted Face Shape: {predicted_class} with confidence: {confidence}")
+            
+            return predicted_class
+        except Exception as predict_error:
+            logging.error(f"Face shape prediction error: {predict_error}")
+            raise ValueError(f"Failed to predict face shape: {predict_error}")
     
-    img_array = image.img_to_array(image_array)
-    img_array = np.expand_dims(img_array, axis=0)
-    img_array = preprocess_input(img_array)
+    except Exception as e:
+        logging.error(f"Comprehensive error in detect_face_shape: {e}")
+        raise
 
-    # ทำนายผล
-    predictions = model_instance.predict(img_array)
-    class_names = ["Heart", "Oblong", "Oval", "Round", "Square"] #หัวใจ สี่เหลี่ยม ใบหน้ารูปไข่ หน้ากลม ใบหน้าสี่เหลี่ยม
-    predicted_class = class_names[np.argmax(predictions)]
-    print(f"Predicted Face Shape: {predicted_class}")
-    return predicted_class
+def add_eyebrow(image_array, face_shape, eyebrow):
+    try:
+        # Validate input
+        if image_array is None or image_array.size == 0:
+            raise ValueError("Empty image array received.")
+        
+        # Ensure image is in color
+        if len(image_array.shape) < 3:
+            image_array = cv2.cvtColor(image_array, cv2.COLOR_GRAY2BGR)
+        
+        # Convert the input image array to RGB
+        face_rgb = cv2.cvtColor(image_array, cv2.COLOR_BGR2RGB)
 
-def add_eyebrow(image_array, face_shape):
-    # Convert the input image array to RGB
-    face_rgb = cv2.cvtColor(image_array, cv2.COLOR_BGR2RGB)
+        # Load Mediapipe Face Mesh with error handling
+        try:
+            mp_face_mesh = mp.solutions.face_mesh
+            with mp_face_mesh.FaceMesh(static_image_mode=True, max_num_faces=1, min_detection_confidence=0.01) as face_mesh:
+                results = face_mesh.process(face_rgb)
+        except Exception as mesh_error:
+            logging.error(f"Face mesh detection error: {mesh_error}")
+            raise ValueError(f"Failed to detect face landmarks: {mesh_error}")
 
-    # Load Mediapipe Face Mesh
-    mp_face_mesh = mp.solutions.face_mesh
-    with mp_face_mesh.FaceMesh(static_image_mode=True, max_num_faces=1, min_detection_confidence=0.01) as face_mesh:
-        results = face_mesh.process(face_rgb)
+        # Check if face landmarks are detected
+        if not results.multi_face_landmarks:
+            logging.warning("No face landmarks detected.")
+            return image_array
 
-    # Check if face landmarks are detected
-    if results.multi_face_landmarks:
+        # Eyebrow path mapping with validation
+        eyebrow_paths = {
+            # Auto Style paths
+            "Heart": "C:/Users/Chits/Documents/pensook/Github/Website_DEEPBROW/API/Frontend/deepbrow-frontend/src/image/eyebrow/rounded-rmbg.png",
+            "Round": "C:/Users/Chits/Documents/pensook/Github/Website_DEEPBROW/API/Frontend/deepbrow-frontend/src/image/eyebrow/hardtangle-rmbg.png",
+            "Oblong": "C:/Users/Chits/Documents/pensook/Github/Website_DEEPBROW/API/Frontend/deepbrow-frontend/src/image/eyebrow/straight-rmbg.png",
+            "Square": "C:/Users/Chits/Documents/pensook/Github/Website_DEEPBROW/API/Frontend/deepbrow-frontend/src/image/eyebrow/softangle-rmbg.png",
+            "Oval": "C:/Users/Chits/Documents/pensook/Github/Website_DEEPBROW/API/Frontend/deepbrow-frontend/src/image/eyebrow/softangle-rmbg.png",
+            
+            # Manual Style paths
+            "Flat Brow": "C:/Users/Chits/Documents/pensook/Github/Website_DEEPBROW/API/Frontend/deepbrow-frontend/src/image/eyebrow/flat-rmbg.png",
+            "Hard Angle": "C:/Users/Chits/Documents/pensook/Github/Website_DEEPBROW/API/Frontend/deepbrow-frontend/src/image/eyebrow/hardtangle-rmbg.png",
+            "Rounded Arch": "C:/Users/Chits/Documents/pensook/Github/Website_DEEPBROW/API/Frontend/deepbrow-frontend/src/image/eyebrow/rounded-rmbg.png",
+            "Soft Angle": "C:/Users/Chits/Documents/pensook/Github/Website_DEEPBROW/API/Frontend/deepbrow-frontend/src/image/eyebrow/softangle-rmbg.png",
+            "Steep Arch": "C:/Users/Chits/Documents/pensook/Github/Website_DEEPBROW/API/Frontend/deepbrow-frontend/src/image/eyebrow/steep_arch-rmbg.png",
+            "Straight Brow": "C:/Users/Chits/Documents/pensook/Github/Website_DEEPBROW/API/Frontend/deepbrow-frontend/src/image/eyebrow/straight-rmbg.png"
+        }
+
+        # Determine eyebrow path
+        if eyebrow == 'Auto Style':
+            eyebrow_path = eyebrow_paths.get(face_shape)
+        else:
+            eyebrow_path = eyebrow_paths.get(eyebrow)
+
+        # Validate eyebrow path
+        if not eyebrow_path or not os.path.exists(eyebrow_path):
+            logging.error(f"Invalid eyebrow path for {eyebrow} or {face_shape}")
+            return image_array
+
         for face_landmarks in results.multi_face_landmarks:
             ih, iw, _ = image_array.shape
 
-            # Determine eyebrow positions (ปรับตำแหน่งตามที่ต้องการ)
+            # Determine eyebrow positions
             left_brow_x = int(face_landmarks.landmark[107].x * iw)
             left_brow_y = int(face_landmarks.landmark[107].y * ih)
             right_brow_x = int(face_landmarks.landmark[336].x * iw)
             right_brow_y = int(face_landmarks.landmark[336].y * ih)
 
-            # เลือก eyebrow image ตาม face shape (ในตัวอย่างใช้ภาพเดียวกัน)
-            if face_shape == "Heart":
-                eyebrow_path = "C:/Users/Chits/Documents/pensook/Github/Website_DEEPBROW/API/Frontend/deepbrow-frontend/src/image/eyebrow/rounded-rmbg.png"
-                x = 1.45
-            elif face_shape == "Round":
-                eyebrow_path = "C:/Users/Chits/Documents/pensook/Github/Website_DEEPBROW/API/Frontend/deepbrow-frontend/src/image/eyebrow/hardtangle-rmbg.png"
-                x = 1.45
-            elif face_shape == "Oblong":
-                eyebrow_path = "C:/Users/Chits/Documents/pensook/Github/Website_DEEPBROW/API/Frontend/deepbrow-frontend/src/image/eyebrow/Oblong.png"
-                x = 1.45
-            elif face_shape == "Square":
-                eyebrow_path = "C:/Users/Chits/Documents/pensook/Github/Website_DEEPBROW/API/Frontend/deepbrow-frontend/src/image/eyebrow/Square.png"
-                x = 1.45
-            
-            # Load the eyebrow image with transparency
-            eyebrow = cv2.imread(eyebrow_path, cv2.IMREAD_UNCHANGED)
+            # Load eyebrow image
+            try:
+                eyebrow_img = cv2.imread(eyebrow_path, cv2.IMREAD_UNCHANGED)
+                if eyebrow_img is None:
+                    raise ValueError(f"Failed to load eyebrow image from {eyebrow_path}")
+            except Exception as img_load_error:
+                logging.error(f"Eyebrow image load error: {img_load_error}")
+                return image_array
 
-            # คำนวณระยะห่างระหว่าง landmark ทั้งสองเพื่อใช้เป็นตัวอ้างอิง
+            # Existing eyebrow addition logic remains the same...
+            x = 1.45  # Default scaling factor
             face_width = abs(right_brow_x - left_brow_x)
-            # กำหนด multiplier (0.4 ในที่นี้) เพื่อปรับขนาด eyebrow ให้เหมาะสมกับใบหน้า
-            dynamic_scale = (face_width * x) / eyebrow.shape[1]
-            eyebrow_width = int(eyebrow.shape[1] * dynamic_scale)
-            eyebrow_height = int(eyebrow.shape[0] * dynamic_scale)
+            dynamic_scale = (face_width * x) / eyebrow_img.shape[1]
+            eyebrow_width = int(eyebrow_img.shape[1] * dynamic_scale)
+            eyebrow_height = int(eyebrow_img.shape[0] * dynamic_scale)
 
             # สร้าง eyebrow สำหรับซ้ายโดยการ mirror จาก eyebrow image
-            left_eyebrow = cv2.flip(eyebrow, 1)
+            left_eyebrow = cv2.flip(eyebrow_img, 1)
 
             # Resize eyebrows ด้วย dynamic_scale
             right_eyebrow_resized = cv2.resize(left_eyebrow, (eyebrow_width, eyebrow_height), interpolation=cv2.INTER_AREA)
-            left_eyebrow_resized = cv2.resize(eyebrow, (eyebrow_width, eyebrow_height), interpolation=cv2.INTER_AREA)
+            left_eyebrow_resized = cv2.resize(eyebrow_img, (eyebrow_width, eyebrow_height), interpolation=cv2.INTER_AREA)
 
             # Apply Gaussian Blur to alpha channel
             right_eyebrow_resized[:, :, 3] = cv2.GaussianBlur(right_eyebrow_resized[:, :, 3], (3, 3), 2)
@@ -167,32 +293,70 @@ def add_eyebrow(image_array, face_shape):
                     image_array[left_y_min:left_y_max, left_x_min:left_x_max, c]
                 )
 
-    return image_array
+        return image_array
+    
+    except Exception as e:
+        logging.error(f"Comprehensive error in add_eyebrow: {e}")
+        return image_array  # Return original image if any error occurs
 
 
 # API สำหรับลบคิ้ว
 @app.post("/model1/")
-async def api_remove_eyebrow(file: UploadFile = File(...)):
-    # ตรวจสอบขนาดไฟล์ (จำกัดที่ 10MB)
+async def api_remove_eyebrow(file: UploadFile = File(...), eyebrow: str = Form(None), style: str = Form(None)):
+    # Validate input parameters
+    if not file:
+        raise HTTPException(status_code=400, detail="No file uploaded")
+    
+    # Set default values if not provided
+    eyebrow = eyebrow or 'Auto Style'
+    style = style or 'Soft Elegance'
+
+    # Print received parameters for logging
+    logging.info(f"Received parameters - Eyebrow: {eyebrow}, Style: {style}")
+
+    # Validate file size
     MAX_FILE_SIZE = 10 * 1024 * 1024  # 10MB
     
-    # อ่านไฟล์และตรวจสอบขนาด
-    contents = await file.read()
-    if len(contents) > MAX_FILE_SIZE:
-        raise HTTPException(status_code=413, detail="File too large")
-    
-    if not contents:
-        raise HTTPException(status_code=400, detail="No image data received.")
-
     try:
-        processed_image = remove_eyebrow(contents)
-        face_shape = detect_face_shape(model, processed_image)
-        final_image = add_eyebrow(processed_image, face_shape)
+        # Read file contents
+        contents = await file.read()
+        
+        # Check file size
+        if len(contents) > MAX_FILE_SIZE:
+            raise HTTPException(status_code=413, detail="File too large")
+        
+        if not contents:
+            raise HTTPException(status_code=400, detail="No image data received")
+
+        # Process image
+        processed_image, eyebrow_mask = remove_eyebrow(contents)
+        
+        # Determine eyebrow addition method
+        if eyebrow != 'Generated':
+            try:
+                face_shape = detect_face_shape(model, processed_image)
+                final_image = add_eyebrow(processed_image, face_shape, eyebrow)
+            except Exception as face_process_error:
+                logging.error(f"Face processing error: {face_process_error}")
+                final_image = processed_image  # Fallback to processed image
+        else:
+            try:
+                # Convert processed_image to PIL Image for Stable Diffusion
+                pil_image = Image.fromarray(cv2.cvtColor(processed_image, cv2.COLOR_BGR2RGB))
+                pil_mask = Image.fromarray(cv2.cvtColor(eyebrow_mask, cv2.COLOR_BGR2RGB))
+                generated_image = generate_eyebrow(pil_image, pil_mask)
+                final_image = cv2.cvtColor(np.array(generated_image), cv2.COLOR_RGB2BGR)
+            except Exception as gen_error:
+                logging.error(f"Eyebrow generation error: {gen_error}")
+                final_image = processed_image  # Fallback to processed image
+
+        # Encode and return image
         _, encoded_img = cv2.imencode(".jpg", final_image, [cv2.IMWRITE_JPEG_QUALITY, 90])
         return Response(content=encoded_img.tobytes(), media_type="image/jpeg")
+    
     except Exception as e:
-        logging.error(f"Error processing image: {e}")
-        raise HTTPException(status_code=500, detail=str(e))
+        logging.error(f"Comprehensive API error: {e}")
+        raise HTTPException(status_code=500, detail=f"Internal server error: {str(e)}")
 
 # Simple GET Endpoint
 @app.get("/")

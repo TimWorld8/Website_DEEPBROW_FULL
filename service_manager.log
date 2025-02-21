@@ -1,0 +1,1231 @@
+2025-02-21 20:19:15,466 - WARNING:  * Debugger is active!
+2025-02-21 20:19:15,474 - INFO:  * Debugger PIN: 706-706-741
+2025-02-21 20:19:15,902 - INFO: 127.0.0.1 - - [21/Feb/2025 20:19:15] "GET /socket.io/?EIO=4&transport=polling&t=PKegO-y HTTP/1.1" 200 -
+2025-02-21 20:19:15,906 - INFO: 127.0.0.1 - - [21/Feb/2025 20:19:15] "POST /socket.io/?EIO=4&transport=polling&t=PKegO_0&sid=WymRkW2LukCPzan9AAAA HTTP/1.1" 200 -
+2025-02-21 20:19:15,907 - INFO: 127.0.0.1 - - [21/Feb/2025 20:19:15] "GET /socket.io/?EIO=4&transport=polling&t=PKegO_1&sid=WymRkW2LukCPzan9AAAA HTTP/1.1" 200 -
+2025-02-21 20:19:15,910 - INFO: 127.0.0.1 - - [21/Feb/2025 20:19:15] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:19:20,920 - INFO: 127.0.0.1 - - [21/Feb/2025 20:19:20] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:19:25,905 - INFO: 127.0.0.1 - - [21/Feb/2025 20:19:25] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:19:30,910 - INFO: 127.0.0.1 - - [21/Feb/2025 20:19:30] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:19:35,911 - INFO: 127.0.0.1 - - [21/Feb/2025 20:19:35] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:19:39,866 - INFO:  * Detected change in 'c:\\Users\\Chits\\Documents\\pensook\\Github\\Website_DEEPBROW\\website_run\\app.py', reloading
+2025-02-21 20:19:39,866 - INFO:  * Detected change in 'c:\\Users\\Chits\\Documents\\pensook\\Github\\Website_DEEPBROW\\website_run\\app.py', reloading
+2025-02-21 20:19:41,577 - WARNING:  * Debugger is active!
+2025-02-21 20:19:41,585 - INFO:  * Debugger PIN: 706-706-741
+2025-02-21 20:19:41,592 - INFO: 127.0.0.1 - - [21/Feb/2025 20:19:41] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:19:41,593 - INFO: 127.0.0.1 - - [21/Feb/2025 20:19:41] "GET /socket.io/?EIO=4&transport=polling&t=PKegVFs HTTP/1.1" 200 -
+2025-02-21 20:19:41,598 - INFO: 127.0.0.1 - - [21/Feb/2025 20:19:41] "POST /socket.io/?EIO=4&transport=polling&t=PKegVGS&sid=u9leE_eUrjS0EKRpAAAA HTTP/1.1" 200 -
+2025-02-21 20:19:41,599 - INFO: 127.0.0.1 - - [21/Feb/2025 20:19:41] "GET /socket.io/?EIO=4&transport=polling&t=PKegVGS.0&sid=u9leE_eUrjS0EKRpAAAA HTTP/1.1" 200 -
+2025-02-21 20:19:45,908 - INFO: 127.0.0.1 - - [21/Feb/2025 20:19:45] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:19:50,911 - INFO: 127.0.0.1 - - [21/Feb/2025 20:19:50] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:19:55,912 - INFO: 127.0.0.1 - - [21/Feb/2025 20:19:55] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:20:00,907 - INFO: 127.0.0.1 - - [21/Feb/2025 20:20:00] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:20:05,910 - INFO: 127.0.0.1 - - [21/Feb/2025 20:20:05] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:20:16,400 - INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-02-21 20:20:16,401 - INFO: [33mPress CTRL+C to quit[0m
+2025-02-21 20:20:16,401 - INFO:  * Restarting with watchdog (windowsapi)
+2025-02-21 20:20:17,357 - WARNING:  * Debugger is active!
+2025-02-21 20:20:17,363 - INFO:  * Debugger PIN: 706-706-741
+2025-02-21 20:20:17,368 - INFO: 127.0.0.1 - - [21/Feb/2025 20:20:17] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:20:19,345 - INFO: 127.0.0.1 - - [21/Feb/2025 20:20:19] "GET / HTTP/1.1" 200 -
+2025-02-21 20:20:19,364 - INFO: 127.0.0.1 - - [21/Feb/2025 20:20:19] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:20:19,364 - INFO: 127.0.0.1 - - [21/Feb/2025 20:20:19] "GET /socket.io/?EIO=4&transport=polling&t=PKegeUX HTTP/1.1" 200 -
+2025-02-21 20:20:19,371 - INFO: 127.0.0.1 - - [21/Feb/2025 20:20:19] "POST /socket.io/?EIO=4&transport=polling&t=PKegeUd&sid=iYi8bsdV9rv6a4taAAAA HTTP/1.1" 200 -
+2025-02-21 20:20:19,372 - INFO: 127.0.0.1 - - [21/Feb/2025 20:20:19] "GET /socket.io/?EIO=4&transport=polling&t=PKegeUe&sid=iYi8bsdV9rv6a4taAAAA HTTP/1.1" 200 -
+2025-02-21 20:20:19,375 - INFO: 127.0.0.1 - - [21/Feb/2025 20:20:19] "GET /socket.io/?EIO=4&transport=polling&t=PKegeUl&sid=iYi8bsdV9rv6a4taAAAA HTTP/1.1" 200 -
+2025-02-21 20:20:22,844 - INFO: Starting service backend: cmd /c "conda activate superNLP && python backend.py"
+2025-02-21 20:20:22,844 - INFO: 127.0.0.1 - - [21/Feb/2025 20:20:22] "POST /run_backend HTTP/1.1" 200 -
+2025-02-21 20:20:22,851 - INFO: Service backend started successfully
+2025-02-21 20:20:29,367 - INFO: 127.0.0.1 - - [21/Feb/2025 20:20:29] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:20:33,871 - INFO: Starting service ai: cmd /c "conda activate superNLP && python AI_API.py"
+2025-02-21 20:20:33,871 - INFO: 127.0.0.1 - - [21/Feb/2025 20:20:33] "POST /run_ai HTTP/1.1" 200 -
+2025-02-21 20:20:33,878 - INFO: Service ai started successfully
+2025-02-21 20:20:39,366 - INFO: 127.0.0.1 - - [21/Feb/2025 20:20:39] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:20:46,973 - INFO: Starting service frontend: cmd /c "conda activate superNLP && npm run dev"
+2025-02-21 20:20:46,973 - INFO: 127.0.0.1 - - [21/Feb/2025 20:20:46] "POST /run_frontend HTTP/1.1" 200 -
+2025-02-21 20:20:46,978 - INFO: Service frontend started successfully
+2025-02-21 20:20:49,376 - INFO: 127.0.0.1 - - [21/Feb/2025 20:20:49] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:20:53,104 - INFO: 127.0.0.1 - - [21/Feb/2025 20:20:53] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:20:54,946 - INFO: 127.0.0.1 - - [21/Feb/2025 20:20:54] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:20:56,150 - INFO: 127.0.0.1 - - [21/Feb/2025 20:20:56] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:20:56,353 - INFO: 127.0.0.1 - - [21/Feb/2025 20:20:56] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:20:59,365 - INFO: 127.0.0.1 - - [21/Feb/2025 20:20:59] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:21:09,367 - INFO: 127.0.0.1 - - [21/Feb/2025 20:21:09] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:21:19,365 - INFO: 127.0.0.1 - - [21/Feb/2025 20:21:19] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:21:26,186 - INFO: 127.0.0.1 - - [21/Feb/2025 20:21:26] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:21:26,531 - INFO: 127.0.0.1 - - [21/Feb/2025 20:21:26] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:21:28,120 - INFO: Starting service backend: cmd /c "conda activate superNLP && python backend.py"
+2025-02-21 20:21:28,120 - INFO: 127.0.0.1 - - [21/Feb/2025 20:21:28] "POST /run_backend HTTP/1.1" 200 -
+2025-02-21 20:21:28,123 - INFO: Service backend started successfully
+2025-02-21 20:21:29,368 - INFO: 127.0.0.1 - - [21/Feb/2025 20:21:29] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:21:37,798 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\socket.py', reloading
+2025-02-21 20:21:38,283 - INFO:  * Detected change in 'c:\\Users\\Chits\\Documents\\pensook\\Github\\Website_DEEPBROW\\website_run\\app.py', reloading
+2025-02-21 20:21:38,287 - INFO:  * Detected change in 'c:\\Users\\Chits\\Documents\\pensook\\Github\\Website_DEEPBROW\\website_run\\app.py', reloading
+2025-02-21 20:21:38,537 - INFO:  * Restarting with watchdog (windowsapi)
+2025-02-21 20:21:39,499 - WARNING:  * Debugger is active!
+2025-02-21 20:21:39,506 - INFO:  * Debugger PIN: 706-706-741
+2025-02-21 20:21:39,512 - INFO: 127.0.0.1 - - [21/Feb/2025 20:21:39] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:21:39,527 - INFO: 127.0.0.1 - - [21/Feb/2025 20:21:39] "GET /socket.io/?EIO=4&transport=polling&t=PKegy36 HTTP/1.1" 200 -
+2025-02-21 20:21:39,531 - INFO: 127.0.0.1 - - [21/Feb/2025 20:21:39] "POST /socket.io/?EIO=4&transport=polling&t=PKegy39&sid=5xz7jEzg9OEk-5GWAAAA HTTP/1.1" 200 -
+2025-02-21 20:21:39,533 - INFO: 127.0.0.1 - - [21/Feb/2025 20:21:39] "GET /socket.io/?EIO=4&transport=polling&t=PKegy3A&sid=5xz7jEzg9OEk-5GWAAAA HTTP/1.1" 200 -
+2025-02-21 20:21:49,364 - INFO: 127.0.0.1 - - [21/Feb/2025 20:21:49] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:21:56,735 - INFO:  * Detected change in 'c:\\Users\\Chits\\Documents\\pensook\\Github\\Website_DEEPBROW\\website_run\\app.py', reloading
+2025-02-21 20:21:56,735 - INFO:  * Detected change in 'c:\\Users\\Chits\\Documents\\pensook\\Github\\Website_DEEPBROW\\website_run\\app.py', reloading
+2025-02-21 20:21:57,595 - INFO:  * Restarting with watchdog (windowsapi)
+2025-02-21 20:21:58,611 - WARNING:  * Debugger is active!
+2025-02-21 20:21:58,618 - INFO:  * Debugger PIN: 706-706-741
+2025-02-21 20:21:58,624 - INFO: 127.0.0.1 - - [21/Feb/2025 20:21:58] "GET /socket.io/?EIO=4&transport=polling&t=PKeh0d- HTTP/1.1" 200 -
+2025-02-21 20:21:58,628 - INFO: 127.0.0.1 - - [21/Feb/2025 20:21:58] "POST /socket.io/?EIO=4&transport=polling&t=PKeh0jY&sid=cwT33h0Bx8Ny1jeYAAAA HTTP/1.1" 200 -
+2025-02-21 20:21:58,629 - INFO: 127.0.0.1 - - [21/Feb/2025 20:21:58] "GET /socket.io/?EIO=4&transport=polling&t=PKeh0jZ&sid=cwT33h0Bx8Ny1jeYAAAA HTTP/1.1" 200 -
+2025-02-21 20:21:59,375 - INFO: 127.0.0.1 - - [21/Feb/2025 20:21:59] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:21:59,568 - INFO:  * Detected change in 'c:\\Users\\Chits\\Documents\\pensook\\Github\\Website_DEEPBROW\\website_run\\app.py', reloading
+2025-02-21 20:21:59,568 - INFO:  * Detected change in 'c:\\Users\\Chits\\Documents\\pensook\\Github\\Website_DEEPBROW\\website_run\\app.py', reloading
+2025-02-21 20:21:59,683 - INFO:  * Restarting with watchdog (windowsapi)
+2025-02-21 20:22:00,606 - WARNING:  * Debugger is active!
+2025-02-21 20:22:00,614 - INFO:  * Debugger PIN: 706-706-741
+2025-02-21 20:22:00,840 - INFO: 127.0.0.1 - - [21/Feb/2025 20:22:00] "GET /socket.io/?EIO=4&transport=polling&t=PKeh1G5 HTTP/1.1" 200 -
+2025-02-21 20:22:00,843 - INFO: 127.0.0.1 - - [21/Feb/2025 20:22:00] "POST /socket.io/?EIO=4&transport=polling&t=PKeh1G9&sid=uLahwRnvgG-D_WBYAAAA HTTP/1.1" 200 -
+2025-02-21 20:22:00,845 - INFO: 127.0.0.1 - - [21/Feb/2025 20:22:00] "GET /socket.io/?EIO=4&transport=polling&t=PKeh1GA&sid=uLahwRnvgG-D_WBYAAAA HTTP/1.1" 200 -
+2025-02-21 20:22:08,627 - INFO:  * Detected change in 'c:\\Users\\Chits\\Documents\\pensook\\Github\\Website_DEEPBROW\\website_run\\app.py', reloading
+2025-02-21 20:22:08,628 - INFO:  * Detected change in 'c:\\Users\\Chits\\Documents\\pensook\\Github\\Website_DEEPBROW\\website_run\\app.py', reloading
+2025-02-21 20:22:08,712 - INFO:  * Restarting with watchdog (windowsapi)
+2025-02-21 20:22:09,648 - WARNING:  * Debugger is active!
+2025-02-21 20:22:09,657 - INFO:  * Debugger PIN: 706-706-741
+2025-02-21 20:22:09,663 - INFO: 127.0.0.1 - - [21/Feb/2025 20:22:09] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:22:09,665 - INFO: 127.0.0.1 - - [21/Feb/2025 20:22:09] "GET /socket.io/?EIO=4&transport=polling&t=PKeh3Oz HTTP/1.1" 200 -
+2025-02-21 20:22:09,669 - INFO: 127.0.0.1 - - [21/Feb/2025 20:22:09] "POST /socket.io/?EIO=4&transport=polling&t=PKeh3Q4&sid=2ixuewLBLFaD-98UAAAA HTTP/1.1" 200 -
+2025-02-21 20:22:09,671 - INFO: 127.0.0.1 - - [21/Feb/2025 20:22:09] "GET /socket.io/?EIO=4&transport=polling&t=PKeh3Q4.0&sid=2ixuewLBLFaD-98UAAAA HTTP/1.1" 200 -
+2025-02-21 20:22:19,379 - INFO: 127.0.0.1 - - [21/Feb/2025 20:22:19] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:22:23,251 - INFO:  * Detected change in 'c:\\Users\\Chits\\Documents\\pensook\\Github\\Website_DEEPBROW\\website_run\\app.py', reloading
+2025-02-21 20:22:23,253 - INFO:  * Detected change in 'c:\\Users\\Chits\\Documents\\pensook\\Github\\Website_DEEPBROW\\website_run\\app.py', reloading
+2025-02-21 20:22:23,749 - INFO:  * Restarting with watchdog (windowsapi)
+2025-02-21 20:22:24,674 - WARNING:  * Debugger is active!
+2025-02-21 20:22:24,682 - INFO:  * Debugger PIN: 706-706-741
+2025-02-21 20:22:25,034 - INFO: 127.0.0.1 - - [21/Feb/2025 20:22:25] "GET /socket.io/?EIO=4&transport=polling&t=PKeh7A8 HTTP/1.1" 200 -
+2025-02-21 20:22:25,037 - INFO: 127.0.0.1 - - [21/Feb/2025 20:22:25] "POST /socket.io/?EIO=4&transport=polling&t=PKeh7AB&sid=2xGYJxYoJasB-NMBAAAA HTTP/1.1" 200 -
+2025-02-21 20:22:25,038 - INFO: 127.0.0.1 - - [21/Feb/2025 20:22:25] "GET /socket.io/?EIO=4&transport=polling&t=PKeh7AC&sid=2xGYJxYoJasB-NMBAAAA HTTP/1.1" 200 -
+2025-02-21 20:22:29,376 - INFO: 127.0.0.1 - - [21/Feb/2025 20:22:29] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:22:39,371 - INFO: 127.0.0.1 - - [21/Feb/2025 20:22:39] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:22:49,373 - INFO: 127.0.0.1 - - [21/Feb/2025 20:22:49] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:22:49,807 - INFO: 127.0.0.1 - - [21/Feb/2025 20:22:49] "GET /socket.io/?EIO=4&transport=websocket&sid=2xGYJxYoJasB-NMBAAAA HTTP/1.1" 200 -
+2025-02-21 20:22:49,811 - INFO: 127.0.0.1 - - [21/Feb/2025 20:22:49] "GET / HTTP/1.1" 200 -
+2025-02-21 20:22:49,830 - INFO: 127.0.0.1 - - [21/Feb/2025 20:22:49] "GET /socket.io/?EIO=4&transport=polling&t=PKehDDb HTTP/1.1" 200 -
+2025-02-21 20:22:49,831 - INFO: 127.0.0.1 - - [21/Feb/2025 20:22:49] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:22:49,837 - INFO: 127.0.0.1 - - [21/Feb/2025 20:22:49] "POST /socket.io/?EIO=4&transport=polling&t=PKehDDg&sid=ldVb6d5l6WIMKQ0rAAAC HTTP/1.1" 200 -
+2025-02-21 20:22:49,838 - INFO: 127.0.0.1 - - [21/Feb/2025 20:22:49] "GET /socket.io/?EIO=4&transport=polling&t=PKehDDh&sid=ldVb6d5l6WIMKQ0rAAAC HTTP/1.1" 200 -
+2025-02-21 20:22:57,418 - INFO: 127.0.0.1 - - [21/Feb/2025 20:22:57] "POST /run_backend HTTP/1.1" 200 -
+2025-02-21 20:22:57,422 - WARNING: Port 8000 is in use. Attempting to kill existing processes.
+2025-02-21 20:22:57,424 - INFO: Killing process 34184 using port 8000: python.exe
+2025-02-21 20:22:58,424 - INFO: Starting service backend: cmd /c "conda activate superNLP && python backend.py"
+2025-02-21 20:22:58,430 - INFO: Service backend started successfully
+2025-02-21 20:22:59,834 - INFO: 127.0.0.1 - - [21/Feb/2025 20:22:59] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:23:07,307 - INFO: 127.0.0.1 - - [21/Feb/2025 20:23:07] "POST /run_ai HTTP/1.1" 200 -
+2025-02-21 20:23:09,346 - INFO: Starting service ai: cmd /c "conda activate superNLP && python AI_API.py"
+2025-02-21 20:23:09,352 - INFO: Service ai started successfully
+2025-02-21 20:23:09,848 - INFO: 127.0.0.1 - - [21/Feb/2025 20:23:09] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:23:19,840 - INFO: 127.0.0.1 - - [21/Feb/2025 20:23:19] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:23:23,532 - INFO: 127.0.0.1 - - [21/Feb/2025 20:23:23] "POST /kill_port/8001 HTTP/1.1" 200 -
+2025-02-21 20:23:29,844 - INFO: 127.0.0.1 - - [21/Feb/2025 20:23:29] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:23:39,832 - INFO: 127.0.0.1 - - [21/Feb/2025 20:23:39] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:23:43,038 - INFO: Killing process 15812 using port 8000: python.exe
+2025-02-21 20:23:43,543 - INFO: 127.0.0.1 - - [21/Feb/2025 20:23:43] "POST /kill_port/3000 HTTP/1.1" 200 -
+2025-02-21 20:23:44,047 - INFO: 127.0.0.1 - - [21/Feb/2025 20:23:44] "POST /kill_port/8000 HTTP/1.1" 200 -
+2025-02-21 20:23:44,050 - INFO: 127.0.0.1 - - [21/Feb/2025 20:23:44] "POST /kill_port/8001 HTTP/1.1" 200 -
+2025-02-21 20:23:44,412 - INFO: 127.0.0.1 - - [21/Feb/2025 20:23:44] "POST /kill_port/8000 HTTP/1.1" 200 -
+2025-02-21 20:23:44,711 - INFO: 127.0.0.1 - - [21/Feb/2025 20:23:44] "POST /kill_port/3000 HTTP/1.1" 200 -
+2025-02-21 20:23:45,061 - INFO: 127.0.0.1 - - [21/Feb/2025 20:23:45] "POST /kill_port/8001 HTTP/1.1" 200 -
+2025-02-21 20:23:46,582 - INFO: 127.0.0.1 - - [21/Feb/2025 20:23:46] "POST /run_ai HTTP/1.1" 200 -
+2025-02-21 20:23:48,629 - INFO: Starting service ai: cmd /c "conda activate superNLP && python AI_API.py"
+2025-02-21 20:23:48,630 - INFO: Service ai started successfully
+2025-02-21 20:23:49,832 - INFO: 127.0.0.1 - - [21/Feb/2025 20:23:49] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:23:59,833 - INFO: 127.0.0.1 - - [21/Feb/2025 20:23:59] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:24:09,837 - INFO: 127.0.0.1 - - [21/Feb/2025 20:24:09] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:24:19,833 - INFO: 127.0.0.1 - - [21/Feb/2025 20:24:19] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:24:29,837 - INFO: 127.0.0.1 - - [21/Feb/2025 20:24:29] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:24:39,842 - INFO: 127.0.0.1 - - [21/Feb/2025 20:24:39] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:24:49,847 - INFO: 127.0.0.1 - - [21/Feb/2025 20:24:49] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:24:56,927 - INFO:  * Detected change in 'c:\\Users\\Chits\\Documents\\pensook\\Github\\Website_DEEPBROW\\website_run\\app.py', reloading
+2025-02-21 20:24:56,927 - INFO:  * Detected change in 'c:\\Users\\Chits\\Documents\\pensook\\Github\\Website_DEEPBROW\\website_run\\app.py', reloading
+2025-02-21 20:24:57,951 - INFO:  * Restarting with watchdog (windowsapi)
+2025-02-21 20:24:58,904 - WARNING:  * Debugger is active!
+2025-02-21 20:24:58,911 - INFO:  * Debugger PIN: 706-706-741
+2025-02-21 20:24:59,111 - INFO: 127.0.0.1 - - [21/Feb/2025 20:24:59] "GET /socket.io/?EIO=4&transport=polling&t=PKehina HTTP/1.1" 200 -
+2025-02-21 20:24:59,116 - INFO: 127.0.0.1 - - [21/Feb/2025 20:24:59] "POST /socket.io/?EIO=4&transport=polling&t=PKehinf&sid=BFcJ0cORJ3JAeqxwAAAA HTTP/1.1" 200 -
+2025-02-21 20:24:59,117 - INFO: 127.0.0.1 - - [21/Feb/2025 20:24:59] "GET /socket.io/?EIO=4&transport=polling&t=PKehinf.0&sid=BFcJ0cORJ3JAeqxwAAAA HTTP/1.1" 200 -
+2025-02-21 20:24:59,833 - INFO: 127.0.0.1 - - [21/Feb/2025 20:24:59] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:25:00,942 - INFO: 127.0.0.1 - - [21/Feb/2025 20:25:00] "GET /socket.io/?EIO=4&transport=websocket&sid=BFcJ0cORJ3JAeqxwAAAA HTTP/1.1" 200 -
+2025-02-21 20:25:00,946 - INFO: 127.0.0.1 - - [21/Feb/2025 20:25:00] "GET / HTTP/1.1" 200 -
+2025-02-21 20:25:00,962 - INFO: 127.0.0.1 - - [21/Feb/2025 20:25:00] "GET /socket.io/?EIO=4&transport=polling&t=PKehjEV HTTP/1.1" 200 -
+2025-02-21 20:25:00,962 - INFO: 127.0.0.1 - - [21/Feb/2025 20:25:00] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:25:00,968 - INFO: 127.0.0.1 - - [21/Feb/2025 20:25:00] "POST /socket.io/?EIO=4&transport=polling&t=PKehjEc&sid=sRKTybL2sv-C8pnxAAAC HTTP/1.1" 200 -
+2025-02-21 20:25:00,969 - INFO: 127.0.0.1 - - [21/Feb/2025 20:25:00] "GET /socket.io/?EIO=4&transport=polling&t=PKehjEc.0&sid=sRKTybL2sv-C8pnxAAAC HTTP/1.1" 200 -
+2025-02-21 20:25:10,972 - INFO: 127.0.0.1 - - [21/Feb/2025 20:25:10] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:25:20,962 - INFO: 127.0.0.1 - - [21/Feb/2025 20:25:20] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:25:29,972 - INFO: 127.0.0.1 - - [21/Feb/2025 20:25:29] "GET /socket.io/?EIO=4&transport=websocket&sid=sRKTybL2sv-C8pnxAAAC HTTP/1.1" 200 -
+2025-02-21 20:25:29,975 - INFO: 127.0.0.1 - - [21/Feb/2025 20:25:29] "GET / HTTP/1.1" 200 -
+2025-02-21 20:25:29,991 - INFO: 127.0.0.1 - - [21/Feb/2025 20:25:29] "GET /socket.io/?EIO=4&transport=polling&t=PKehqK4 HTTP/1.1" 200 -
+2025-02-21 20:25:29,992 - INFO: 127.0.0.1 - - [21/Feb/2025 20:25:29] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:25:29,998 - INFO: 127.0.0.1 - - [21/Feb/2025 20:25:29] "POST /socket.io/?EIO=4&transport=polling&t=PKehqKD&sid=6fgCfxoXF8OvkYmDAAAE HTTP/1.1" 200 -
+2025-02-21 20:25:30,000 - INFO: 127.0.0.1 - - [21/Feb/2025 20:25:30] "GET /socket.io/?EIO=4&transport=polling&t=PKehqKD.0&sid=6fgCfxoXF8OvkYmDAAAE HTTP/1.1" 200 -
+2025-02-21 20:25:55,826 - INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-02-21 20:25:55,826 - INFO: [33mPress CTRL+C to quit[0m
+2025-02-21 20:25:55,827 - INFO:  * Restarting with watchdog (windowsapi)
+2025-02-21 20:25:56,705 - WARNING:  * Debugger is active!
+2025-02-21 20:25:56,712 - INFO:  * Debugger PIN: 706-706-741
+2025-02-21 20:25:57,302 - INFO: 127.0.0.1 - - [21/Feb/2025 20:25:57] "GET /socket.io/?EIO=4&transport=polling&t=PKehw-p HTTP/1.1" 200 -
+2025-02-21 20:25:57,305 - INFO: 127.0.0.1 - - [21/Feb/2025 20:25:57] "POST /socket.io/?EIO=4&transport=polling&t=PKehw-t&sid=QmUaiLUWhjp4upCjAAAA HTTP/1.1" 200 -
+2025-02-21 20:25:57,306 - INFO: 127.0.0.1 - - [21/Feb/2025 20:25:57] "GET /socket.io/?EIO=4&transport=polling&t=PKehw-u&sid=QmUaiLUWhjp4upCjAAAA HTTP/1.1" 200 -
+2025-02-21 20:26:00,004 - INFO: 127.0.0.1 - - [21/Feb/2025 20:26:00] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:26:06,816 - INFO: 127.0.0.1 - - [21/Feb/2025 20:26:06] "POST /run_ai HTTP/1.1" 200 -
+2025-02-21 20:26:06,818 - WARNING: Port 9000 is in use. Attempting to kill existing processes.
+2025-02-21 20:26:06,819 - INFO: Killing process 30896 using port 9000: python.exe
+2025-02-21 20:26:07,820 - INFO: Starting service ai: cmd /c "conda activate superNLP && python AI_API.py"
+2025-02-21 20:26:07,826 - INFO: Service ai started successfully
+2025-02-21 20:26:10,004 - INFO: 127.0.0.1 - - [21/Feb/2025 20:26:10] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:26:19,992 - INFO: 127.0.0.1 - - [21/Feb/2025 20:26:19] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:26:20,909 - INFO: 127.0.0.1 - - [21/Feb/2025 20:26:20] "POST /run_backend HTTP/1.1" 200 -
+2025-02-21 20:26:22,934 - INFO: Starting service backend: cmd /c "conda activate superNLP && python backend.py"
+2025-02-21 20:26:22,939 - INFO: Service backend started successfully
+2025-02-21 20:26:24,177 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\cv2\\config.py', reloading
+2025-02-21 20:26:24,178 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\cv2\\config-3.py', reloading
+2025-02-21 20:26:24,659 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\torch\\cuda\\__init__.py', reloading
+2025-02-21 20:26:24,660 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\torch\\__init__.py', reloading
+2025-02-21 20:26:24,661 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\ultralytics\\engine\\model.py', reloading
+2025-02-21 20:26:24,661 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\ultralytics\\models\\fastsam\\model.py', reloading
+2025-02-21 20:26:24,661 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\ultralytics\\models\\fastsam\\__init__.py', reloading
+2025-02-21 20:26:24,662 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\ultralytics\\models\\__init__.py', reloading
+2025-02-21 20:26:24,662 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\ultralytics\\__init__.py', reloading
+2025-02-21 20:26:24,817 - INFO:  * Restarting with watchdog (windowsapi)
+2025-02-21 20:26:25,725 - WARNING:  * Debugger is active!
+2025-02-21 20:26:25,733 - INFO:  * Debugger PIN: 706-706-741
+2025-02-21 20:26:26,281 - INFO: 127.0.0.1 - - [21/Feb/2025 20:26:26] "GET /socket.io/?EIO=4&transport=polling&t=PKei23c HTTP/1.1" 200 -
+2025-02-21 20:26:26,285 - INFO: 127.0.0.1 - - [21/Feb/2025 20:26:26] "POST /socket.io/?EIO=4&transport=polling&t=PKei23h&sid=Ww75xVbhGWug5YRnAAAA HTTP/1.1" 200 -
+2025-02-21 20:26:26,286 - INFO: 127.0.0.1 - - [21/Feb/2025 20:26:26] "GET /socket.io/?EIO=4&transport=polling&t=PKei23h.0&sid=Ww75xVbhGWug5YRnAAAA HTTP/1.1" 200 -
+2025-02-21 20:26:26,289 - INFO: 127.0.0.1 - - [21/Feb/2025 20:26:26] "GET /socket.io/?EIO=4&transport=polling&t=PKei23m&sid=Ww75xVbhGWug5YRnAAAA HTTP/1.1" 200 -
+2025-02-21 20:26:26,324 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\torch\\fx\\experimental\\_config.py', reloading
+2025-02-21 20:26:26,794 - INFO:  * Restarting with watchdog (windowsapi)
+2025-02-21 20:26:27,682 - WARNING:  * Debugger is active!
+2025-02-21 20:26:27,689 - INFO:  * Debugger PIN: 706-706-741
+2025-02-21 20:26:27,778 - INFO: 127.0.0.1 - - [21/Feb/2025 20:26:27] "GET /socket.io/?EIO=4&transport=polling&t=PKei2R0 HTTP/1.1" 200 -
+2025-02-21 20:26:27,782 - INFO: 127.0.0.1 - - [21/Feb/2025 20:26:27] "POST /socket.io/?EIO=4&transport=polling&t=PKei2R4&sid=hNwhoC0SRZJi3yH7AAAA HTTP/1.1" 200 -
+2025-02-21 20:26:27,783 - INFO: 127.0.0.1 - - [21/Feb/2025 20:26:27] "GET /socket.io/?EIO=4&transport=polling&t=PKei2R4.0&sid=hNwhoC0SRZJi3yH7AAAA HTTP/1.1" 200 -
+2025-02-21 20:26:30,002 - INFO: 127.0.0.1 - - [21/Feb/2025 20:26:30] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:26:40,003 - INFO: 127.0.0.1 - - [21/Feb/2025 20:26:40] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:26:49,093 - INFO: 127.0.0.1 - - [21/Feb/2025 20:26:49] "POST /run_backend HTTP/1.1" 200 -
+2025-02-21 20:26:49,097 - WARNING: Port 8000 is in use. Attempting to kill existing processes.
+2025-02-21 20:26:49,098 - INFO: Killing process 35356 using port 8000: python.exe
+2025-02-21 20:26:49,991 - INFO: 127.0.0.1 - - [21/Feb/2025 20:26:49] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:26:50,099 - INFO: Starting service backend: cmd /c "conda activate superNLP && python backend.py"
+2025-02-21 20:26:50,106 - INFO: Service backend started successfully
+2025-02-21 20:26:58,485 - INFO: 127.0.0.1 - - [21/Feb/2025 20:26:58] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:26:59,995 - INFO: 127.0.0.1 - - [21/Feb/2025 20:26:59] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:27:04,160 - INFO: 127.0.0.1 - - [21/Feb/2025 20:27:04] "POST /run_frontend HTTP/1.1" 200 -
+2025-02-21 20:27:06,191 - INFO: Starting service frontend: cmd /c "conda activate superNLP && npm run dev"
+2025-02-21 20:27:06,196 - INFO: Service frontend started successfully
+2025-02-21 20:27:10,001 - INFO: 127.0.0.1 - - [21/Feb/2025 20:27:10] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:27:19,996 - INFO: 127.0.0.1 - - [21/Feb/2025 20:27:19] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:27:29,999 - INFO: 127.0.0.1 - - [21/Feb/2025 20:27:29] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:27:40,004 - INFO: 127.0.0.1 - - [21/Feb/2025 20:27:40] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:27:50,000 - INFO: 127.0.0.1 - - [21/Feb/2025 20:27:50] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:27:59,997 - INFO: 127.0.0.1 - - [21/Feb/2025 20:27:59] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:28:10,004 - INFO: 127.0.0.1 - - [21/Feb/2025 20:28:10] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:28:19,995 - INFO: 127.0.0.1 - - [21/Feb/2025 20:28:19] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:28:29,992 - INFO: 127.0.0.1 - - [21/Feb/2025 20:28:29] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:28:39,997 - INFO: 127.0.0.1 - - [21/Feb/2025 20:28:39] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:28:49,997 - INFO: 127.0.0.1 - - [21/Feb/2025 20:28:49] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:28:59,997 - INFO: 127.0.0.1 - - [21/Feb/2025 20:28:59] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:29:09,998 - INFO: 127.0.0.1 - - [21/Feb/2025 20:29:09] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:29:19,998 - INFO: 127.0.0.1 - - [21/Feb/2025 20:29:19] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:29:30,003 - INFO: 127.0.0.1 - - [21/Feb/2025 20:29:30] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:29:39,995 - INFO: 127.0.0.1 - - [21/Feb/2025 20:29:39] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:29:49,991 - INFO: 127.0.0.1 - - [21/Feb/2025 20:29:49] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:29:59,999 - INFO: 127.0.0.1 - - [21/Feb/2025 20:29:59] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:30:09,993 - INFO: 127.0.0.1 - - [21/Feb/2025 20:30:09] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:30:19,998 - INFO: 127.0.0.1 - - [21/Feb/2025 20:30:19] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:30:29,991 - INFO: 127.0.0.1 - - [21/Feb/2025 20:30:29] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:30:40,002 - INFO: 127.0.0.1 - - [21/Feb/2025 20:30:40] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:30:49,993 - INFO: 127.0.0.1 - - [21/Feb/2025 20:30:49] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:30:59,992 - INFO: 127.0.0.1 - - [21/Feb/2025 20:30:59] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:31:09,992 - INFO: 127.0.0.1 - - [21/Feb/2025 20:31:09] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:31:19,992 - INFO: 127.0.0.1 - - [21/Feb/2025 20:31:19] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:31:30,001 - INFO: 127.0.0.1 - - [21/Feb/2025 20:31:30] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:31:39,992 - INFO: 127.0.0.1 - - [21/Feb/2025 20:31:39] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:31:50,006 - INFO: 127.0.0.1 - - [21/Feb/2025 20:31:50] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:31:59,999 - INFO: 127.0.0.1 - - [21/Feb/2025 20:31:59] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:32:09,991 - INFO: 127.0.0.1 - - [21/Feb/2025 20:32:09] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:32:19,998 - INFO: 127.0.0.1 - - [21/Feb/2025 20:32:19] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:32:29,995 - INFO: 127.0.0.1 - - [21/Feb/2025 20:32:29] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:32:34,196 - INFO: 127.0.0.1 - - [21/Feb/2025 20:32:34] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:32:35,490 - INFO: 127.0.0.1 - - [21/Feb/2025 20:32:35] "POST /restart_all HTTP/1.1" 200 -
+2025-02-21 20:32:35,490 - WARNING: Port 9000 is in use. Attempting to kill existing processes.
+2025-02-21 20:32:35,492 - INFO: Killing process 35692 using port 9000: python.exe
+2025-02-21 20:32:36,493 - INFO: Starting service ai: cmd /c "conda activate superNLP && python AI_API.py"
+2025-02-21 20:32:36,498 - INFO: Service ai started successfully
+2025-02-21 20:32:37,543 - INFO: Starting service frontend: cmd /c "conda activate superNLP && npm run dev"
+2025-02-21 20:32:37,543 - INFO: Starting service backend: cmd /c "conda activate superNLP && python backend.py"
+2025-02-21 20:32:37,547 - INFO: Service frontend started successfully
+2025-02-21 20:32:37,547 - INFO: Service backend started successfully
+2025-02-21 20:32:40,004 - INFO: 127.0.0.1 - - [21/Feb/2025 20:32:40] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:32:40,858 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\tensorflow\\python\\framework\\registry.py', reloading
+2025-02-21 20:32:40,858 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\tensorflow\\python\\framework\\ops.py', reloading
+2025-02-21 20:32:40,859 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\tensorflow\\dtensor\\python\\api.py', reloading
+2025-02-21 20:32:40,867 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\tensorflow\\python\\ops\\array_ops.py', reloading
+2025-02-21 20:32:40,890 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\tensorflow\\python\\ops\\list_ops.py', reloading
+2025-02-21 20:32:40,917 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\tensorflow\\python\\ops\\math_ops.py', reloading
+2025-02-21 20:32:40,922 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\tensorflow\\python\\autograph\\utils\\ag_logging.py', reloading
+2025-02-21 20:32:40,936 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\tensorflow\\python\\ops\\control_flow_ops.py', reloading
+2025-02-21 20:32:40,937 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\tensorflow\\python\\framework\\auto_control_deps.py', reloading
+2025-02-21 20:32:40,960 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\tensorflow\\python\\ops\\state_grad.py', reloading
+2025-02-21 20:32:40,970 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\tensorflow\\python\\ops\\resource_variable_ops.py', reloading
+2025-02-21 20:32:40,985 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\tensorflow\\python\\ops\\random_ops.py', reloading
+2025-02-21 20:32:41,019 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\tensorflow\\python\\ops\\cond_v2.py', reloading
+2025-02-21 20:32:41,031 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\tensorflow\\python\\ops\\while_v2.py', reloading
+2025-02-21 20:32:41,173 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\tensorflow\\python\\ops\\check_ops.py', reloading
+2025-02-21 20:32:41,180 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\tensorflow\\python\\ops\\ragged\\ragged_tensor.py', reloading
+2025-02-21 20:32:41,255 - INFO:  * Restarting with watchdog (windowsapi)
+2025-02-21 20:32:42,205 - WARNING:  * Debugger is active!
+2025-02-21 20:32:42,214 - INFO:  * Debugger PIN: 706-706-741
+2025-02-21 20:32:42,530 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\tensorflow\\lite\\experimental\\microfrontend\\python\\ops\\audio_microfrontend_op.py', reloading
+2025-02-21 20:32:42,563 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\tensorflow\\python\\profiler\\internal\\flops_registry.py', reloading
+2025-02-21 20:32:42,613 - INFO: 127.0.0.1 - - [21/Feb/2025 20:32:42] "GET /socket.io/?EIO=4&transport=polling&t=PKejTxp HTTP/1.1" 200 -
+2025-02-21 20:32:42,617 - INFO: 127.0.0.1 - - [21/Feb/2025 20:32:42] "POST /socket.io/?EIO=4&transport=polling&t=PKejTxu&sid=GVmLdO_1YeNrYNxYAAAA HTTP/1.1" 200 -
+2025-02-21 20:32:42,619 - INFO: 127.0.0.1 - - [21/Feb/2025 20:32:42] "GET /socket.io/?EIO=4&transport=polling&t=PKejTxu.0&sid=GVmLdO_1YeNrYNxYAAAA HTTP/1.1" 200 -
+2025-02-21 20:32:43,282 - INFO:  * Restarting with watchdog (windowsapi)
+2025-02-21 20:32:44,244 - WARNING:  * Debugger is active!
+2025-02-21 20:32:44,251 - INFO:  * Debugger PIN: 706-706-741
+2025-02-21 20:32:44,775 - INFO: 127.0.0.1 - - [21/Feb/2025 20:32:44] "GET /socket.io/?EIO=4&transport=polling&t=PKejUTb HTTP/1.1" 200 -
+2025-02-21 20:32:44,780 - INFO: 127.0.0.1 - - [21/Feb/2025 20:32:44] "POST /socket.io/?EIO=4&transport=polling&t=PKejUTf&sid=Hgx9bV9wH_mmiyQUAAAA HTTP/1.1" 200 -
+2025-02-21 20:32:44,781 - INFO: 127.0.0.1 - - [21/Feb/2025 20:32:44] "GET /socket.io/?EIO=4&transport=polling&t=PKejUTf.0&sid=Hgx9bV9wH_mmiyQUAAAA HTTP/1.1" 200 -
+2025-02-21 20:32:49,998 - INFO: 127.0.0.1 - - [21/Feb/2025 20:32:49] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:32:59,993 - INFO: 127.0.0.1 - - [21/Feb/2025 20:32:59] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:33:09,996 - INFO: 127.0.0.1 - - [21/Feb/2025 20:33:09] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:33:20,001 - INFO: 127.0.0.1 - - [21/Feb/2025 20:33:20] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:33:29,997 - INFO: 127.0.0.1 - - [21/Feb/2025 20:33:29] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:33:39,998 - INFO: 127.0.0.1 - - [21/Feb/2025 20:33:39] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:33:50,002 - INFO: 127.0.0.1 - - [21/Feb/2025 20:33:50] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:33:59,998 - INFO: 127.0.0.1 - - [21/Feb/2025 20:33:59] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:34:09,993 - INFO: 127.0.0.1 - - [21/Feb/2025 20:34:09] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:34:19,998 - INFO: 127.0.0.1 - - [21/Feb/2025 20:34:19] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:34:30,000 - INFO: 127.0.0.1 - - [21/Feb/2025 20:34:30] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:34:40,003 - INFO: 127.0.0.1 - - [21/Feb/2025 20:34:40] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:34:49,999 - INFO: 127.0.0.1 - - [21/Feb/2025 20:34:49] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:34:59,993 - INFO: 127.0.0.1 - - [21/Feb/2025 20:34:59] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:35:10,006 - INFO: 127.0.0.1 - - [21/Feb/2025 20:35:10] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:35:19,994 - INFO: 127.0.0.1 - - [21/Feb/2025 20:35:19] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:35:30,006 - INFO: 127.0.0.1 - - [21/Feb/2025 20:35:30] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:35:40,002 - INFO: 127.0.0.1 - - [21/Feb/2025 20:35:40] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:35:49,999 - INFO: 127.0.0.1 - - [21/Feb/2025 20:35:49] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:35:59,997 - INFO: 127.0.0.1 - - [21/Feb/2025 20:35:59] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:36:09,999 - INFO: 127.0.0.1 - - [21/Feb/2025 20:36:09] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:36:19,993 - INFO: 127.0.0.1 - - [21/Feb/2025 20:36:19] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:36:29,999 - INFO: 127.0.0.1 - - [21/Feb/2025 20:36:29] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:36:40,002 - INFO: 127.0.0.1 - - [21/Feb/2025 20:36:40] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:36:49,995 - INFO: 127.0.0.1 - - [21/Feb/2025 20:36:49] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:37:00,005 - INFO: 127.0.0.1 - - [21/Feb/2025 20:37:00] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:37:09,995 - INFO: 127.0.0.1 - - [21/Feb/2025 20:37:09] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:37:19,990 - INFO: 127.0.0.1 - - [21/Feb/2025 20:37:19] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:37:29,995 - INFO: 127.0.0.1 - - [21/Feb/2025 20:37:29] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:37:40,001 - INFO: 127.0.0.1 - - [21/Feb/2025 20:37:40] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:37:49,993 - INFO: 127.0.0.1 - - [21/Feb/2025 20:37:49] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:38:00,000 - INFO: 127.0.0.1 - - [21/Feb/2025 20:38:00] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:38:10,000 - INFO: 127.0.0.1 - - [21/Feb/2025 20:38:10] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:38:19,995 - INFO: 127.0.0.1 - - [21/Feb/2025 20:38:19] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:38:30,003 - INFO: 127.0.0.1 - - [21/Feb/2025 20:38:30] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:38:39,992 - INFO: 127.0.0.1 - - [21/Feb/2025 20:38:39] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:38:49,997 - INFO: 127.0.0.1 - - [21/Feb/2025 20:38:49] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:39:00,001 - INFO: 127.0.0.1 - - [21/Feb/2025 20:39:00] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:39:10,002 - INFO: 127.0.0.1 - - [21/Feb/2025 20:39:10] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:39:19,995 - INFO: 127.0.0.1 - - [21/Feb/2025 20:39:19] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:39:30,004 - INFO: 127.0.0.1 - - [21/Feb/2025 20:39:30] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:39:40,002 - INFO: 127.0.0.1 - - [21/Feb/2025 20:39:40] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:39:49,994 - INFO: 127.0.0.1 - - [21/Feb/2025 20:39:49] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:39:59,991 - INFO: 127.0.0.1 - - [21/Feb/2025 20:39:59] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:40:10,002 - INFO: 127.0.0.1 - - [21/Feb/2025 20:40:10] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:40:19,999 - INFO: 127.0.0.1 - - [21/Feb/2025 20:40:19] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:40:29,993 - INFO: 127.0.0.1 - - [21/Feb/2025 20:40:29] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:40:39,992 - INFO: 127.0.0.1 - - [21/Feb/2025 20:40:39] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:40:50,005 - INFO: 127.0.0.1 - - [21/Feb/2025 20:40:50] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:40:59,996 - INFO: 127.0.0.1 - - [21/Feb/2025 20:40:59] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:41:09,992 - INFO: 127.0.0.1 - - [21/Feb/2025 20:41:09] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:41:19,997 - INFO: 127.0.0.1 - - [21/Feb/2025 20:41:19] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:41:29,991 - INFO: 127.0.0.1 - - [21/Feb/2025 20:41:29] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:41:39,993 - INFO: 127.0.0.1 - - [21/Feb/2025 20:41:39] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:41:49,994 - INFO: 127.0.0.1 - - [21/Feb/2025 20:41:49] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:41:59,993 - INFO: 127.0.0.1 - - [21/Feb/2025 20:41:59] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:42:10,004 - INFO: 127.0.0.1 - - [21/Feb/2025 20:42:10] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:42:20,002 - INFO: 127.0.0.1 - - [21/Feb/2025 20:42:20] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:42:30,003 - INFO: 127.0.0.1 - - [21/Feb/2025 20:42:30] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:42:39,992 - INFO: 127.0.0.1 - - [21/Feb/2025 20:42:39] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:42:50,003 - INFO: 127.0.0.1 - - [21/Feb/2025 20:42:50] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:42:59,997 - INFO: 127.0.0.1 - - [21/Feb/2025 20:42:59] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:43:10,002 - INFO: 127.0.0.1 - - [21/Feb/2025 20:43:10] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:43:19,999 - INFO: 127.0.0.1 - - [21/Feb/2025 20:43:19] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:43:30,005 - INFO: 127.0.0.1 - - [21/Feb/2025 20:43:30] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:43:39,998 - INFO: 127.0.0.1 - - [21/Feb/2025 20:43:39] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:43:50,004 - INFO: 127.0.0.1 - - [21/Feb/2025 20:43:50] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:44:00,005 - INFO: 127.0.0.1 - - [21/Feb/2025 20:44:00] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:44:09,991 - INFO: 127.0.0.1 - - [21/Feb/2025 20:44:09] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:44:19,998 - INFO: 127.0.0.1 - - [21/Feb/2025 20:44:19] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:44:29,993 - INFO: 127.0.0.1 - - [21/Feb/2025 20:44:29] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:44:40,007 - INFO: 127.0.0.1 - - [21/Feb/2025 20:44:40] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:44:50,002 - INFO: 127.0.0.1 - - [21/Feb/2025 20:44:50] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:44:52,505 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\httpx\\__init__.py', reloading
+2025-02-21 20:44:52,521 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\httpx\\_client.py', reloading
+2025-02-21 20:44:52,541 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\httpx\\_types.py', reloading
+2025-02-21 20:44:52,552 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\httpx\\_models.py', reloading
+2025-02-21 20:44:52,570 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\httpx\\_auth.py', reloading
+2025-02-21 20:44:52,583 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\httpx\\_urls.py', reloading
+2025-02-21 20:44:52,610 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\httpx\\_config.py', reloading
+2025-02-21 20:44:52,622 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\httpx\\_transports\\base.py', reloading
+2025-02-21 20:44:52,641 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\certifi\\__init__.py', reloading
+2025-02-21 20:44:52,650 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\certifi\\core.py', reloading
+2025-02-21 20:44:52,662 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\httpx\\_decoders.py', reloading
+2025-02-21 20:44:52,690 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\httpx\\_exceptions.py', reloading
+2025-02-21 20:44:52,728 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\typing.py', reloading
+2025-02-21 20:44:53,269 - INFO:  * Restarting with watchdog (windowsapi)
+2025-02-21 20:44:54,288 - WARNING:  * Debugger is active!
+2025-02-21 20:44:54,295 - INFO:  * Debugger PIN: 706-706-741
+2025-02-21 20:44:54,348 - INFO: 127.0.0.1 - - [21/Feb/2025 20:44:54] "GET /socket.io/?EIO=4&transport=polling&t=PKemGbA HTTP/1.1" 200 -
+2025-02-21 20:44:54,351 - INFO: 127.0.0.1 - - [21/Feb/2025 20:44:54] "POST /socket.io/?EIO=4&transport=polling&t=PKemGbE&sid=0pdUrriK_QLb-JuLAAAA HTTP/1.1" 200 -
+2025-02-21 20:44:54,352 - INFO: 127.0.0.1 - - [21/Feb/2025 20:44:54] "GET /socket.io/?EIO=4&transport=polling&t=PKemGbE.0&sid=0pdUrriK_QLb-JuLAAAA HTTP/1.1" 200 -
+2025-02-21 20:45:00,007 - INFO: 127.0.0.1 - - [21/Feb/2025 20:45:00] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:45:10,003 - INFO: 127.0.0.1 - - [21/Feb/2025 20:45:10] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:45:19,997 - INFO: 127.0.0.1 - - [21/Feb/2025 20:45:19] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:45:30,005 - INFO: 127.0.0.1 - - [21/Feb/2025 20:45:30] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:48:22,318 - INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-02-21 20:48:22,318 - INFO: [33mPress CTRL+C to quit[0m
+2025-02-21 20:48:22,319 - INFO:  * Restarting with watchdog (windowsapi)
+2025-02-21 20:48:23,257 - WARNING:  * Debugger is active!
+2025-02-21 20:48:23,263 - INFO:  * Debugger PIN: 706-706-741
+2025-02-21 20:48:23,756 - INFO: 127.0.0.1 - - [21/Feb/2025 20:48:23] "GET / HTTP/1.1" 200 -
+2025-02-21 20:48:23,785 - INFO: 127.0.0.1 - - [21/Feb/2025 20:48:23] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:48:23,785 - INFO: 127.0.0.1 - - [21/Feb/2025 20:48:23] "GET /socket.io/?EIO=4&transport=polling&t=PKen3jd HTTP/1.1" 200 -
+2025-02-21 20:48:23,811 - INFO: 127.0.0.1 - - [21/Feb/2025 20:48:23] "POST /socket.io/?EIO=4&transport=polling&t=PKen3j-&sid=OUlCvZEwximqoIg5AAAA HTTP/1.1" 200 -
+2025-02-21 20:48:23,813 - INFO: 127.0.0.1 - - [21/Feb/2025 20:48:23] "GET /socket.io/?EIO=4&transport=polling&t=PKen3j_&sid=OUlCvZEwximqoIg5AAAA HTTP/1.1" 200 -
+2025-02-21 20:48:28,954 - INFO: 127.0.0.1 - - [21/Feb/2025 20:48:28] "POST /restart_all HTTP/1.1" 200 -
+2025-02-21 20:48:28,955 - WARNING: Port 8000 is in use. Attempting to kill existing processes.
+2025-02-21 20:48:28,957 - INFO: Killing process 10400 using port 8000: python.exe
+2025-02-21 20:48:29,957 - INFO: Starting service backend: cmd /c "conda activate superNLP && python backend.py"
+2025-02-21 20:48:29,959 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\subprocess.py', reloading
+2025-02-21 20:48:29,964 - INFO: Service backend started successfully
+2025-02-21 20:48:30,336 - INFO:  * Restarting with watchdog (windowsapi)
+2025-02-21 20:48:31,243 - WARNING:  * Debugger is active!
+2025-02-21 20:48:31,250 - INFO:  * Debugger PIN: 706-706-741
+2025-02-21 20:48:31,255 - INFO: 127.0.0.1 - - [21/Feb/2025 20:48:31] "GET /socket.io/?EIO=4&transport=polling&t=PKen5Xh HTTP/1.1" 200 -
+2025-02-21 20:48:31,260 - INFO: 127.0.0.1 - - [21/Feb/2025 20:48:31] "POST /socket.io/?EIO=4&transport=polling&t=PKen5YP&sid=JyrwAVsIUzNzYQIdAAAA HTTP/1.1" 200 -
+2025-02-21 20:48:31,262 - INFO: 127.0.0.1 - - [21/Feb/2025 20:48:31] "GET /socket.io/?EIO=4&transport=polling&t=PKen5YQ&sid=JyrwAVsIUzNzYQIdAAAA HTTP/1.1" 200 -
+2025-02-21 20:48:33,797 - INFO: 127.0.0.1 - - [21/Feb/2025 20:48:33] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:48:42,782 - INFO: 127.0.0.1 - - [21/Feb/2025 20:48:42] "POST /restart_all HTTP/1.1" 200 -
+2025-02-21 20:48:42,784 - WARNING: Port 8000 is in use. Attempting to kill existing processes.
+2025-02-21 20:48:42,785 - INFO: Killing process 35684 using port 8000: python.exe
+2025-02-21 20:48:43,786 - INFO: Starting service backend: cmd /c "conda activate superNLP && python backend.py"
+2025-02-21 20:48:43,787 - INFO: 127.0.0.1 - - [21/Feb/2025 20:48:43] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:48:43,794 - INFO: Service backend started successfully
+2025-02-21 20:48:44,833 - INFO: Starting service frontend: cmd /c "conda activate superNLP && npm run dev"
+2025-02-21 20:48:44,833 - INFO: Starting service ai: cmd /c "conda activate superNLP && python AI_API.py"
+2025-02-21 20:48:44,839 - INFO: Service frontend started successfully
+2025-02-21 20:48:44,839 - INFO: Service ai started successfully
+2025-02-21 20:48:53,796 - INFO: 127.0.0.1 - - [21/Feb/2025 20:48:53] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:49:03,796 - INFO: 127.0.0.1 - - [21/Feb/2025 20:49:03] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:49:13,786 - INFO: 127.0.0.1 - - [21/Feb/2025 20:49:13] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:49:18,582 - INFO: Killing process 8732 using port 9000: python.exe
+2025-02-21 20:49:19,583 - INFO: 127.0.0.1 - - [21/Feb/2025 20:49:19] "POST /kill_port/9000 HTTP/1.1" 200 -
+2025-02-21 20:49:23,790 - INFO: 127.0.0.1 - - [21/Feb/2025 20:49:23] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:49:26,817 - INFO: 127.0.0.1 - - [21/Feb/2025 20:49:26] "POST /run_ai HTTP/1.1" 200 -
+2025-02-21 20:49:28,860 - INFO: Starting service ai: cmd /c "conda activate superNLP && python AI_API.py"
+2025-02-21 20:49:28,864 - INFO: Service ai started successfully
+2025-02-21 20:49:33,798 - INFO: 127.0.0.1 - - [21/Feb/2025 20:49:33] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:49:43,785 - INFO: 127.0.0.1 - - [21/Feb/2025 20:49:43] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:49:51,267 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\torchvision\\_meta_registrations.py', reloading
+2025-02-21 20:49:51,415 - INFO:  * Restarting with watchdog (windowsapi)
+2025-02-21 20:49:52,315 - WARNING:  * Debugger is active!
+2025-02-21 20:49:52,322 - INFO:  * Debugger PIN: 706-706-741
+2025-02-21 20:49:52,361 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\torchvision\\models\\densenet.py', reloading
+2025-02-21 20:49:52,380 - INFO: 127.0.0.1 - - [21/Feb/2025 20:49:52] "GET /socket.io/?EIO=4&transport=polling&t=PKenPLw HTTP/1.1" 200 -
+2025-02-21 20:49:52,384 - INFO: 127.0.0.1 - - [21/Feb/2025 20:49:52] "POST /socket.io/?EIO=4&transport=polling&t=PKenPLz&sid=f_6_YTkOLy5JoqWtAAAA HTTP/1.1" 200 -
+2025-02-21 20:49:52,385 - INFO: 127.0.0.1 - - [21/Feb/2025 20:49:52] "GET /socket.io/?EIO=4&transport=polling&t=PKenPL-&sid=f_6_YTkOLy5JoqWtAAAA HTTP/1.1" 200 -
+2025-02-21 20:49:53,378 - INFO:  * Restarting with watchdog (windowsapi)
+2025-02-21 20:49:54,295 - WARNING:  * Debugger is active!
+2025-02-21 20:49:54,302 - INFO:  * Debugger PIN: 706-706-741
+2025-02-21 20:49:54,307 - INFO: 127.0.0.1 - - [21/Feb/2025 20:49:54] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:49:54,650 - INFO: 127.0.0.1 - - [21/Feb/2025 20:49:54] "GET /socket.io/?EIO=4&transport=polling&t=PKenPvO HTTP/1.1" 200 -
+2025-02-21 20:49:54,655 - INFO: 127.0.0.1 - - [21/Feb/2025 20:49:54] "POST /socket.io/?EIO=4&transport=polling&t=PKenPvS&sid=D7_7QIySVSavVA2nAAAA HTTP/1.1" 200 -
+2025-02-21 20:49:54,656 - INFO: 127.0.0.1 - - [21/Feb/2025 20:49:54] "GET /socket.io/?EIO=4&transport=polling&t=PKenPvS.0&sid=D7_7QIySVSavVA2nAAAA HTTP/1.1" 200 -
+2025-02-21 20:50:03,787 - INFO: 127.0.0.1 - - [21/Feb/2025 20:50:03] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:50:11,010 - INFO: 127.0.0.1 - - [21/Feb/2025 20:50:11] "POST /restart_all HTTP/1.1" 200 -
+2025-02-21 20:50:11,012 - WARNING: Port 8000 is in use. Attempting to kill existing processes.
+2025-02-21 20:50:11,013 - INFO: Killing process 5352 using port 8000: python.exe
+2025-02-21 20:50:12,018 - INFO: Killing process 0 using port 8000: System Idle Process
+2025-02-21 20:50:12,024 - INFO: Starting service backend: cmd /c "conda activate superNLP && python backend.py"
+2025-02-21 20:50:12,031 - INFO: Service backend started successfully
+2025-02-21 20:50:13,057 - INFO: Starting service frontend: cmd /c "conda activate superNLP && npm run dev"
+2025-02-21 20:50:13,057 - INFO: Starting service ai: cmd /c "conda activate superNLP && python AI_API.py"
+2025-02-21 20:50:13,062 - INFO: Service ai started successfully
+2025-02-21 20:50:13,064 - INFO: Service frontend started successfully
+2025-02-21 20:50:13,791 - INFO: 127.0.0.1 - - [21/Feb/2025 20:50:13] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:50:23,797 - INFO: 127.0.0.1 - - [21/Feb/2025 20:50:23] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:50:27,794 - INFO: 127.0.0.1 - - [21/Feb/2025 20:50:27] "POST /run_ai HTTP/1.1" 200 -
+2025-02-21 20:50:29,827 - INFO: Starting service ai: cmd /c "conda activate superNLP && python AI_API.py"
+2025-02-21 20:50:29,830 - INFO: Service ai started successfully
+2025-02-21 20:50:33,790 - INFO: 127.0.0.1 - - [21/Feb/2025 20:50:33] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:50:41,663 - INFO: Killing process 37592 using port 9000: python.exe
+2025-02-21 20:50:42,664 - INFO: 127.0.0.1 - - [21/Feb/2025 20:50:42] "POST /kill_port/9000 HTTP/1.1" 200 -
+2025-02-21 20:50:43,787 - INFO: 127.0.0.1 - - [21/Feb/2025 20:50:43] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:50:45,159 - INFO: 127.0.0.1 - - [21/Feb/2025 20:50:45] "POST /run_ai HTTP/1.1" 200 -
+2025-02-21 20:50:47,210 - INFO: Starting service ai: cmd /c "conda activate superNLP && python AI_API.py"
+2025-02-21 20:50:47,212 - INFO: Service ai started successfully
+2025-02-21 20:50:53,800 - INFO: 127.0.0.1 - - [21/Feb/2025 20:50:53] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:51:03,796 - INFO: 127.0.0.1 - - [21/Feb/2025 20:51:03] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:51:13,802 - INFO: 127.0.0.1 - - [21/Feb/2025 20:51:13] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:51:23,793 - INFO: 127.0.0.1 - - [21/Feb/2025 20:51:23] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:51:33,791 - INFO: 127.0.0.1 - - [21/Feb/2025 20:51:33] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:51:43,796 - INFO: 127.0.0.1 - - [21/Feb/2025 20:51:43] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:51:53,794 - INFO: 127.0.0.1 - - [21/Feb/2025 20:51:53] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:52:03,792 - INFO: 127.0.0.1 - - [21/Feb/2025 20:52:03] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:52:13,800 - INFO: 127.0.0.1 - - [21/Feb/2025 20:52:13] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:52:23,794 - INFO: 127.0.0.1 - - [21/Feb/2025 20:52:23] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:52:33,797 - INFO: 127.0.0.1 - - [21/Feb/2025 20:52:33] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:52:43,801 - INFO: 127.0.0.1 - - [21/Feb/2025 20:52:43] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:52:53,786 - INFO: 127.0.0.1 - - [21/Feb/2025 20:52:53] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:53:03,789 - INFO: 127.0.0.1 - - [21/Feb/2025 20:53:03] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:53:13,788 - INFO: 127.0.0.1 - - [21/Feb/2025 20:53:13] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:53:23,792 - INFO: 127.0.0.1 - - [21/Feb/2025 20:53:23] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:53:33,793 - INFO: 127.0.0.1 - - [21/Feb/2025 20:53:33] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:53:43,793 - INFO: 127.0.0.1 - - [21/Feb/2025 20:53:43] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:53:53,790 - INFO: 127.0.0.1 - - [21/Feb/2025 20:53:53] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:54:03,790 - INFO: 127.0.0.1 - - [21/Feb/2025 20:54:03] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:54:13,799 - INFO: 127.0.0.1 - - [21/Feb/2025 20:54:13] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:54:23,788 - INFO: 127.0.0.1 - - [21/Feb/2025 20:54:23] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:54:33,792 - INFO: 127.0.0.1 - - [21/Feb/2025 20:54:33] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:54:43,788 - INFO: 127.0.0.1 - - [21/Feb/2025 20:54:43] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:54:53,798 - INFO: 127.0.0.1 - - [21/Feb/2025 20:54:53] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:55:03,788 - INFO: 127.0.0.1 - - [21/Feb/2025 20:55:03] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:55:13,790 - INFO: 127.0.0.1 - - [21/Feb/2025 20:55:13] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:55:23,798 - INFO: 127.0.0.1 - - [21/Feb/2025 20:55:23] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:55:33,787 - INFO: 127.0.0.1 - - [21/Feb/2025 20:55:33] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:55:43,799 - INFO: 127.0.0.1 - - [21/Feb/2025 20:55:43] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:55:53,793 - INFO: 127.0.0.1 - - [21/Feb/2025 20:55:53] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:56:03,800 - INFO: 127.0.0.1 - - [21/Feb/2025 20:56:03] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:56:13,797 - INFO: 127.0.0.1 - - [21/Feb/2025 20:56:13] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:56:23,788 - INFO: 127.0.0.1 - - [21/Feb/2025 20:56:23] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:56:33,790 - INFO: 127.0.0.1 - - [21/Feb/2025 20:56:33] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:56:43,794 - INFO: 127.0.0.1 - - [21/Feb/2025 20:56:43] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:56:53,789 - INFO: 127.0.0.1 - - [21/Feb/2025 20:56:53] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:57:03,799 - INFO: 127.0.0.1 - - [21/Feb/2025 20:57:03] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:57:13,799 - INFO: 127.0.0.1 - - [21/Feb/2025 20:57:13] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:57:23,792 - INFO: 127.0.0.1 - - [21/Feb/2025 20:57:23] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:57:33,791 - INFO: 127.0.0.1 - - [21/Feb/2025 20:57:33] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:57:43,799 - INFO: 127.0.0.1 - - [21/Feb/2025 20:57:43] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:57:53,799 - INFO: 127.0.0.1 - - [21/Feb/2025 20:57:53] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:58:03,787 - INFO: 127.0.0.1 - - [21/Feb/2025 20:58:03] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:58:13,787 - INFO: 127.0.0.1 - - [21/Feb/2025 20:58:13] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:58:23,797 - INFO: 127.0.0.1 - - [21/Feb/2025 20:58:23] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:58:33,788 - INFO: 127.0.0.1 - - [21/Feb/2025 20:58:33] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:58:43,795 - INFO: 127.0.0.1 - - [21/Feb/2025 20:58:43] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:58:53,791 - INFO: 127.0.0.1 - - [21/Feb/2025 20:58:53] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:59:03,795 - INFO: 127.0.0.1 - - [21/Feb/2025 20:59:03] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:59:13,791 - INFO: 127.0.0.1 - - [21/Feb/2025 20:59:13] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:59:23,797 - INFO: 127.0.0.1 - - [21/Feb/2025 20:59:23] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:59:33,789 - INFO: 127.0.0.1 - - [21/Feb/2025 20:59:33] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:59:43,795 - INFO: 127.0.0.1 - - [21/Feb/2025 20:59:43] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 20:59:53,798 - INFO: 127.0.0.1 - - [21/Feb/2025 20:59:53] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:00:03,785 - INFO: 127.0.0.1 - - [21/Feb/2025 21:00:03] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:00:13,797 - INFO: 127.0.0.1 - - [21/Feb/2025 21:00:13] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:00:23,793 - INFO: 127.0.0.1 - - [21/Feb/2025 21:00:23] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:00:33,793 - INFO: 127.0.0.1 - - [21/Feb/2025 21:00:33] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:00:43,787 - INFO: 127.0.0.1 - - [21/Feb/2025 21:00:43] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:00:53,788 - INFO: 127.0.0.1 - - [21/Feb/2025 21:00:53] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:01:03,800 - INFO: 127.0.0.1 - - [21/Feb/2025 21:01:03] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:01:13,801 - INFO: 127.0.0.1 - - [21/Feb/2025 21:01:13] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:01:23,795 - INFO: 127.0.0.1 - - [21/Feb/2025 21:01:23] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:01:33,789 - INFO: 127.0.0.1 - - [21/Feb/2025 21:01:33] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:01:43,789 - INFO: 127.0.0.1 - - [21/Feb/2025 21:01:43] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:01:53,797 - INFO: 127.0.0.1 - - [21/Feb/2025 21:01:53] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:02:03,797 - INFO: 127.0.0.1 - - [21/Feb/2025 21:02:03] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:02:13,794 - INFO: 127.0.0.1 - - [21/Feb/2025 21:02:13] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:02:23,795 - INFO: 127.0.0.1 - - [21/Feb/2025 21:02:23] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:02:33,793 - INFO: 127.0.0.1 - - [21/Feb/2025 21:02:33] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:02:43,795 - INFO: 127.0.0.1 - - [21/Feb/2025 21:02:43] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:02:53,794 - INFO: 127.0.0.1 - - [21/Feb/2025 21:02:53] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:03:03,792 - INFO: 127.0.0.1 - - [21/Feb/2025 21:03:03] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:03:13,787 - INFO: 127.0.0.1 - - [21/Feb/2025 21:03:13] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:03:23,792 - INFO: 127.0.0.1 - - [21/Feb/2025 21:03:23] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:03:33,787 - INFO: 127.0.0.1 - - [21/Feb/2025 21:03:33] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:03:43,786 - INFO: 127.0.0.1 - - [21/Feb/2025 21:03:43] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:03:53,790 - INFO: 127.0.0.1 - - [21/Feb/2025 21:03:53] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:04:03,800 - INFO: 127.0.0.1 - - [21/Feb/2025 21:04:03] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:04:13,793 - INFO: 127.0.0.1 - - [21/Feb/2025 21:04:13] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:04:23,794 - INFO: 127.0.0.1 - - [21/Feb/2025 21:04:23] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:04:33,799 - INFO: 127.0.0.1 - - [21/Feb/2025 21:04:33] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:04:43,788 - INFO: 127.0.0.1 - - [21/Feb/2025 21:04:43] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:04:53,798 - INFO: 127.0.0.1 - - [21/Feb/2025 21:04:53] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:05:03,786 - INFO: 127.0.0.1 - - [21/Feb/2025 21:05:03] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:05:13,788 - INFO: 127.0.0.1 - - [21/Feb/2025 21:05:13] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:05:23,793 - INFO: 127.0.0.1 - - [21/Feb/2025 21:05:23] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:05:33,797 - INFO: 127.0.0.1 - - [21/Feb/2025 21:05:33] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:05:43,792 - INFO: 127.0.0.1 - - [21/Feb/2025 21:05:43] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:05:53,789 - INFO: 127.0.0.1 - - [21/Feb/2025 21:05:53] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:06:03,793 - INFO: 127.0.0.1 - - [21/Feb/2025 21:06:03] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:06:13,795 - INFO: 127.0.0.1 - - [21/Feb/2025 21:06:13] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:06:23,794 - INFO: 127.0.0.1 - - [21/Feb/2025 21:06:23] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:06:33,796 - INFO: 127.0.0.1 - - [21/Feb/2025 21:06:33] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:06:43,785 - INFO: 127.0.0.1 - - [21/Feb/2025 21:06:43] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:06:53,800 - INFO: 127.0.0.1 - - [21/Feb/2025 21:06:53] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:07:03,790 - INFO: 127.0.0.1 - - [21/Feb/2025 21:07:03] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:07:13,792 - INFO: 127.0.0.1 - - [21/Feb/2025 21:07:13] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:07:23,788 - INFO: 127.0.0.1 - - [21/Feb/2025 21:07:23] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:07:33,799 - INFO: 127.0.0.1 - - [21/Feb/2025 21:07:33] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:07:43,796 - INFO: 127.0.0.1 - - [21/Feb/2025 21:07:43] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:07:53,786 - INFO: 127.0.0.1 - - [21/Feb/2025 21:07:53] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:08:03,800 - INFO: 127.0.0.1 - - [21/Feb/2025 21:08:03] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:08:13,798 - INFO: 127.0.0.1 - - [21/Feb/2025 21:08:13] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:08:23,792 - INFO: 127.0.0.1 - - [21/Feb/2025 21:08:23] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:08:33,798 - INFO: 127.0.0.1 - - [21/Feb/2025 21:08:33] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:08:43,787 - INFO: 127.0.0.1 - - [21/Feb/2025 21:08:43] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:08:53,797 - INFO: 127.0.0.1 - - [21/Feb/2025 21:08:53] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:09:03,791 - INFO: 127.0.0.1 - - [21/Feb/2025 21:09:03] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:09:13,790 - INFO: 127.0.0.1 - - [21/Feb/2025 21:09:13] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:09:23,799 - INFO: 127.0.0.1 - - [21/Feb/2025 21:09:23] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:09:33,789 - INFO: 127.0.0.1 - - [21/Feb/2025 21:09:33] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:09:43,790 - INFO: 127.0.0.1 - - [21/Feb/2025 21:09:43] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:09:53,798 - INFO: 127.0.0.1 - - [21/Feb/2025 21:09:53] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:10:03,791 - INFO: 127.0.0.1 - - [21/Feb/2025 21:10:03] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:10:14,259 - INFO: 127.0.0.1 - - [21/Feb/2025 21:10:14] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:10:24,260 - INFO: 127.0.0.1 - - [21/Feb/2025 21:10:24] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:10:34,259 - INFO: 127.0.0.1 - - [21/Feb/2025 21:10:34] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:10:44,267 - INFO: 127.0.0.1 - - [21/Feb/2025 21:10:44] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:10:54,263 - INFO: 127.0.0.1 - - [21/Feb/2025 21:10:54] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:11:04,265 - INFO: 127.0.0.1 - - [21/Feb/2025 21:11:04] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:11:14,255 - INFO: 127.0.0.1 - - [21/Feb/2025 21:11:14] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:11:35,263 - INFO: 127.0.0.1 - - [21/Feb/2025 21:11:35] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:12:35,267 - INFO: 127.0.0.1 - - [21/Feb/2025 21:12:35] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:13:35,259 - INFO: 127.0.0.1 - - [21/Feb/2025 21:13:35] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:14:27,794 - INFO: 127.0.0.1 - - [21/Feb/2025 21:14:27] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:14:34,256 - INFO: 127.0.0.1 - - [21/Feb/2025 21:14:34] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:14:44,266 - INFO: 127.0.0.1 - - [21/Feb/2025 21:14:44] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:14:54,254 - INFO: 127.0.0.1 - - [21/Feb/2025 21:14:54] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:15:04,266 - INFO: 127.0.0.1 - - [21/Feb/2025 21:15:04] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:15:14,261 - INFO: 127.0.0.1 - - [21/Feb/2025 21:15:14] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:15:24,256 - INFO: 127.0.0.1 - - [21/Feb/2025 21:15:24] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:15:35,261 - INFO: 127.0.0.1 - - [21/Feb/2025 21:15:35] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:16:35,265 - INFO: 127.0.0.1 - - [21/Feb/2025 21:16:35] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:17:23,880 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\mediapipe\\__init__.py', reloading
+2025-02-21 21:17:23,882 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\mediapipe\\python\\__init__.py', reloading
+2025-02-21 21:17:24,167 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\mediapipe\\python\\solutions\\__init__.py', reloading
+2025-02-21 21:17:24,536 - INFO:  * Restarting with watchdog (windowsapi)
+2025-02-21 21:17:25,538 - WARNING:  * Debugger is active!
+2025-02-21 21:17:25,546 - INFO:  * Debugger PIN: 706-706-741
+2025-02-21 21:17:25,550 - INFO: 127.0.0.1 - - [21/Feb/2025 21:17:25] "GET /socket.io/?EIO=4&transport=polling&t=PKetiu8 HTTP/1.1" 200 -
+2025-02-21 21:17:25,555 - INFO: 127.0.0.1 - - [21/Feb/2025 21:17:25] "POST /socket.io/?EIO=4&transport=polling&t=PKetiyn&sid=vLL0rgyTBmnBD1qtAAAA HTTP/1.1" 200 -
+2025-02-21 21:17:25,557 - INFO: 127.0.0.1 - - [21/Feb/2025 21:17:25] "GET /socket.io/?EIO=4&transport=polling&t=PKetiyo&sid=vLL0rgyTBmnBD1qtAAAA HTTP/1.1" 200 -
+2025-02-21 21:17:25,560 - INFO: 127.0.0.1 - - [21/Feb/2025 21:17:25] "GET /socket.io/?EIO=4&transport=polling&t=PKetiys&sid=vLL0rgyTBmnBD1qtAAAA HTTP/1.1" 200 -
+2025-02-21 21:17:35,254 - INFO: 127.0.0.1 - - [21/Feb/2025 21:17:35] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:18:35,268 - INFO: 127.0.0.1 - - [21/Feb/2025 21:18:35] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:18:56,269 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\cv2\\typing\\__init__.py', reloading
+2025-02-21 21:18:56,275 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\cv2\\mat_wrapper\\__init__.py', reloading
+2025-02-21 21:18:56,281 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\numpy\\_typing\\__init__.py', reloading
+2025-02-21 21:18:56,748 - INFO:  * Restarting with watchdog (windowsapi)
+2025-02-21 21:18:57,752 - WARNING:  * Debugger is active!
+2025-02-21 21:18:57,758 - INFO:  * Debugger PIN: 706-706-741
+2025-02-21 21:18:58,256 - INFO: 127.0.0.1 - - [21/Feb/2025 21:18:58] "GET /socket.io/?EIO=4&transport=polling&t=PKeu3bD HTTP/1.1" 200 -
+2025-02-21 21:18:58,259 - INFO: 127.0.0.1 - - [21/Feb/2025 21:18:58] "POST /socket.io/?EIO=4&transport=polling&t=PKeu3bH&sid=g4FiIoEiuoKLdf__AAAA HTTP/1.1" 200 -
+2025-02-21 21:18:58,261 - INFO: 127.0.0.1 - - [21/Feb/2025 21:18:58] "GET /socket.io/?EIO=4&transport=polling&t=PKeu3bI&sid=g4FiIoEiuoKLdf__AAAA HTTP/1.1" 200 -
+2025-02-21 21:18:58,265 - INFO: 127.0.0.1 - - [21/Feb/2025 21:18:58] "GET /socket.io/?EIO=4&transport=polling&t=PKeu3bO&sid=g4FiIoEiuoKLdf__AAAA HTTP/1.1" 200 -
+2025-02-21 21:19:27,962 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\numpy\\_utils\\__init__.py', reloading
+2025-02-21 21:19:28,882 - INFO:  * Restarting with watchdog (windowsapi)
+2025-02-21 21:19:29,790 - WARNING:  * Debugger is active!
+2025-02-21 21:19:29,797 - INFO:  * Debugger PIN: 706-706-741
+2025-02-21 21:19:30,256 - INFO: 127.0.0.1 - - [21/Feb/2025 21:19:30] "GET /socket.io/?EIO=4&transport=polling&t=PKeuBPE HTTP/1.1" 200 -
+2025-02-21 21:19:30,259 - INFO: 127.0.0.1 - - [21/Feb/2025 21:19:30] "POST /socket.io/?EIO=4&transport=polling&t=PKeuBPI&sid=HNfEUz5xsKMDuAr7AAAA HTTP/1.1" 200 -
+2025-02-21 21:19:30,261 - INFO: 127.0.0.1 - - [21/Feb/2025 21:19:30] "GET /socket.io/?EIO=4&transport=polling&t=PKeuBPI.0&sid=HNfEUz5xsKMDuAr7AAAA HTTP/1.1" 200 -
+2025-02-21 21:19:35,263 - INFO: 127.0.0.1 - - [21/Feb/2025 21:19:35] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:19:55,276 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\numpy\\_typing\\_array_like.py', reloading
+2025-02-21 21:19:55,278 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\numpy\\_typing\\_nested_sequence.py', reloading
+2025-02-21 21:19:55,281 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\numpy\\_typing\\_shape.py', reloading
+2025-02-21 21:19:55,899 - INFO:  * Restarting with watchdog (windowsapi)
+2025-02-21 21:19:56,865 - WARNING:  * Debugger is active!
+2025-02-21 21:19:56,873 - INFO:  * Debugger PIN: 706-706-741
+2025-02-21 21:19:57,255 - INFO: 127.0.0.1 - - [21/Feb/2025 21:19:57] "GET /socket.io/?EIO=4&transport=polling&t=PKeuH_5 HTTP/1.1" 200 -
+2025-02-21 21:19:57,259 - INFO: 127.0.0.1 - - [21/Feb/2025 21:19:57] "POST /socket.io/?EIO=4&transport=polling&t=PKeuH_9&sid=8QD7EOyWXc3dYYLXAAAA HTTP/1.1" 200 -
+2025-02-21 21:19:57,261 - INFO: 127.0.0.1 - - [21/Feb/2025 21:19:57] "GET /socket.io/?EIO=4&transport=polling&t=PKeuH_A&sid=8QD7EOyWXc3dYYLXAAAA HTTP/1.1" 200 -
+2025-02-21 21:19:57,264 - INFO: 127.0.0.1 - - [21/Feb/2025 21:19:57] "GET /socket.io/?EIO=4&transport=polling&t=PKeuH_F&sid=8QD7EOyWXc3dYYLXAAAA HTTP/1.1" 200 -
+2025-02-21 21:20:35,262 - INFO: 127.0.0.1 - - [21/Feb/2025 21:20:35] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:21:35,262 - INFO: 127.0.0.1 - - [21/Feb/2025 21:21:35] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:22:35,264 - INFO: 127.0.0.1 - - [21/Feb/2025 21:22:35] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:23:35,266 - INFO: 127.0.0.1 - - [21/Feb/2025 21:23:35] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:24:35,261 - INFO: 127.0.0.1 - - [21/Feb/2025 21:24:35] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:25:35,268 - INFO: 127.0.0.1 - - [21/Feb/2025 21:25:35] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:26:35,256 - INFO: 127.0.0.1 - - [21/Feb/2025 21:26:35] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:27:35,269 - INFO: 127.0.0.1 - - [21/Feb/2025 21:27:35] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:27:50,483 - INFO: 127.0.0.1 - - [21/Feb/2025 21:27:50] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:27:53,785 - INFO: 127.0.0.1 - - [21/Feb/2025 21:27:53] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:28:03,788 - INFO: 127.0.0.1 - - [21/Feb/2025 21:28:03] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:28:13,788 - INFO: 127.0.0.1 - - [21/Feb/2025 21:28:13] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:28:23,797 - INFO: 127.0.0.1 - - [21/Feb/2025 21:28:23] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:28:33,799 - INFO: 127.0.0.1 - - [21/Feb/2025 21:28:33] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:28:43,797 - INFO: 127.0.0.1 - - [21/Feb/2025 21:28:43] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:28:53,787 - INFO: 127.0.0.1 - - [21/Feb/2025 21:28:53] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:29:03,791 - INFO: 127.0.0.1 - - [21/Feb/2025 21:29:03] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:29:13,786 - INFO: 127.0.0.1 - - [21/Feb/2025 21:29:13] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:29:23,790 - INFO: 127.0.0.1 - - [21/Feb/2025 21:29:23] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:29:33,792 - INFO: 127.0.0.1 - - [21/Feb/2025 21:29:33] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:29:43,797 - INFO: 127.0.0.1 - - [21/Feb/2025 21:29:43] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:29:53,798 - INFO: 127.0.0.1 - - [21/Feb/2025 21:29:53] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:30:03,791 - INFO: 127.0.0.1 - - [21/Feb/2025 21:30:03] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:30:13,789 - INFO: 127.0.0.1 - - [21/Feb/2025 21:30:13] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:30:23,796 - INFO: 127.0.0.1 - - [21/Feb/2025 21:30:23] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:30:33,798 - INFO: 127.0.0.1 - - [21/Feb/2025 21:30:33] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:30:43,786 - INFO: 127.0.0.1 - - [21/Feb/2025 21:30:43] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:30:54,253 - INFO: 127.0.0.1 - - [21/Feb/2025 21:30:54] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:31:04,262 - INFO: 127.0.0.1 - - [21/Feb/2025 21:31:04] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:31:14,264 - INFO: 127.0.0.1 - - [21/Feb/2025 21:31:14] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:31:24,257 - INFO: 127.0.0.1 - - [21/Feb/2025 21:31:24] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:31:34,254 - INFO: 127.0.0.1 - - [21/Feb/2025 21:31:34] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:31:44,252 - INFO: 127.0.0.1 - - [21/Feb/2025 21:31:44] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:32:19,126 - INFO: 127.0.0.1 - - [21/Feb/2025 21:32:19] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:32:24,267 - INFO: 127.0.0.1 - - [21/Feb/2025 21:32:24] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:32:34,265 - INFO: 127.0.0.1 - - [21/Feb/2025 21:32:34] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:32:35,248 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\fastapi\\responses.py', reloading
+2025-02-21 21:32:35,260 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\numpy\\_typing\\_dtype_like.py', reloading
+2025-02-21 21:32:35,295 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\numpy\\_typing\\_nbit.py', reloading
+2025-02-21 21:32:35,298 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\starlette\\background.py', reloading
+2025-02-21 21:32:35,963 - INFO:  * Restarting with watchdog (windowsapi)
+2025-02-21 21:32:36,907 - WARNING:  * Debugger is active!
+2025-02-21 21:32:36,915 - INFO:  * Debugger PIN: 706-706-741
+2025-02-21 21:32:37,258 - INFO: 127.0.0.1 - - [21/Feb/2025 21:32:37] "GET /socket.io/?EIO=4&transport=polling&t=PKexBY7 HTTP/1.1" 200 -
+2025-02-21 21:32:37,261 - INFO: 127.0.0.1 - - [21/Feb/2025 21:32:37] "POST /socket.io/?EIO=4&transport=polling&t=PKexBYB&sid=ydQMmfWOubO7bil_AAAA HTTP/1.1" 200 -
+2025-02-21 21:32:37,263 - INFO: 127.0.0.1 - - [21/Feb/2025 21:32:37] "GET /socket.io/?EIO=4&transport=polling&t=PKexBYC&sid=ydQMmfWOubO7bil_AAAA HTTP/1.1" 200 -
+2025-02-21 21:32:37,265 - INFO: 127.0.0.1 - - [21/Feb/2025 21:32:37] "GET /socket.io/?EIO=4&transport=polling&t=PKexBYG&sid=ydQMmfWOubO7bil_AAAA HTTP/1.1" 200 -
+2025-02-21 21:32:44,256 - INFO: 127.0.0.1 - - [21/Feb/2025 21:32:44] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:32:54,254 - INFO: 127.0.0.1 - - [21/Feb/2025 21:32:54] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:33:04,252 - INFO: 127.0.0.1 - - [21/Feb/2025 21:33:04] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:33:14,264 - INFO: 127.0.0.1 - - [21/Feb/2025 21:33:14] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:33:35,262 - INFO: 127.0.0.1 - - [21/Feb/2025 21:33:35] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:34:35,268 - INFO: 127.0.0.1 - - [21/Feb/2025 21:34:35] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:35:35,268 - INFO: 127.0.0.1 - - [21/Feb/2025 21:35:35] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:36:35,269 - INFO: 127.0.0.1 - - [21/Feb/2025 21:36:35] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:37:35,259 - INFO: 127.0.0.1 - - [21/Feb/2025 21:37:35] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:37:52,915 - INFO: 127.0.0.1 - - [21/Feb/2025 21:37:52] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:37:53,797 - INFO: 127.0.0.1 - - [21/Feb/2025 21:37:53] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:38:04,265 - INFO: 127.0.0.1 - - [21/Feb/2025 21:38:04] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:38:14,266 - INFO: 127.0.0.1 - - [21/Feb/2025 21:38:14] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:38:24,263 - INFO: 127.0.0.1 - - [21/Feb/2025 21:38:24] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:38:33,788 - INFO: 127.0.0.1 - - [21/Feb/2025 21:38:33] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:38:44,266 - INFO: 127.0.0.1 - - [21/Feb/2025 21:38:44] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:38:54,260 - INFO: 127.0.0.1 - - [21/Feb/2025 21:38:54] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:39:04,257 - INFO: 127.0.0.1 - - [21/Feb/2025 21:39:04] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:39:14,264 - INFO: 127.0.0.1 - - [21/Feb/2025 21:39:14] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:39:24,258 - INFO: 127.0.0.1 - - [21/Feb/2025 21:39:24] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:39:34,258 - INFO: 127.0.0.1 - - [21/Feb/2025 21:39:34] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:39:44,256 - INFO: 127.0.0.1 - - [21/Feb/2025 21:39:44] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:39:54,255 - INFO: 127.0.0.1 - - [21/Feb/2025 21:39:54] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:40:04,258 - INFO: 127.0.0.1 - - [21/Feb/2025 21:40:04] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:40:14,262 - INFO: 127.0.0.1 - - [21/Feb/2025 21:40:14] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:40:24,258 - INFO: 127.0.0.1 - - [21/Feb/2025 21:40:24] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:40:34,261 - INFO: 127.0.0.1 - - [21/Feb/2025 21:40:34] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:40:44,252 - INFO: 127.0.0.1 - - [21/Feb/2025 21:40:44] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:40:54,260 - INFO: 127.0.0.1 - - [21/Feb/2025 21:40:54] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:41:04,255 - INFO: 127.0.0.1 - - [21/Feb/2025 21:41:04] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:41:14,255 - INFO: 127.0.0.1 - - [21/Feb/2025 21:41:14] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:41:24,264 - INFO: 127.0.0.1 - - [21/Feb/2025 21:41:24] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:41:34,261 - INFO: 127.0.0.1 - - [21/Feb/2025 21:41:34] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:41:44,255 - INFO: 127.0.0.1 - - [21/Feb/2025 21:41:44] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:41:54,266 - INFO: 127.0.0.1 - - [21/Feb/2025 21:41:54] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:42:03,800 - INFO: 127.0.0.1 - - [21/Feb/2025 21:42:03] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:42:13,786 - INFO: 127.0.0.1 - - [21/Feb/2025 21:42:13] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:42:16,282 - INFO: 127.0.0.1 - - [21/Feb/2025 21:42:16] "POST /run_frontend HTTP/1.1" 200 -
+2025-02-21 21:42:18,322 - INFO: Starting service frontend: cmd /c "conda activate superNLP && npm run dev"
+2025-02-21 21:42:18,328 - INFO: Service frontend started successfully
+2025-02-21 21:42:23,797 - INFO: 127.0.0.1 - - [21/Feb/2025 21:42:23] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:42:33,792 - INFO: 127.0.0.1 - - [21/Feb/2025 21:42:33] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:42:43,786 - INFO: 127.0.0.1 - - [21/Feb/2025 21:42:43] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:42:53,789 - INFO: 127.0.0.1 - - [21/Feb/2025 21:42:53] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:43:03,791 - INFO: 127.0.0.1 - - [21/Feb/2025 21:43:03] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:43:13,785 - INFO: 127.0.0.1 - - [21/Feb/2025 21:43:13] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:43:23,793 - INFO: 127.0.0.1 - - [21/Feb/2025 21:43:23] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:43:29,460 - INFO: 127.0.0.1 - - [21/Feb/2025 21:43:29] "POST /stop/frontend HTTP/1.1" 200 -
+2025-02-21 21:43:32,330 - INFO: 127.0.0.1 - - [21/Feb/2025 21:43:32] "POST /run_frontend HTTP/1.1" 200 -
+2025-02-21 21:43:33,786 - INFO: 127.0.0.1 - - [21/Feb/2025 21:43:33] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:43:34,355 - INFO: Starting service frontend: cmd /c "conda activate superNLP && npm run dev"
+2025-02-21 21:43:34,358 - INFO: Service frontend started successfully
+2025-02-21 21:43:43,788 - INFO: 127.0.0.1 - - [21/Feb/2025 21:43:43] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:43:53,792 - INFO: 127.0.0.1 - - [21/Feb/2025 21:43:53] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:44:03,787 - INFO: 127.0.0.1 - - [21/Feb/2025 21:44:03] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:44:13,801 - INFO: 127.0.0.1 - - [21/Feb/2025 21:44:13] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:44:23,801 - INFO: 127.0.0.1 - - [21/Feb/2025 21:44:23] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:44:33,796 - INFO: 127.0.0.1 - - [21/Feb/2025 21:44:33] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:44:43,795 - INFO: 127.0.0.1 - - [21/Feb/2025 21:44:43] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:44:53,791 - INFO: 127.0.0.1 - - [21/Feb/2025 21:44:53] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:45:03,790 - INFO: 127.0.0.1 - - [21/Feb/2025 21:45:03] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:45:05,101 - INFO: 127.0.0.1 - - [21/Feb/2025 21:45:05] "POST /stop/frontend HTTP/1.1" 200 -
+2025-02-21 21:45:12,248 - INFO: 127.0.0.1 - - [21/Feb/2025 21:45:12] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:45:13,800 - INFO: 127.0.0.1 - - [21/Feb/2025 21:45:13] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:45:14,100 - INFO: 127.0.0.1 - - [21/Feb/2025 21:45:14] "POST /run_frontend HTTP/1.1" 200 -
+2025-02-21 21:45:16,137 - INFO: Starting service frontend: cmd /c "conda activate superNLP && npm run dev"
+2025-02-21 21:45:16,139 - INFO: Service frontend started successfully
+2025-02-21 21:45:23,793 - INFO: 127.0.0.1 - - [21/Feb/2025 21:45:23] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:45:33,754 - INFO: 127.0.0.1 - - [21/Feb/2025 21:45:33] "POST /run_ai HTTP/1.1" 200 -
+2025-02-21 21:45:33,788 - INFO: 127.0.0.1 - - [21/Feb/2025 21:45:33] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:45:35,787 - INFO: Starting service ai: cmd /c "conda activate superNLP && python AI_API.py"
+2025-02-21 21:45:35,793 - INFO: Service ai started successfully
+2025-02-21 21:45:37,113 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\cv2\\config.py', reloading
+2025-02-21 21:45:37,115 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\cv2\\config-3.py', reloading
+2025-02-21 21:45:37,620 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\torch\\cuda\\__init__.py', reloading
+2025-02-21 21:45:37,621 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\torch\\__init__.py', reloading
+2025-02-21 21:45:37,622 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\ultralytics\\engine\\model.py', reloading
+2025-02-21 21:45:37,622 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\ultralytics\\models\\fastsam\\model.py', reloading
+2025-02-21 21:45:37,622 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\ultralytics\\models\\fastsam\\__init__.py', reloading
+2025-02-21 21:45:37,623 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\ultralytics\\models\\__init__.py', reloading
+2025-02-21 21:45:37,623 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\ultralytics\\__init__.py', reloading
+2025-02-21 21:45:37,745 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\torch\\nn\\functional.py', reloading
+2025-02-21 21:45:37,817 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\torch\\nn\\modules\\rnn.py', reloading
+2025-02-21 21:45:37,845 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\torch\\functional.py', reloading
+2025-02-21 21:45:38,035 - INFO:  * Restarting with watchdog (windowsapi)
+2025-02-21 21:45:38,996 - WARNING:  * Debugger is active!
+2025-02-21 21:45:39,003 - INFO:  * Debugger PIN: 706-706-741
+2025-02-21 21:45:39,009 - INFO: 127.0.0.1 - - [21/Feb/2025 21:45:39] "GET /socket.io/?EIO=4&transport=polling&t=PKe-AIt HTTP/1.1" 200 -
+2025-02-21 21:45:39,013 - INFO: 127.0.0.1 - - [21/Feb/2025 21:45:39] "POST /socket.io/?EIO=4&transport=polling&t=PKe-AP4&sid=JKLTkGYrsiIKROEnAAAA HTTP/1.1" 200 -
+2025-02-21 21:45:39,016 - INFO: 127.0.0.1 - - [21/Feb/2025 21:45:39] "GET /socket.io/?EIO=4&transport=polling&t=PKe-AP5&sid=JKLTkGYrsiIKROEnAAAA HTTP/1.1" 200 -
+2025-02-21 21:45:39,419 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\torch\\fx\\experimental\\_config.py', reloading
+2025-02-21 21:45:40,079 - INFO:  * Restarting with watchdog (windowsapi)
+2025-02-21 21:45:40,977 - WARNING:  * Debugger is active!
+2025-02-21 21:45:40,983 - INFO:  * Debugger PIN: 706-706-741
+2025-02-21 21:45:40,990 - INFO: 127.0.0.1 - - [21/Feb/2025 21:45:40] "GET /socket.io/?EIO=4&transport=polling&t=PKe-AqP HTTP/1.1" 200 -
+2025-02-21 21:45:40,995 - INFO: 127.0.0.1 - - [21/Feb/2025 21:45:40] "POST /socket.io/?EIO=4&transport=polling&t=PKe-Au0&sid=fvsztpWfEMrQRR6dAAAA HTTP/1.1" 200 -
+2025-02-21 21:45:40,998 - INFO: 127.0.0.1 - - [21/Feb/2025 21:45:40] "GET /socket.io/?EIO=4&transport=polling&t=PKe-Au1&sid=fvsztpWfEMrQRR6dAAAA HTTP/1.1" 200 -
+2025-02-21 21:45:41,359 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\tensorflow\\python\\debug\\lib\\debug_gradients.py', reloading
+2025-02-21 21:45:41,378 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\tensorflow\\python\\debug\\lib\\dumping_callback.py', reloading
+2025-02-21 21:45:41,753 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\tensorflow\\lite\\experimental\\microfrontend\\python\\ops\\audio_microfrontend_op.py', reloading
+2025-02-21 21:45:41,787 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\tensorflow\\python\\profiler\\internal\\flops_registry.py', reloading
+2025-02-21 21:45:42,048 - INFO:  * Restarting with watchdog (windowsapi)
+2025-02-21 21:45:43,000 - WARNING:  * Debugger is active!
+2025-02-21 21:45:43,007 - INFO:  * Debugger PIN: 706-706-741
+2025-02-21 21:45:43,127 - INFO: 127.0.0.1 - - [21/Feb/2025 21:45:43] "GET /socket.io/?EIO=4&transport=polling&t=PKe-BPL HTTP/1.1" 200 -
+2025-02-21 21:45:43,131 - INFO: 127.0.0.1 - - [21/Feb/2025 21:45:43] "POST /socket.io/?EIO=4&transport=polling&t=PKe-BPQ&sid=eSnlUpdhu3zYC3ZCAAAA HTTP/1.1" 200 -
+2025-02-21 21:45:43,133 - INFO: 127.0.0.1 - - [21/Feb/2025 21:45:43] "GET /socket.io/?EIO=4&transport=polling&t=PKe-BPQ.0&sid=eSnlUpdhu3zYC3ZCAAAA HTTP/1.1" 200 -
+2025-02-21 21:45:43,442 - INFO: 127.0.0.1 - - [21/Feb/2025 21:45:43] "POST /run_ai HTTP/1.1" 200 -
+2025-02-21 21:45:43,794 - INFO: 127.0.0.1 - - [21/Feb/2025 21:45:43] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:45:45,484 - INFO: Starting service ai: cmd /c "conda activate superNLP && python AI_API.py"
+2025-02-21 21:45:45,490 - INFO: Service ai started successfully
+2025-02-21 21:45:46,420 - INFO: 127.0.0.1 - - [21/Feb/2025 21:45:46] "POST /run_ai HTTP/1.1" 200 -
+2025-02-21 21:45:48,445 - INFO: Starting service ai: cmd /c "conda activate superNLP && python AI_API.py"
+2025-02-21 21:45:48,447 - INFO: Service ai started successfully
+2025-02-21 21:45:49,520 - INFO: 127.0.0.1 - - [21/Feb/2025 21:45:49] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:45:53,803 - INFO: 127.0.0.1 - - [21/Feb/2025 21:45:53] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:46:03,793 - INFO: 127.0.0.1 - - [21/Feb/2025 21:46:03] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:46:06,838 - INFO: 127.0.0.1 - - [21/Feb/2025 21:46:06] "POST /run_backend HTTP/1.1" 200 -
+2025-02-21 21:46:06,838 - WARNING: Port 8000 is in use. Attempting to kill existing processes.
+2025-02-21 21:46:06,840 - INFO: Killing process 37756 using port 8000: python.exe
+2025-02-21 21:46:07,841 - INFO: Starting service backend: cmd /c "conda activate superNLP && python backend.py"
+2025-02-21 21:46:07,847 - INFO: Service backend started successfully
+2025-02-21 21:46:12,253 - INFO: 127.0.0.1 - - [21/Feb/2025 21:46:12] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:46:13,786 - INFO: 127.0.0.1 - - [21/Feb/2025 21:46:13] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:46:14,539 - INFO: 127.0.0.1 - - [21/Feb/2025 21:46:14] "POST /run_ai HTTP/1.1" 200 -
+2025-02-21 21:46:16,572 - INFO: Starting service ai: cmd /c "conda activate superNLP && python AI_API.py"
+2025-02-21 21:46:16,575 - INFO: Service ai started successfully
+2025-02-21 21:46:23,794 - INFO: 127.0.0.1 - - [21/Feb/2025 21:46:23] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:46:31,473 - INFO: 127.0.0.1 - - [21/Feb/2025 21:46:31] "POST /run_frontend HTTP/1.1" 200 -
+2025-02-21 21:46:33,503 - INFO: Starting service frontend: cmd /c "conda activate superNLP && npm run dev"
+2025-02-21 21:46:33,511 - INFO: Service frontend started successfully
+2025-02-21 21:46:33,785 - INFO: 127.0.0.1 - - [21/Feb/2025 21:46:33] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:46:39,365 - INFO: 127.0.0.1 - - [21/Feb/2025 21:46:39] "POST /restart_all HTTP/1.1" 200 -
+2025-02-21 21:46:41,399 - INFO: Starting service frontend: cmd /c "conda activate superNLP && npm run dev"
+2025-02-21 21:46:41,399 - INFO: Starting service ai: cmd /c "conda activate superNLP && python AI_API.py"
+2025-02-21 21:46:41,399 - INFO: Starting service backend: cmd /c "conda activate superNLP && python backend.py"
+2025-02-21 21:46:41,402 - INFO: Service ai started successfully
+2025-02-21 21:46:41,403 - INFO: Service frontend started successfully
+2025-02-21 21:46:41,403 - INFO: Service backend started successfully
+2025-02-21 21:46:44,255 - INFO: 127.0.0.1 - - [21/Feb/2025 21:46:44] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:46:53,795 - INFO: 127.0.0.1 - - [21/Feb/2025 21:46:53] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:47:03,795 - INFO: 127.0.0.1 - - [21/Feb/2025 21:47:03] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:47:13,791 - INFO: 127.0.0.1 - - [21/Feb/2025 21:47:13] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:47:23,787 - INFO: 127.0.0.1 - - [21/Feb/2025 21:47:23] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:47:27,887 - INFO: 127.0.0.1 - - [21/Feb/2025 21:47:27] "POST /run_ai HTTP/1.1" 200 -
+2025-02-21 21:47:29,918 - INFO: Starting service ai: cmd /c "conda activate superNLP && python AI_API.py"
+2025-02-21 21:47:29,921 - INFO: Service ai started successfully
+2025-02-21 21:47:33,801 - INFO: 127.0.0.1 - - [21/Feb/2025 21:47:33] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:47:43,786 - INFO: 127.0.0.1 - - [21/Feb/2025 21:47:43] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:47:46,830 - INFO: Killing process 37568 using port 9000: python.exe
+2025-02-21 21:47:47,831 - INFO: 127.0.0.1 - - [21/Feb/2025 21:47:47] "POST /kill_port/9000 HTTP/1.1" 200 -
+2025-02-21 21:47:49,738 - INFO: 127.0.0.1 - - [21/Feb/2025 21:47:49] "POST /run_ai HTTP/1.1" 200 -
+2025-02-21 21:47:51,787 - INFO: Starting service ai: cmd /c "conda activate superNLP && python AI_API.py"
+2025-02-21 21:47:51,789 - INFO: Service ai started successfully
+2025-02-21 21:47:53,785 - INFO: 127.0.0.1 - - [21/Feb/2025 21:47:53] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:48:03,785 - INFO: 127.0.0.1 - - [21/Feb/2025 21:48:03] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:48:13,785 - INFO: 127.0.0.1 - - [21/Feb/2025 21:48:13] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:48:23,790 - INFO: 127.0.0.1 - - [21/Feb/2025 21:48:23] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:48:33,791 - INFO: 127.0.0.1 - - [21/Feb/2025 21:48:33] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:48:43,789 - INFO: 127.0.0.1 - - [21/Feb/2025 21:48:43] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:48:53,799 - INFO: 127.0.0.1 - - [21/Feb/2025 21:48:53] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:49:03,795 - INFO: 127.0.0.1 - - [21/Feb/2025 21:49:03] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:49:13,785 - INFO: 127.0.0.1 - - [21/Feb/2025 21:49:13] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:49:23,800 - INFO: 127.0.0.1 - - [21/Feb/2025 21:49:23] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:49:33,794 - INFO: 127.0.0.1 - - [21/Feb/2025 21:49:33] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:49:43,800 - INFO: 127.0.0.1 - - [21/Feb/2025 21:49:43] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:49:50,939 - INFO:  * Detected change in 'c:\\Users\\Chits\\Documents\\pensook\\Github\\Website_DEEPBROW\\website_run\\app.py', reloading
+2025-02-21 21:49:51,391 - INFO:  * Restarting with watchdog (windowsapi)
+2025-02-21 21:49:52,278 - WARNING:  * Debugger is active!
+2025-02-21 21:49:52,286 - INFO:  * Debugger PIN: 706-706-741
+2025-02-21 21:49:52,292 - INFO: 127.0.0.1 - - [21/Feb/2025 21:49:52] "GET /socket.io/?EIO=4&transport=polling&t=PKe_8Ab HTTP/1.1" 200 -
+2025-02-21 21:49:52,295 - INFO: 127.0.0.1 - - [21/Feb/2025 21:49:52] "POST /socket.io/?EIO=4&transport=polling&t=PKe_8Eb&sid=aaQUYT6GRzmrPirZAAAA HTTP/1.1" 200 -
+2025-02-21 21:49:52,298 - INFO: 127.0.0.1 - - [21/Feb/2025 21:49:52] "GET /socket.io/?EIO=4&transport=polling&t=PKe_8Ec&sid=aaQUYT6GRzmrPirZAAAA HTTP/1.1" 200 -
+2025-02-21 21:49:53,796 - INFO: 127.0.0.1 - - [21/Feb/2025 21:49:53] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:50:03,391 - INFO: 127.0.0.1 - - [21/Feb/2025 21:50:03] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:50:03,787 - INFO: 127.0.0.1 - - [21/Feb/2025 21:50:03] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:50:13,788 - INFO: 127.0.0.1 - - [21/Feb/2025 21:50:13] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:50:23,796 - INFO: 127.0.0.1 - - [21/Feb/2025 21:50:23] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:50:24,399 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\torchvision\\_meta_registrations.py', reloading
+2025-02-21 21:50:25,056 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\torch\\_dynamo\\config.py', reloading
+2025-02-21 21:50:25,060 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\torch\\_functorch\\config.py', reloading
+2025-02-21 21:50:25,081 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\torch\\_inductor\\test_operators.py', reloading
+2025-02-21 21:50:25,302 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\torch\\distributed\\_functional_collectives.py', reloading
+2025-02-21 21:50:25,305 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\torch\\distributed\\tensor\\_collective_utils.py', reloading
+2025-02-21 21:50:25,399 - INFO:  * Restarting with watchdog (windowsapi)
+2025-02-21 21:50:26,310 - WARNING:  * Debugger is active!
+2025-02-21 21:50:26,318 - INFO:  * Debugger PIN: 706-706-741
+2025-02-21 21:50:26,656 - INFO: 127.0.0.1 - - [21/Feb/2025 21:50:26] "GET /socket.io/?EIO=4&transport=polling&t=PKe_GdU HTTP/1.1" 200 -
+2025-02-21 21:50:26,659 - INFO: 127.0.0.1 - - [21/Feb/2025 21:50:26] "POST /socket.io/?EIO=4&transport=polling&t=PKe_GdY&sid=w-lNgez8bVgqJZoSAAAA HTTP/1.1" 200 -
+2025-02-21 21:50:26,662 - INFO: 127.0.0.1 - - [21/Feb/2025 21:50:26] "GET /socket.io/?EIO=4&transport=polling&t=PKe_GdY.0&sid=w-lNgez8bVgqJZoSAAAA HTTP/1.1" 200 -
+2025-02-21 21:50:31,271 - INFO: 127.0.0.1 - - [21/Feb/2025 21:50:31] "POST /restart_all HTTP/1.1" 200 -
+2025-02-21 21:50:31,272 - WARNING: Port 8000 is in use. Attempting to kill existing processes.
+2025-02-21 21:50:31,274 - INFO: Killing process 38828 using port 8000: python.exe
+2025-02-21 21:50:32,276 - INFO: Starting service backend: cmd /c "conda activate superNLP && python backend.py"
+2025-02-21 21:50:32,279 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\subprocess.py', reloading
+2025-02-21 21:50:32,286 - INFO: Service backend started successfully
+2025-02-21 21:50:32,392 - INFO:  * Restarting with watchdog (windowsapi)
+2025-02-21 21:50:33,308 - WARNING:  * Debugger is active!
+2025-02-21 21:50:33,314 - INFO:  * Debugger PIN: 706-706-741
+2025-02-21 21:50:33,476 - INFO: 127.0.0.1 - - [21/Feb/2025 21:50:33] "GET /socket.io/?EIO=4&transport=polling&t=PKe_II2 HTTP/1.1" 200 -
+2025-02-21 21:50:33,479 - INFO: 127.0.0.1 - - [21/Feb/2025 21:50:33] "POST /socket.io/?EIO=4&transport=polling&t=PKe_II6&sid=DfaDq-s3XAr9PrpJAAAA HTTP/1.1" 200 -
+2025-02-21 21:50:33,481 - INFO: 127.0.0.1 - - [21/Feb/2025 21:50:33] "GET /socket.io/?EIO=4&transport=polling&t=PKe_II6.0&sid=DfaDq-s3XAr9PrpJAAAA HTTP/1.1" 200 -
+2025-02-21 21:50:33,786 - INFO: 127.0.0.1 - - [21/Feb/2025 21:50:33] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:50:43,786 - INFO: 127.0.0.1 - - [21/Feb/2025 21:50:43] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:50:50,260 - INFO: 127.0.0.1 - - [21/Feb/2025 21:50:50] "POST /restart_all HTTP/1.1" 200 -
+2025-02-21 21:50:50,262 - WARNING: Port 8000 is in use. Attempting to kill existing processes.
+2025-02-21 21:50:50,263 - INFO: Killing process 3784 using port 8000: python.exe
+2025-02-21 21:50:51,265 - INFO: Starting service backend: cmd /c "conda activate superNLP && python backend.py"
+2025-02-21 21:50:51,273 - INFO: Service backend started successfully
+2025-02-21 21:50:52,303 - INFO: Starting service frontend: cmd /c "conda activate superNLP && npm run dev"
+2025-02-21 21:50:52,303 - INFO: Starting service ai: cmd /c "conda activate superNLP && python AI_API.py"
+2025-02-21 21:50:52,309 - INFO: Service ai started successfully
+2025-02-21 21:50:52,309 - INFO: Service frontend started successfully
+2025-02-21 21:50:53,788 - INFO: 127.0.0.1 - - [21/Feb/2025 21:50:53] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:51:03,800 - INFO: 127.0.0.1 - - [21/Feb/2025 21:51:03] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:51:13,789 - INFO: 127.0.0.1 - - [21/Feb/2025 21:51:13] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:51:14,748 - INFO: Killing process 37384 using port 9000: python.exe
+2025-02-21 21:51:15,749 - INFO: 127.0.0.1 - - [21/Feb/2025 21:51:15] "POST /kill_port/9000 HTTP/1.1" 200 -
+2025-02-21 21:51:16,258 - INFO: 127.0.0.1 - - [21/Feb/2025 21:51:16] "POST /run_ai HTTP/1.1" 200 -
+2025-02-21 21:51:18,278 - INFO: Starting service ai: cmd /c "conda activate superNLP && python AI_API.py"
+2025-02-21 21:51:18,280 - INFO: Service ai started successfully
+2025-02-21 21:51:23,788 - INFO: 127.0.0.1 - - [21/Feb/2025 21:51:23] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:51:33,794 - INFO: 127.0.0.1 - - [21/Feb/2025 21:51:33] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:51:43,797 - INFO: 127.0.0.1 - - [21/Feb/2025 21:51:43] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:51:53,789 - INFO: 127.0.0.1 - - [21/Feb/2025 21:51:53] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:52:03,800 - INFO: 127.0.0.1 - - [21/Feb/2025 21:52:03] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:52:13,795 - INFO: 127.0.0.1 - - [21/Feb/2025 21:52:13] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:52:23,791 - INFO: 127.0.0.1 - - [21/Feb/2025 21:52:23] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:52:33,795 - INFO: 127.0.0.1 - - [21/Feb/2025 21:52:33] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:52:43,787 - INFO: 127.0.0.1 - - [21/Feb/2025 21:52:43] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:52:53,787 - INFO: 127.0.0.1 - - [21/Feb/2025 21:52:53] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:53:03,792 - INFO: 127.0.0.1 - - [21/Feb/2025 21:53:03] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:53:13,797 - INFO: 127.0.0.1 - - [21/Feb/2025 21:53:13] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:53:23,796 - INFO: 127.0.0.1 - - [21/Feb/2025 21:53:23] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:53:33,798 - INFO: 127.0.0.1 - - [21/Feb/2025 21:53:33] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:53:43,795 - INFO: 127.0.0.1 - - [21/Feb/2025 21:53:43] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:53:53,790 - INFO: 127.0.0.1 - - [21/Feb/2025 21:53:53] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:54:03,796 - INFO: 127.0.0.1 - - [21/Feb/2025 21:54:03] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:54:13,798 - INFO: 127.0.0.1 - - [21/Feb/2025 21:54:13] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:54:23,799 - INFO: 127.0.0.1 - - [21/Feb/2025 21:54:23] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:54:34,260 - INFO: 127.0.0.1 - - [21/Feb/2025 21:54:34] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:54:43,785 - INFO: 127.0.0.1 - - [21/Feb/2025 21:54:43] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:54:53,787 - INFO: 127.0.0.1 - - [21/Feb/2025 21:54:53] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:55:03,788 - INFO: 127.0.0.1 - - [21/Feb/2025 21:55:03] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:55:13,794 - INFO: 127.0.0.1 - - [21/Feb/2025 21:55:13] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:55:24,255 - INFO: 127.0.0.1 - - [21/Feb/2025 21:55:24] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:55:34,266 - INFO: 127.0.0.1 - - [21/Feb/2025 21:55:34] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:55:44,263 - INFO: 127.0.0.1 - - [21/Feb/2025 21:55:44] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:55:54,258 - INFO: 127.0.0.1 - - [21/Feb/2025 21:55:54] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:56:04,262 - INFO: 127.0.0.1 - - [21/Feb/2025 21:56:04] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:56:14,267 - INFO: 127.0.0.1 - - [21/Feb/2025 21:56:14] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:56:35,258 - INFO: 127.0.0.1 - - [21/Feb/2025 21:56:35] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:57:35,273 - INFO: 127.0.0.1 - - [21/Feb/2025 21:57:35] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:58:05,686 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\fastapi\\exceptions.py', reloading
+2025-02-21 21:58:05,688 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\fastapi\\middleware\\cors.py', reloading
+2025-02-21 21:58:05,689 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\starlette\\middleware\\cors.py', reloading
+2025-02-21 21:58:05,984 - INFO:  * Restarting with watchdog (windowsapi)
+2025-02-21 21:58:06,913 - WARNING:  * Debugger is active!
+2025-02-21 21:58:06,921 - INFO:  * Debugger PIN: 706-706-741
+2025-02-21 21:58:07,258 - INFO: 127.0.0.1 - - [21/Feb/2025 21:58:07] "GET /socket.io/?EIO=4&transport=polling&t=PKf114O HTTP/1.1" 200 -
+2025-02-21 21:58:07,261 - INFO: 127.0.0.1 - - [21/Feb/2025 21:58:07] "POST /socket.io/?EIO=4&transport=polling&t=PKf114S&sid=5riZKHSejOein5XjAAAA HTTP/1.1" 200 -
+2025-02-21 21:58:07,262 - INFO: 127.0.0.1 - - [21/Feb/2025 21:58:07] "GET /socket.io/?EIO=4&transport=polling&t=PKf114T&sid=5riZKHSejOein5XjAAAA HTTP/1.1" 200 -
+2025-02-21 21:58:35,258 - INFO: 127.0.0.1 - - [21/Feb/2025 21:58:35] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 21:59:35,262 - INFO: 127.0.0.1 - - [21/Feb/2025 21:59:35] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:00:35,266 - INFO: 127.0.0.1 - - [21/Feb/2025 22:00:35] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:00:43,161 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\starlette\\exceptions.py', reloading
+2025-02-21 22:00:44,196 - INFO:  * Restarting with watchdog (windowsapi)
+2025-02-21 22:00:45,085 - WARNING:  * Debugger is active!
+2025-02-21 22:00:45,092 - INFO:  * Debugger PIN: 706-706-741
+2025-02-21 22:00:45,261 - INFO: 127.0.0.1 - - [21/Feb/2025 22:00:45] "GET /socket.io/?EIO=4&transport=polling&t=PKf1dfA HTTP/1.1" 200 -
+2025-02-21 22:00:45,264 - INFO: 127.0.0.1 - - [21/Feb/2025 22:00:45] "POST /socket.io/?EIO=4&transport=polling&t=PKf1dfE&sid=R-i3_TTp6QSja1CwAAAA HTTP/1.1" 200 -
+2025-02-21 22:00:45,265 - INFO: 127.0.0.1 - - [21/Feb/2025 22:00:45] "GET /socket.io/?EIO=4&transport=polling&t=PKf1dfE.0&sid=R-i3_TTp6QSja1CwAAAA HTTP/1.1" 200 -
+2025-02-21 22:00:49,998 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\httpx\\__init__.py', reloading
+2025-02-21 22:00:50,002 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\httpx\\_client.py', reloading
+2025-02-21 22:00:50,026 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\httpx\\_types.py', reloading
+2025-02-21 22:00:50,030 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\httpx\\_models.py', reloading
+2025-02-21 22:00:50,044 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\httpx\\_auth.py', reloading
+2025-02-21 22:00:50,049 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\httpx\\_urls.py', reloading
+2025-02-21 22:00:50,069 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\httpx\\_config.py', reloading
+2025-02-21 22:00:50,076 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\httpx\\_transports\\base.py', reloading
+2025-02-21 22:00:50,080 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\certifi\\__init__.py', reloading
+2025-02-21 22:00:50,080 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\certifi\\core.py', reloading
+2025-02-21 22:00:50,083 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\httpx\\_decoders.py', reloading
+2025-02-21 22:00:50,153 - INFO:  * Restarting with watchdog (windowsapi)
+2025-02-21 22:00:51,082 - WARNING:  * Debugger is active!
+2025-02-21 22:00:51,090 - INFO:  * Debugger PIN: 706-706-741
+2025-02-21 22:00:51,255 - INFO: 127.0.0.1 - - [21/Feb/2025 22:00:51] "GET /socket.io/?EIO=4&transport=polling&t=PKf1f6r HTTP/1.1" 200 -
+2025-02-21 22:00:51,260 - INFO: 127.0.0.1 - - [21/Feb/2025 22:00:51] "POST /socket.io/?EIO=4&transport=polling&t=PKf1f6v&sid=GDcf6BWm--i_dk9uAAAA HTTP/1.1" 200 -
+2025-02-21 22:00:51,261 - INFO: 127.0.0.1 - - [21/Feb/2025 22:00:51] "GET /socket.io/?EIO=4&transport=polling&t=PKf1f6w&sid=GDcf6BWm--i_dk9uAAAA HTTP/1.1" 200 -
+2025-02-21 22:01:35,261 - INFO: 127.0.0.1 - - [21/Feb/2025 22:01:35] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:02:35,254 - INFO: 127.0.0.1 - - [21/Feb/2025 22:02:35] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:02:39,981 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\logging\\__init__.py', reloading
+2025-02-21 22:02:40,297 - INFO:  * Restarting with watchdog (windowsapi)
+2025-02-21 22:02:41,211 - WARNING:  * Debugger is active!
+2025-02-21 22:02:41,218 - INFO:  * Debugger PIN: 706-706-741
+2025-02-21 22:02:42,265 - INFO: 127.0.0.1 - - [21/Feb/2025 22:02:42] "GET /socket.io/?EIO=4&transport=polling&t=PKf24DM HTTP/1.1" 200 -
+2025-02-21 22:02:42,268 - INFO: 127.0.0.1 - - [21/Feb/2025 22:02:42] "POST /socket.io/?EIO=4&transport=polling&t=PKf24DR&sid=6QS5umQbiPwaW3zdAAAA HTTP/1.1" 200 -
+2025-02-21 22:02:42,270 - INFO: 127.0.0.1 - - [21/Feb/2025 22:02:42] "GET /socket.io/?EIO=4&transport=polling&t=PKf24DS&sid=6QS5umQbiPwaW3zdAAAA HTTP/1.1" 200 -
+2025-02-21 22:03:31,299 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\_pytest\\cacheprovider.py', reloading
+2025-02-21 22:03:31,309 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\_pytest\\fixtures.py', reloading
+2025-02-21 22:03:31,332 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\_pytest\\config\\__init__.py', reloading
+2025-02-21 22:03:31,346 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\_pytest\\capture.py', reloading
+2025-02-21 22:03:31,365 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\_pytest\\doctest.py', reloading
+2025-02-21 22:03:31,379 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\_pytest\\junitxml.py', reloading
+2025-02-21 22:03:31,387 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\_pytest\\legacypath.py', reloading
+2025-02-21 22:03:31,397 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\_pytest\\logging.py', reloading
+2025-02-21 22:03:31,410 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\_pytest\\monkeypatch.py', reloading
+2025-02-21 22:03:31,416 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\_pytest\\recwarn.py', reloading
+2025-02-21 22:03:31,422 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\_pytest\\tmpdir.py', reloading
+2025-02-21 22:03:32,345 - INFO:  * Restarting with watchdog (windowsapi)
+2025-02-21 22:03:33,224 - WARNING:  * Debugger is active!
+2025-02-21 22:03:33,231 - INFO:  * Debugger PIN: 706-706-741
+2025-02-21 22:03:34,268 - INFO: 127.0.0.1 - - [21/Feb/2025 22:03:34] "GET /socket.io/?EIO=4&transport=polling&t=PKf2Gvv HTTP/1.1" 200 -
+2025-02-21 22:03:34,271 - INFO: 127.0.0.1 - - [21/Feb/2025 22:03:34] "POST /socket.io/?EIO=4&transport=polling&t=PKf2Gvz&sid=S6jyOFaIYeIncDMOAAAA HTTP/1.1" 200 -
+2025-02-21 22:03:34,273 - INFO: 127.0.0.1 - - [21/Feb/2025 22:03:34] "GET /socket.io/?EIO=4&transport=polling&t=PKf2Gv-&sid=S6jyOFaIYeIncDMOAAAA HTTP/1.1" 200 -
+2025-02-21 22:03:34,275 - INFO: 127.0.0.1 - - [21/Feb/2025 22:03:34] "GET /socket.io/?EIO=4&transport=polling&t=PKf2Gw2&sid=S6jyOFaIYeIncDMOAAAA HTTP/1.1" 200 -
+2025-02-21 22:03:35,257 - INFO: 127.0.0.1 - - [21/Feb/2025 22:03:35] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:03:45,101 - INFO: 127.0.0.1 - - [21/Feb/2025 22:03:45] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:03:53,794 - INFO: 127.0.0.1 - - [21/Feb/2025 22:03:53] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:04:03,791 - INFO: 127.0.0.1 - - [21/Feb/2025 22:04:03] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:04:07,702 - INFO: 127.0.0.1 - - [21/Feb/2025 22:04:07] "POST /restart_all HTTP/1.1" 200 -
+2025-02-21 22:04:07,704 - WARNING: Port 8000 is in use. Attempting to kill existing processes.
+2025-02-21 22:04:07,705 - INFO: Killing process 1452 using port 8000: python.exe
+2025-02-21 22:04:08,705 - INFO: Starting service backend: cmd /c "conda activate superNLP && python backend.py"
+2025-02-21 22:04:08,712 - INFO: Service backend started successfully
+2025-02-21 22:04:09,742 - INFO: Starting service frontend: cmd /c "conda activate superNLP && npm run dev"
+2025-02-21 22:04:09,742 - INFO: Starting service ai: cmd /c "conda activate superNLP && python AI_API.py"
+2025-02-21 22:04:09,747 - INFO: Service ai started successfully
+2025-02-21 22:04:09,747 - INFO: Service frontend started successfully
+2025-02-21 22:04:13,786 - INFO: 127.0.0.1 - - [21/Feb/2025 22:04:13] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:04:23,791 - INFO: 127.0.0.1 - - [21/Feb/2025 22:04:23] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:04:33,368 - INFO: Killing process 37432 using port 9000: python.exe
+2025-02-21 22:04:33,788 - INFO: 127.0.0.1 - - [21/Feb/2025 22:04:33] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:04:34,369 - INFO: 127.0.0.1 - - [21/Feb/2025 22:04:34] "POST /kill_port/9000 HTTP/1.1" 200 -
+2025-02-21 22:04:36,092 - INFO: 127.0.0.1 - - [21/Feb/2025 22:04:36] "POST /run_ai HTTP/1.1" 200 -
+2025-02-21 22:04:38,128 - INFO: Starting service ai: cmd /c "conda activate superNLP && python AI_API.py"
+2025-02-21 22:04:38,131 - INFO: Service ai started successfully
+2025-02-21 22:04:43,800 - INFO: 127.0.0.1 - - [21/Feb/2025 22:04:43] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:04:51,254 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\uvicorn\\protocols\\http\\httptools_impl.py', reloading
+2025-02-21 22:04:51,254 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\uvicorn\\middleware\\proxy_headers.py', reloading
+2025-02-21 22:04:51,255 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\fastapi\\applications.py', reloading
+2025-02-21 22:04:51,255 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\starlette\\applications.py', reloading
+2025-02-21 22:04:51,256 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\starlette\\middleware\\errors.py', reloading
+2025-02-21 22:04:51,256 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\starlette\\middleware\\exceptions.py', reloading
+2025-02-21 22:04:51,256 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\starlette\\_exception_handler.py', reloading
+2025-02-21 22:04:51,256 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\starlette\\routing.py', reloading
+2025-02-21 22:04:51,257 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\fastapi\\routing.py', reloading
+2025-02-21 22:04:51,395 - INFO:  * Restarting with watchdog (windowsapi)
+2025-02-21 22:04:52,313 - WARNING:  * Debugger is active!
+2025-02-21 22:04:52,320 - INFO:  * Debugger PIN: 706-706-741
+2025-02-21 22:04:52,364 - INFO: 127.0.0.1 - - [21/Feb/2025 22:04:52] "GET /socket.io/?EIO=4&transport=polling&t=PKf2Z-B HTTP/1.1" 200 -
+2025-02-21 22:04:52,367 - INFO: 127.0.0.1 - - [21/Feb/2025 22:04:52] "POST /socket.io/?EIO=4&transport=polling&t=PKf2Z-E&sid=n8xRXTcsSOXW5RZuAAAA HTTP/1.1" 200 -
+2025-02-21 22:04:52,369 - INFO: 127.0.0.1 - - [21/Feb/2025 22:04:52] "GET /socket.io/?EIO=4&transport=polling&t=PKf2Z-E.0&sid=n8xRXTcsSOXW5RZuAAAA HTTP/1.1" 200 -
+2025-02-21 22:04:53,790 - INFO: 127.0.0.1 - - [21/Feb/2025 22:04:53] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:05:03,789 - INFO: 127.0.0.1 - - [21/Feb/2025 22:05:03] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:05:05,811 - INFO: 127.0.0.1 - - [21/Feb/2025 22:05:05] "POST /restart_all HTTP/1.1" 200 -
+2025-02-21 22:05:05,812 - WARNING: Port 8000 is in use. Attempting to kill existing processes.
+2025-02-21 22:05:05,819 - INFO: Killing process 0 using port 8000: System Idle Process
+2025-02-21 22:05:05,825 - INFO: Killing process 35432 using port 8000: python.exe
+2025-02-21 22:05:06,832 - INFO: Killing process 0 using port 8000: System Idle Process
+2025-02-21 22:05:06,837 - INFO: Starting service backend: cmd /c "conda activate superNLP && python backend.py"
+2025-02-21 22:05:06,844 - INFO: Service backend started successfully
+2025-02-21 22:05:07,853 - INFO: Starting service frontend: cmd /c "conda activate superNLP && npm run dev"
+2025-02-21 22:05:07,853 - INFO: Starting service ai: cmd /c "conda activate superNLP && python AI_API.py"
+2025-02-21 22:05:07,859 - INFO: Service ai started successfully
+2025-02-21 22:05:07,859 - INFO: Service frontend started successfully
+2025-02-21 22:05:13,793 - INFO: 127.0.0.1 - - [21/Feb/2025 22:05:13] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:05:23,794 - INFO: 127.0.0.1 - - [21/Feb/2025 22:05:23] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:05:26,377 - INFO: Killing process 0 using port 9000: System Idle Process
+2025-02-21 22:05:26,382 - INFO: Killing process 10420 using port 9000: python.exe
+2025-02-21 22:05:27,383 - INFO: 127.0.0.1 - - [21/Feb/2025 22:05:27] "POST /kill_port/9000 HTTP/1.1" 200 -
+2025-02-21 22:05:27,997 - INFO: 127.0.0.1 - - [21/Feb/2025 22:05:27] "POST /run_ai HTTP/1.1" 200 -
+2025-02-21 22:05:30,045 - INFO: Starting service ai: cmd /c "conda activate superNLP && python AI_API.py"
+2025-02-21 22:05:30,047 - INFO: Service ai started successfully
+2025-02-21 22:05:33,789 - INFO: 127.0.0.1 - - [21/Feb/2025 22:05:33] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:05:43,792 - INFO: 127.0.0.1 - - [21/Feb/2025 22:05:43] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:05:53,789 - INFO: 127.0.0.1 - - [21/Feb/2025 22:05:53] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:06:03,798 - INFO: 127.0.0.1 - - [21/Feb/2025 22:06:03] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:06:13,802 - INFO: 127.0.0.1 - - [21/Feb/2025 22:06:13] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:06:23,792 - INFO: 127.0.0.1 - - [21/Feb/2025 22:06:23] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:06:33,790 - INFO: 127.0.0.1 - - [21/Feb/2025 22:06:33] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:06:43,789 - INFO: 127.0.0.1 - - [21/Feb/2025 22:06:43] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:06:53,800 - INFO: 127.0.0.1 - - [21/Feb/2025 22:06:53] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:07:03,787 - INFO: 127.0.0.1 - - [21/Feb/2025 22:07:03] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:07:13,795 - INFO: 127.0.0.1 - - [21/Feb/2025 22:07:13] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:07:23,788 - INFO: 127.0.0.1 - - [21/Feb/2025 22:07:23] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:07:33,801 - INFO: 127.0.0.1 - - [21/Feb/2025 22:07:33] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:07:43,794 - INFO: 127.0.0.1 - - [21/Feb/2025 22:07:43] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:07:53,794 - INFO: 127.0.0.1 - - [21/Feb/2025 22:07:53] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:08:03,795 - INFO: 127.0.0.1 - - [21/Feb/2025 22:08:03] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:08:13,787 - INFO: 127.0.0.1 - - [21/Feb/2025 22:08:13] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:08:23,793 - INFO: 127.0.0.1 - - [21/Feb/2025 22:08:23] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:08:33,788 - INFO: 127.0.0.1 - - [21/Feb/2025 22:08:33] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:08:43,795 - INFO: 127.0.0.1 - - [21/Feb/2025 22:08:43] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:08:53,801 - INFO: 127.0.0.1 - - [21/Feb/2025 22:08:53] "POST /stop/ai HTTP/1.1" 200 -
+2025-02-21 22:08:53,802 - INFO: 127.0.0.1 - - [21/Feb/2025 22:08:53] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:08:56,880 - INFO: 127.0.0.1 - - [21/Feb/2025 22:08:56] "POST /run_ai HTTP/1.1" 200 -
+2025-02-21 22:08:58,928 - INFO: Starting service ai: cmd /c "conda activate superNLP && python AI_API.py"
+2025-02-21 22:08:58,930 - INFO: Service ai started successfully
+2025-02-21 22:09:03,795 - INFO: 127.0.0.1 - - [21/Feb/2025 22:09:03] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:09:13,789 - INFO: 127.0.0.1 - - [21/Feb/2025 22:09:13] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:09:23,787 - INFO: 127.0.0.1 - - [21/Feb/2025 22:09:23] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:09:33,797 - INFO: 127.0.0.1 - - [21/Feb/2025 22:09:33] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:09:43,796 - INFO: 127.0.0.1 - - [21/Feb/2025 22:09:43] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:09:53,800 - INFO: 127.0.0.1 - - [21/Feb/2025 22:09:53] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:10:03,787 - INFO: 127.0.0.1 - - [21/Feb/2025 22:10:03] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:10:13,799 - INFO: 127.0.0.1 - - [21/Feb/2025 22:10:13] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:10:23,798 - INFO: 127.0.0.1 - - [21/Feb/2025 22:10:23] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:10:34,257 - INFO: 127.0.0.1 - - [21/Feb/2025 22:10:34] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:10:44,261 - INFO: 127.0.0.1 - - [21/Feb/2025 22:10:44] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:10:54,259 - INFO: 127.0.0.1 - - [21/Feb/2025 22:10:54] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:11:04,260 - INFO: 127.0.0.1 - - [21/Feb/2025 22:11:04] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:11:14,259 - INFO: 127.0.0.1 - - [21/Feb/2025 22:11:14] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:11:24,259 - INFO: 127.0.0.1 - - [21/Feb/2025 22:11:24] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:11:35,262 - INFO: 127.0.0.1 - - [21/Feb/2025 22:11:35] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:11:55,156 - INFO: 127.0.0.1 - - [21/Feb/2025 22:11:55] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:12:04,267 - INFO: 127.0.0.1 - - [21/Feb/2025 22:12:04] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:12:13,858 - INFO: 127.0.0.1 - - [21/Feb/2025 22:12:13] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:12:24,258 - INFO: 127.0.0.1 - - [21/Feb/2025 22:12:24] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:12:34,257 - INFO: 127.0.0.1 - - [21/Feb/2025 22:12:34] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:12:44,256 - INFO: 127.0.0.1 - - [21/Feb/2025 22:12:44] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:12:54,267 - INFO: 127.0.0.1 - - [21/Feb/2025 22:12:54] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:13:04,256 - INFO: 127.0.0.1 - - [21/Feb/2025 22:13:04] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:13:14,255 - INFO: 127.0.0.1 - - [21/Feb/2025 22:13:14] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:13:35,255 - INFO: 127.0.0.1 - - [21/Feb/2025 22:13:35] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:14:08,711 - INFO: 127.0.0.1 - - [21/Feb/2025 22:14:08] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:14:14,263 - INFO: 127.0.0.1 - - [21/Feb/2025 22:14:14] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:14:24,261 - INFO: 127.0.0.1 - - [21/Feb/2025 22:14:24] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:14:34,257 - INFO: 127.0.0.1 - - [21/Feb/2025 22:14:34] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:14:44,262 - INFO: 127.0.0.1 - - [21/Feb/2025 22:14:44] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:14:54,258 - INFO: 127.0.0.1 - - [21/Feb/2025 22:14:54] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:15:02,315 - INFO: 127.0.0.1 - - [21/Feb/2025 22:15:02] "POST /stop/backend HTTP/1.1" 200 -
+2025-02-21 22:15:03,785 - INFO: 127.0.0.1 - - [21/Feb/2025 22:15:03] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:15:06,561 - INFO: 127.0.0.1 - - [21/Feb/2025 22:15:06] "POST /run_backend HTTP/1.1" 200 -
+2025-02-21 22:15:08,598 - INFO: Starting service backend: cmd /c "conda activate superNLP && python backend.py"
+2025-02-21 22:15:08,600 - INFO: Service backend started successfully
+2025-02-21 22:15:14,258 - INFO: 127.0.0.1 - - [21/Feb/2025 22:15:14] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:15:24,264 - INFO: 127.0.0.1 - - [21/Feb/2025 22:15:24] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:15:34,256 - INFO: 127.0.0.1 - - [21/Feb/2025 22:15:34] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:15:44,258 - INFO: 127.0.0.1 - - [21/Feb/2025 22:15:44] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:15:54,257 - INFO: 127.0.0.1 - - [21/Feb/2025 22:15:54] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:16:04,267 - INFO: 127.0.0.1 - - [21/Feb/2025 22:16:04] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:16:35,260 - INFO: 127.0.0.1 - - [21/Feb/2025 22:16:35] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:17:35,261 - INFO: 127.0.0.1 - - [21/Feb/2025 22:17:35] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:18:35,268 - INFO: 127.0.0.1 - - [21/Feb/2025 22:18:35] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:19:35,258 - INFO: 127.0.0.1 - - [21/Feb/2025 22:19:35] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:20:35,262 - INFO: 127.0.0.1 - - [21/Feb/2025 22:20:35] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:21:35,258 - INFO: 127.0.0.1 - - [21/Feb/2025 22:21:35] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:22:35,258 - INFO: 127.0.0.1 - - [21/Feb/2025 22:22:35] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:23:35,264 - INFO: 127.0.0.1 - - [21/Feb/2025 22:23:35] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:24:35,256 - INFO: 127.0.0.1 - - [21/Feb/2025 22:24:35] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:25:06,810 - INFO: 127.0.0.1 - - [21/Feb/2025 22:25:06] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:25:10,568 - INFO: 127.0.0.1 - - [21/Feb/2025 22:25:10] "POST /stop/ai HTTP/1.1" 200 -
+2025-02-21 22:25:13,785 - INFO: 127.0.0.1 - - [21/Feb/2025 22:25:13] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:25:24,263 - INFO: 127.0.0.1 - - [21/Feb/2025 22:25:24] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:25:34,256 - INFO: 127.0.0.1 - - [21/Feb/2025 22:25:34] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:25:44,262 - INFO: 127.0.0.1 - - [21/Feb/2025 22:25:44] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:25:54,252 - INFO: 127.0.0.1 - - [21/Feb/2025 22:25:54] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:25:57,304 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\runpy.py', reloading
+2025-02-21 22:25:58,072 - INFO:  * Restarting with watchdog (windowsapi)
+2025-02-21 22:25:59,032 - WARNING:  * Debugger is active!
+2025-02-21 22:25:59,040 - INFO:  * Debugger PIN: 706-706-741
+2025-02-21 22:26:00,259 - INFO: 127.0.0.1 - - [21/Feb/2025 22:26:00] "GET /socket.io/?EIO=4&transport=polling&t=PKf7PX0 HTTP/1.1" 200 -
+2025-02-21 22:26:00,261 - INFO: 127.0.0.1 - - [21/Feb/2025 22:26:00] "POST /socket.io/?EIO=4&transport=polling&t=PKf7PX4&sid=LYKouzM9zTTyq1FuAAAA HTTP/1.1" 200 -
+2025-02-21 22:26:00,263 - INFO: 127.0.0.1 - - [21/Feb/2025 22:26:00] "GET /socket.io/?EIO=4&transport=polling&t=PKf7PX4.0&sid=LYKouzM9zTTyq1FuAAAA HTTP/1.1" 200 -
+2025-02-21 22:26:04,254 - INFO: 127.0.0.1 - - [21/Feb/2025 22:26:04] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:26:14,269 - INFO: 127.0.0.1 - - [21/Feb/2025 22:26:14] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:26:35,264 - INFO: 127.0.0.1 - - [21/Feb/2025 22:26:35] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:26:39,931 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\ultralytics\\models\\yolo\\__init__.py', reloading
+2025-02-21 22:26:39,948 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\ultralytics\\models\\yolo\\model.py', reloading
+2025-02-21 22:26:40,000 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\ultralytics\\nn\\tasks.py', reloading
+2025-02-21 22:26:40,034 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\torch\\nn\\__init__.py', reloading
+2025-02-21 22:26:40,047 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\torch\\nn\\modules\\__init__.py', reloading
+2025-02-21 22:26:40,062 - INFO:  * Detected change in 'C:\\Users\\Chits\\anaconda3\\envs\\superNLP\\Lib\\site-packages\\torch\\nn\\modules\\module.py', reloading
+2025-02-21 22:26:40,189 - INFO:  * Restarting with watchdog (windowsapi)
+2025-02-21 22:26:41,261 - WARNING:  * Debugger is active!
+2025-02-21 22:26:41,270 - INFO:  * Debugger PIN: 706-706-741
+2025-02-21 22:26:41,277 - INFO: 127.0.0.1 - - [21/Feb/2025 22:26:41] "GET /socket.io/?EIO=4&transport=polling&t=PKf7ZXa HTTP/1.1" 200 -
+2025-02-21 22:26:41,281 - INFO: 127.0.0.1 - - [21/Feb/2025 22:26:41] "POST /socket.io/?EIO=4&transport=polling&t=PKf7ZY0&sid=RyoXdXe4TGqSvo4sAAAA HTTP/1.1" 200 -
+2025-02-21 22:26:41,284 - INFO: 127.0.0.1 - - [21/Feb/2025 22:26:41] "GET /socket.io/?EIO=4&transport=polling&t=PKf7ZY1&sid=RyoXdXe4TGqSvo4sAAAA HTTP/1.1" 200 -
+2025-02-21 22:26:41,288 - INFO: 127.0.0.1 - - [21/Feb/2025 22:26:41] "GET /socket.io/?EIO=4&transport=polling&t=PKf7ZY7&sid=RyoXdXe4TGqSvo4sAAAA HTTP/1.1" 200 -
+2025-02-21 22:27:35,271 - INFO: 127.0.0.1 - - [21/Feb/2025 22:27:35] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:28:35,264 - INFO: 127.0.0.1 - - [21/Feb/2025 22:28:35] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:29:35,265 - INFO: 127.0.0.1 - - [21/Feb/2025 22:29:35] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:30:35,265 - INFO: 127.0.0.1 - - [21/Feb/2025 22:30:35] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:31:35,261 - INFO: 127.0.0.1 - - [21/Feb/2025 22:31:35] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:32:35,259 - INFO: 127.0.0.1 - - [21/Feb/2025 22:32:35] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:33:35,261 - INFO: 127.0.0.1 - - [21/Feb/2025 22:33:35] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:34:35,271 - INFO: 127.0.0.1 - - [21/Feb/2025 22:34:35] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:35:35,264 - INFO: 127.0.0.1 - - [21/Feb/2025 22:35:35] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:36:23,060 - INFO: 127.0.0.1 - - [21/Feb/2025 22:36:23] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:36:23,785 - INFO: 127.0.0.1 - - [21/Feb/2025 22:36:23] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:36:33,786 - INFO: 127.0.0.1 - - [21/Feb/2025 22:36:33] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:36:43,788 - INFO: 127.0.0.1 - - [21/Feb/2025 22:36:43] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:36:53,793 - INFO: 127.0.0.1 - - [21/Feb/2025 22:36:53] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:37:03,798 - INFO: 127.0.0.1 - - [21/Feb/2025 22:37:03] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:37:13,785 - INFO: 127.0.0.1 - - [21/Feb/2025 22:37:13] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:37:23,785 - INFO: 127.0.0.1 - - [21/Feb/2025 22:37:23] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:37:32,822 - INFO: 127.0.0.1 - - [21/Feb/2025 22:37:32] "POST /run_frontend HTTP/1.1" 200 -
+2025-02-21 22:37:33,790 - INFO: 127.0.0.1 - - [21/Feb/2025 22:37:33] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:37:34,878 - INFO: Starting service frontend: cmd /c "conda activate superNLP && npm run dev"
+2025-02-21 22:37:34,884 - INFO: Service frontend started successfully
+2025-02-21 22:37:43,790 - INFO: 127.0.0.1 - - [21/Feb/2025 22:37:43] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:37:47,113 - INFO: 127.0.0.1 - - [21/Feb/2025 22:37:47] "POST /run_backend HTTP/1.1" 200 -
+2025-02-21 22:37:47,113 - WARNING: Port 8000 is in use. Attempting to kill existing processes.
+2025-02-21 22:37:47,114 - INFO: Killing process 35776 using port 8000: python.exe
+2025-02-21 22:37:48,121 - INFO: Killing process 0 using port 8000: System Idle Process
+2025-02-21 22:37:48,127 - INFO: Starting service backend: cmd /c "conda activate superNLP && python backend.py"
+2025-02-21 22:37:48,133 - INFO: Service backend started successfully
+2025-02-21 22:37:53,789 - INFO: 127.0.0.1 - - [21/Feb/2025 22:37:53] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:38:03,791 - INFO: 127.0.0.1 - - [21/Feb/2025 22:38:03] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:38:13,785 - INFO: 127.0.0.1 - - [21/Feb/2025 22:38:13] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:38:23,791 - INFO: 127.0.0.1 - - [21/Feb/2025 22:38:23] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:38:33,787 - INFO: 127.0.0.1 - - [21/Feb/2025 22:38:33] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:38:43,788 - INFO: 127.0.0.1 - - [21/Feb/2025 22:38:43] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:38:53,800 - INFO: 127.0.0.1 - - [21/Feb/2025 22:38:53] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:39:04,259 - INFO: 127.0.0.1 - - [21/Feb/2025 22:39:04] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:39:14,265 - INFO: 127.0.0.1 - - [21/Feb/2025 22:39:14] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:39:24,258 - INFO: 127.0.0.1 - - [21/Feb/2025 22:39:24] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:39:34,252 - INFO: 127.0.0.1 - - [21/Feb/2025 22:39:34] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:39:44,263 - INFO: 127.0.0.1 - - [21/Feb/2025 22:39:44] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:39:54,260 - INFO: 127.0.0.1 - - [21/Feb/2025 22:39:54] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:40:35,263 - INFO: 127.0.0.1 - - [21/Feb/2025 22:40:35] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:41:35,260 - INFO: 127.0.0.1 - - [21/Feb/2025 22:41:35] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:42:35,254 - INFO: 127.0.0.1 - - [21/Feb/2025 22:42:35] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:43:35,262 - INFO: 127.0.0.1 - - [21/Feb/2025 22:43:35] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:44:35,256 - INFO: 127.0.0.1 - - [21/Feb/2025 22:44:35] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:45:35,261 - INFO: 127.0.0.1 - - [21/Feb/2025 22:45:35] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:46:35,267 - INFO: 127.0.0.1 - - [21/Feb/2025 22:46:35] "GET /check_status HTTP/1.1" 200 -
+2025-02-21 22:47:35,261 - INFO: 127.0.0.1 - - [21/Feb/2025 22:47:35] "GET /check_status HTTP/1.1" 200 -

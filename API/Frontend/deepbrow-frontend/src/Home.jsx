@@ -14,27 +14,27 @@ export default function Home({ setIsAccepted }) {
   const [selectedEyebrowImage, setSelectedEyebrowImage] = useState(null);
 
   const makeupStyles = [
-    '/src/image/style/style.jpg',
-    '/src/image/style/Teardrop-Eyes-Korean-Makeup.png',
-    '/src/image/style/style03.jpg',
-    '/src/image/style/style04.jpg',
-    '/src/image/style/style05.jpg',
-    '/src/image/style/style06.jpg',
-    '/src/image/style/style07.jpg',
-    '/src/image/style/style08.jpg',
-    '/src/image/style/style09.jpg',
-    '/src/image/style/style10.jpg',
+    { path: '/src/image/style/style.jpg', name: 'Classic Glam' },
+    { path: '/src/image/style/Teardrop-Eyes-Korean-Makeup.png', name: 'Korean Teardrop' },
+    { path: '/src/image/style/style03.jpg', name: 'Soft Elegance' },
+    { path: '/src/image/style/style04.jpg', name: 'Bold Statement' },
+    { path: '/src/image/style/style05.jpg', name: 'Natural Chic' },
+    { path: '/src/image/style/style06.jpg', name: 'Vintage Charm' },
+    { path: '/src/image/style/style07.jpg', name: 'Modern Edge' },
+    { path: '/src/image/style/style08.jpg', name: 'Romantic Glow' },
+    { path: '/src/image/style/style09.jpg', name: 'Minimalist' },
+    { path: '/src/image/style/style10.jpg', name: 'Dramatic Flair' },
   ];
-
+ 
   const eyebrowStyles = [
-    'src/image/eyebrow/flat-rmbg.png',
-    'src/image/eyebrow/hardtangle-rmbg.png',
-    'src/image/eyebrow/rounded-rmbg.png',
-    'src/image/eyebrow/softangle-rmbg.png',
-    'src/image/eyebrow/steep_arch-rmbg.png',
-    'src/image/eyebrow/straight-rmbg.png',
-    'src/image/eyebrow/generate.png',
-
+    { path: 'src/image/eyebrow/flat-rmbg.png', name: 'Flat Brow' },
+    { path: 'src/image/eyebrow/hardtangle-rmbg.png', name: 'Hard Angle' },
+    { path: 'src/image/eyebrow/rounded-rmbg.png', name: 'Rounded Arch' },
+    { path: 'src/image/eyebrow/softangle-rmbg.png', name: 'Soft Angle' },
+    { path: 'src/image/eyebrow/steep_arch-rmbg.png', name: 'Steep Arch' },
+    { path: 'src/image/eyebrow/straight-rmbg.png', name: 'Straight Brow' },
+    { path: 'src/image/eyebrow/generate.png', name: 'Generated' },
+    { path: 'src/image/eyebrow/Auto.png', name: 'Auto Style' }
   ];
 
   const handleImageUpload = (event) => {
@@ -168,24 +168,26 @@ export default function Home({ setIsAccepted }) {
               </div>
               <div className="design-images grid grid-cols-2 gap-4 mt-4">
                 {(selectedStyle === 'makeup' ? makeupStyles : eyebrowStyles).map((image, index) => (
-                  <img 
-                    key={index}
-                    src={image} 
-                    alt={`Style ${index + 1}`} 
-                    className={`design-image ${
-                      (selectedStyle === 'makeup' && selectedMakeupImage === image) ||
-                      (selectedStyle === 'eyebrow' && selectedEyebrowImage === image)
-                        ? 'selected-image'
-                        : ''
-                    }`} 
-                    onClick={() => {
-                      if (selectedStyle === 'makeup') {
-                        setSelectedMakeupImage(image);
-                      } else {
-                        setSelectedEyebrowImage(image);
-                      }
-                    }}
-                  />
+                  <div key={index} className="flex flex-col items-center">
+                    <img 
+                      src={image.path} 
+                      alt={`Style ${index + 1}`} 
+                      className={`design-image ${
+                        (selectedStyle === 'makeup' && selectedMakeupImage === image.name) ||
+                        (selectedStyle === 'eyebrow' && selectedEyebrowImage === image.name)
+                          ? 'selected-image'
+                          : ''
+                      }`} 
+                      onClick={() => {
+                        if (selectedStyle === 'makeup') {
+                          setSelectedMakeupImage(image.name);
+                        } else {
+                          setSelectedEyebrowImage(image.name);
+                        }
+                      }}
+                    />
+                    <p className="mt-2 text-sm text-gray-700">{image.name}</p>
+                  </div>
                 ))}
               </div>
              

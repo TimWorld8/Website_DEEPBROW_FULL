@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Manager</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    <style>
+        body { 
+            font-family: 'Arial', sans-serif; 
+            text-align: center; 
+            padding: 20px; 
+            background-color: #f4f4f4; 
+            margin: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        h1 { color: #333; }
+        button { 
+            margin: 10px; 
+            padding: 10px 20px; 
+            font-size: 16px; 
+            cursor: pointer; 
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        button:hover { background-color: #45a049; }
+        button:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+        #status {
+            margin: 20px 0;
+            font-weight: bold;
+            color: #333;
+        }
+        .terminal {
+            background-color: #000;
+            color: #0f0;
+            font-family: 'Courier New', monospace;
+            padding: 10px;
+            margin: 10px 0;
+            height: 200px;
+            overflow-y: auto;
+            border-radius: 5px;
+            text-align: left;
+        }
+        .service-container {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .error { color: red; }
+        .success { color: green; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔧 Service Manager</h1>
+
+        <div class="service-container">
+            <h2>Backend Service</h2>
+            <button id="backend-run" onclick="runService('backend')">▶️ Run Backend</button>
+            <button id="backend-stop" onclick="stopService('backend')">⏹ Stop Backend</button>
+            <div id="backend-terminal" class="terminal"></div>
+        </div>
+
+        <div class="service-container">
+            <h2>AI API Service</h2>
+            <button id="ai-run" onclick="runService('ai')">▶️ Run AI API</button>
+            <button id="ai-stop" onclick="stopService('ai')">⏹ Stop AI API</button>
+            <div id="ai-terminal" class="terminal"></div>
+        </div>
+
+        <div class="service-container">
+            <h2>Frontend Service</h2>
+            <button id="frontend-run" onclick="runService('frontend')">▶️ Run Frontend</button>
+            <button id="frontend-stop" onclick="stopService('frontend')">⏹ Stop Frontend</button>
+            <div id="frontend-terminal" class="terminal"></div>
+        </div>
+
+        <h2>🔄 Restart</h2>
+        <button onclick="restartAll()">♻️ Restart All Services</button>
+
+        <h2>🟢 Status</h2>
+        <button onclick="checkStatus()">🔍 Refresh Status</button>
+        <p id="status">Status: Unknown</p>
+
+        <h2>🔌 Port Management</h2>
+        <div class="port-management">
+            <button onclick="killPort(8000)">Kill Port 8000 (Backend)</button>
+            <button onclick="killPort(9000)">Kill Port 8001 (AI API)</button>
+            <button onclick="killPort(3000)">Kill Port 3000 (Frontend)</button>
+        </div>
+
+        <div id="terminal-container">
+            <div id="terminal-output" class="terminal" style="height: 300px; overflow-y: scroll; background-color: black; color: green; padding: 10px;"></div>
+            <div class="terminal-input-container">
+                <input type="text" id="terminal-input" placeholder="Enter command..." style="width: 80%; margin-right: 10px;">
+                <button onclick="executeTerminalCommand()">Run</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const socket = io();
+        const statusElement = document.getElementById('status');
+
+        // Enhanced logging and error handling
+        function logError(message) {
+            console.error(message);
+            statusElement.innerHTML = `<span class="error">${message}</span>`;
+        }
+
+        function logSuccess(message) {
+            console.log(message);
+            statusElement.innerHTML = `<span class="success">${message}</span>`;
+        }
+
+        socket.on('log_update', function(data) {
+            const terminal = document.getElementById(`${data.service}-terminal`);
+            terminal.innerHTML += data.log + '<br>';
+            terminal.scrollTop = terminal.scrollHeight;
+        });
+
+        async function runService(service) {
+            try {
+                const runButton = document.getElementById(`${service}-run`);
+                const stopButton = document.getElementById(`${service}-stop`);
+                
+                runButton.disabled = true;
+                stopButton.disabled = false;
+
+                const response = await fetch(`/run_${service}`, { method: 'POST' });
+                const data = await response.json();
+                
+                if (data.status) {
+                    logSuccess(data.status);
+                } else {
+                    throw new Error('Unknown response from server');
+                }
+            } catch (error) {
+                logError(`Failed to run ${service} service: ${error.message}`);
+                const runButton = document.getElementById(`${service}-run`);
+                const stopButton = document.getElementById(`${service}-stop`);
+                runButton.disabled = false;
+                stopButton.disabled = true;
+            }
+        }
+
+        async function stopService(service) {
+            try {
+                const runButton = document.getElementById(`${service}-run`);
+                const stopButton = document.getElementById(`${service}-stop`);
+                
+                runButton.disabled = false;
+                stopButton.disabled = true;
+
+                const response = await fetch(`/stop/${service}`, { method: 'POST' });
+                const data = await response.json();
+                
+                if (data.status) {
+                    logSuccess(data.status);
+                } else {
+                    throw new Error('Unknown response from server');
+                }
+            } catch (error) {
+                logError(`Failed to stop ${service} service: ${error.message}`);
+                const runButton = document.getElementById(`${service}-run`);
+                const stopButton = document.getElementById(`${service}-stop`);
+                runButton.disabled = true;
+                stopButton.disabled = false;
+            }
+        }
+
+        async function restartAll() {
+            try {
+                const response = await fetch('/restart_all', { method: 'POST' });
+                const data = await response.json();
+                
+                if (data.status) {
+                    logSuccess(data.status);
+                } else {
+                    throw new Error('Unknown response from server');
+                }
+            } catch (error) {
+                logError(`Failed to restart services: ${error.message}`);
+            }
+        }
+
+        async function checkStatus() {
+            try {
+                const response = await fetch('/check_status');
+                const data = await response.json();
+                
+                const statusText = `Backend: ${data.Backend}, AI API: ${data["AI API"]}, Frontend: ${data.Frontend}`;
+                statusElement.innerHTML = statusText;
+
+                // Update button states based on status
+                ['backend', 'ai', 'frontend'].forEach(service => {
+                    const runButton = document.getElementById(`${service}-run`);
+                    const stopButton = document.getElementById(`${service}-stop`);
+                    const status = data[service === 'ai' ? 'AI API' : service.charAt(0).toUpperCase() + service.slice(1)];
+                    
+                    runButton.disabled = status === '🟢 Running';
+                    stopButton.disabled = status === '🔴 Stopped';
+                });
+            } catch (error) {
+                logError(`Failed to check status: ${error.message}`);
+            }
+        }
+
+        async function killPort(port) {
+            try {
+                const response = await fetch(`/kill_port/${port}`, { method: 'POST' });
+                const data = await response.json();
+                
+                if (data.status) {
+                    logSuccess(data.status);
+                } else {
+                    throw new Error('Unknown response from server');
+                }
+            } catch (error) {
+                logError(`Failed to kill processes on port ${port}: ${error.message}`);
+            }
+        }
+
+        function executeTerminalCommand() {
+            const terminalInput = document.getElementById('terminal-input');
+            const terminalOutput = document.getElementById('terminal-output');
+            const command = terminalInput.value.trim();
+
+            if (!command) {
+                return;
+            }
+
+            // Add command to output
+            terminalOutput.innerHTML += `<div style="color: white;">&gt; ${command}</div>`;
+
+            // Send command to backend
+            fetch('/execute_command', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ command: command })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.stdout) {
+                    terminalOutput.innerHTML += `<div style="color: green;">${escapeHtml(data.stdout)}</div>`;
+                }
+                if (data.stderr) {
+                    terminalOutput.innerHTML += `<div style="color: red;">${escapeHtml(data.stderr)}</div>`;
+                }
+                if (data.error) {
+                    terminalOutput.innerHTML += `<div style="color: red;">${escapeHtml(data.error)}</div>`;
+                }
+                terminalOutput.scrollTop = terminalOutput.scrollHeight;
+            })
+            .catch(error => {
+                terminalOutput.innerHTML += `<div style="color: red;">Error: ${escapeHtml(error.toString())}</div>`;
+                terminalOutput.scrollTop = terminalOutput.scrollHeight;
+            });
+
+            // Clear input
+            terminalInput.value = '';
+        }
+
+        function escapeHtml(unsafe) {
+            return unsafe
+                 .replace(/&/g, "&amp;")
+                 .replace(/</g, "&lt;")
+                 .replace(/>/g, "&gt;")
+                 .replace(/"/g, "&quot;")
+                 .replace(/'/g, "&#039;");
+        }
+
+        // Optional: Allow Enter key to submit command
+        document.getElementById('terminal-input').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                executeTerminalCommand();
+            }
+        });
+
+        // Initial status check and periodic updates
+        checkStatus();
+        setInterval(checkStatus, 10000);  // Check every 10 seconds
+    </script>
+</body>
+</html>

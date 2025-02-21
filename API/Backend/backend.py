@@ -31,7 +31,8 @@ async def switch_model(file: UploadFile, style: str, eyebrow: str, model: int) -
     }
     data = {
         'style': style,
-        'eyebrow': eyebrow
+        'eyebrow': eyebrow,
+        'model': model
     }
     
     # เลือก URL ตามโมเดล
