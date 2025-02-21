@@ -112,11 +112,11 @@ export default function Home({ setIsAccepted }) {
       
       <main className="flex flex-col items-center justify-center text-center p-4 bg-gradient-to-b from-pink-100 to-white min-h-screen">
       <h1 className="text-5xl font-extrabold text-pink-700 mt-8 animate-bounce">
-          Discover Your Perfect Eyebrow Shape
+          Discover Your Perfect Eyebrow 
         </h1>
         <p className="max-w-md mx-auto mb-8 text-gray-700 text-lg">
           Using advanced AI technology to enhance your natural beauty and create
-          the most flattering eyebrow shape for your unique facial features.
+          the most flattering eyebrow  for your unique facial features.
         </p>
         <button
           onClick={() => alert("Start Your Beauty Journey")}

@@ -55,9 +55,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 def generate_eyebrow(init_image,mask_image):
-    # Resize images to 512x512 as required by Stable Diffusion
-    # init_image = init_image.resize((512, 512))
-    # mask_image = mask_image.resize((512, 512))
+
 
     # ใช้ Stable Diffusion Inpainting เติมคิ้ว
     prompt = "A face with natural and realistic eyebrows, high quality, photorealistic"
@@ -251,7 +249,7 @@ def add_eyebrow(image_array, face_shape, eyebrow):
                 return image_array
 
             # Existing eyebrow addition logic remains the same...
-            x = 1.45  # Default scaling factor
+            x = 1.49  # Default scaling factor
             face_width = abs(right_brow_x - left_brow_x)
             dynamic_scale = (face_width * x) / eyebrow_img.shape[1]
             eyebrow_width = int(eyebrow_img.shape[1] * dynamic_scale)
@@ -342,10 +340,26 @@ async def api_remove_eyebrow(file: UploadFile = File(...), eyebrow: str = Form(N
         else:
             try:
                 # Convert processed_image to PIL Image for Stable Diffusion
+                # แปลงภาพจาก OpenCV (BGR) -> PIL (RGB)
                 pil_image = Image.fromarray(cv2.cvtColor(processed_image, cv2.COLOR_BGR2RGB))
                 pil_mask = Image.fromarray(cv2.cvtColor(eyebrow_mask, cv2.COLOR_BGR2RGB))
+
+                # ใช้ Stable Diffusion เติมคิ้ว
                 generated_image = generate_eyebrow(pil_image, pil_mask)
-                final_image = cv2.cvtColor(np.array(generated_image), cv2.COLOR_RGB2BGR)
+
+                # แปลง PIL Image -> NumPy Array (RGB)
+                generated_np = np.array(generated_image)
+
+                # ตรวจสอบว่า generated_np อยู่ในช่วง 0-255 และเป็น dtype uint8
+                if generated_np.dtype != np.uint8:
+                    generated_np = (generated_np * 255).astype(np.uint8)  # ป้องกันปัญหาการ Normalize เป็น 0-1
+
+                # บังคับให้ขนาดของภาพกลับไปเป็นขนาดเดิม
+                final_image = cv2.resize(generated_np, (processed_image.shape[1], processed_image.shape[0]), interpolation=cv2.INTER_AREA)
+
+                # แปลงจาก RGB -> BGR กลับไปใช้กับ OpenCV
+                final_image = cv2.cvtColor(final_image, cv2.COLOR_RGB2BGR)
+
             except Exception as gen_error:
                 logging.error(f"Eyebrow generation error: {gen_error}")
                 final_image = processed_image  # Fallback to processed image
