@@ -21,7 +21,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-async def switch_model(file: UploadFile, style: str, eyebrow: str, model: int) -> Union[bytes, None]:
+async def switch_model(file: UploadFile, style: str, eyebrow: str, model: int, eyebrow_prompt: str) -> Union[bytes, None]:
     # Read file content
     file_content = await file.read()
     
@@ -32,7 +32,8 @@ async def switch_model(file: UploadFile, style: str, eyebrow: str, model: int) -
     data = {
         'style': style,
         'eyebrow': eyebrow,
-        'model': model
+        'model': model,
+        'eyebrow_prompt': eyebrow_prompt
     }
     
     # เลือก URL ตามโมเดล
@@ -98,16 +99,17 @@ async def remove_eyebrow(
     file: UploadFile = File(...),
     style: str = Form(...),
     eyebrow: str = Form(...),
-    model: int = Form(...)
+    model: int = Form(...),
+    eyebrow_prompt: str = Form(...)
 ):
     # เพิ่ม logging เพื่อดูข้อมูลที่ได้รับ
-    logging.info(f"Received request - File: {file.filename}, Style: {style}, Eyebrow: {eyebrow}, Model: {model}")
+    logging.info(f"Received request - File: {file.filename}, Style: {style}, Eyebrow: {eyebrow}, Model: {model}, Eyebrow Prompt: {eyebrow_prompt}")
     
     # Validate model value
     if not isinstance(model, int) or model not in [0, 1, 2]:
         raise HTTPException(status_code=400, detail="Model must be 0, 1, or 2")
     
-    result = await switch_model(file, style, eyebrow, model)
+    result = await switch_model(file, style, eyebrow, model, eyebrow_prompt)
     if result:
         return Response(content=result, media_type="image/png")
     raise HTTPException(status_code=500, detail="Failed to process image")

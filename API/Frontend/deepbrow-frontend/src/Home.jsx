@@ -12,6 +12,9 @@ export default function Home({ setIsAccepted }) {
   const [selectedStyle, setSelectedStyle] = useState('makeup');
   const [selectedMakeupImage, setSelectedMakeupImage] = useState(null);
   const [selectedEyebrowImage, setSelectedEyebrowImage] = useState(null);
+  const [showChatPrompt, setShowChatPrompt] = useState(false);
+  const [chatPrompt, setChatPrompt] = useState('');
+  const [generatedEyebrowPrompt, setGeneratedEyebrowPrompt] = useState('');
 
   const makeupStyles = [
     { path: '/src/image/style/style.jpg', name: 'Classic Glam' },
@@ -45,6 +48,10 @@ export default function Home({ setIsAccepted }) {
   };
 
   const handleProcessImage = async () => {
+    console.log("Selected Eyebrow Image:", selectedEyebrowImage);
+    console.log("Generated Eyebrow Prompt:", generatedEyebrowPrompt);
+    console.log("Chat Prompt:", chatPrompt);
+    
     if (!selectedImage) {
       alert("Please select an image first");
       return;
@@ -63,12 +70,24 @@ export default function Home({ setIsAccepted }) {
     formData.append("file", selectedImage);
     formData.append("style", selectedMakeupImage);
     formData.append("eyebrow", selectedEyebrowImage);
+    
+    // Set a default prompt if none exists
+    let eyebrowPrompt = "natural eyebrows";  // Default value
+    
+    // Override with generated prompt if available
+    if (selectedEyebrowImage === 'Generated' && generatedEyebrowPrompt.trim()) {
+      eyebrowPrompt = generatedEyebrowPrompt;
+    }
+    
+    // Ensure eyebrow_prompt is always a non-empty string
+    formData.append("eyebrow_prompt", eyebrowPrompt);
     formData.append("model", Number(0));
 
     console.log("Sending request with:", {
       file: selectedImage.name,
       style: selectedMakeupImage,
       eyebrow: selectedEyebrowImage,
+      eyebrow_prompt: eyebrowPrompt,
       model: 0
     });
 
@@ -94,6 +113,26 @@ export default function Home({ setIsAccepted }) {
       alert(`Processing failed! ${errorMessage}`);
     } finally {
       setIsProcessing(false);
+    }
+  };
+
+  const handleEyebrowStyleSelect = (image) => {
+    setSelectedEyebrowImage(image.name);
+    if (image.name === 'Generated') {
+      setShowChatPrompt(true);
+    } else {
+      setShowChatPrompt(false);
+    }
+  };
+
+  const handleChatSubmit = () => {
+    console.log("Current chatPrompt:", chatPrompt);
+    if (chatPrompt.trim()) {
+      console.log("Setting generated eyebrow prompt:", chatPrompt);
+      setGeneratedEyebrowPrompt(chatPrompt);
+      setShowChatPrompt(true);
+    } else {
+      console.warn("Chat prompt is empty or only whitespace");
     }
   };
 
@@ -182,7 +221,7 @@ export default function Home({ setIsAccepted }) {
                         if (selectedStyle === 'makeup') {
                           setSelectedMakeupImage(image.name);
                         } else {
-                          setSelectedEyebrowImage(image.name);
+                          handleEyebrowStyleSelect(image);
                         }
                       }}
                     />
@@ -214,6 +253,24 @@ export default function Home({ setIsAccepted }) {
             </div>
             </div>
             </div>
+            {showChatPrompt && (
+        <div className="chat-prompt-container mt-4 w-full max-w-md bg-pink-50 p-6 rounded-lg shadow-lg">
+          <h3 className="text-xl font-bold text-pink-700 mb-4">Generate Custom Eyebrow</h3>
+          <textarea 
+            className="w-full border border-pink-200 rounded-lg p-3 mb-4 resize-y"
+            rows="10"  
+            placeholder="Describe the eyebrow style you want to generate (e.g., 'Natural, soft arch, slightly thick')"
+            value={chatPrompt}
+            onChange={(e) => setChatPrompt(e.target.value)}
+          />
+          <button 
+            className="w-full bg-pink-700 text-white px-6 py-3 rounded-lg hover:bg-pink-800 transition-all transform hover:scale-105 shadow-md"
+            onClick={handleChatSubmit}
+          >
+            Save Prompt
+          </button>
+        </div>
+      )}
     
 
        
@@ -221,6 +278,8 @@ export default function Home({ setIsAccepted }) {
           
         
       </main>
+
+
 
       {/* Add CSS for the glow effect */}
       <style jsx>{`

@@ -54,11 +54,19 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-def generate_eyebrow(init_image,mask_image):
+def generate_eyebrow(init_image,mask_image,prompt):
 
 
+    # Check if prompt is provided and not empty
+    if not prompt or prompt.strip() == "":
+        # Use default prompt if none provided
+        #prompt = "A face with natural and realistic eyebrows, high quality, photorealistic"
+        prompt = "Face of a yellow cat, high resolution, sitting on a park bench"   
+    else:
+        # Add quality keywords to user prompt
+        prompt = f"{prompt.strip()}"
     # ใช้ Stable Diffusion Inpainting เติมคิ้ว
-    prompt = "A face with natural and realistic eyebrows, high quality, photorealistic"
+
     output = pipe(prompt=prompt, image=init_image, mask_image=mask_image).images[0]
 
     return output
@@ -300,7 +308,7 @@ def add_eyebrow(image_array, face_shape, eyebrow):
 
 # API สำหรับลบคิ้ว
 @app.post("/model1/")
-async def api_remove_eyebrow(file: UploadFile = File(...), eyebrow: str = Form(None), style: str = Form(None)):
+async def api_remove_eyebrow(file: UploadFile = File(...), eyebrow: str = Form(None), style: str = Form(None), eyebrow_prompt: str = Form(None)):
     # Validate input parameters
     if not file:
         raise HTTPException(status_code=400, detail="No file uploaded")
@@ -341,11 +349,12 @@ async def api_remove_eyebrow(file: UploadFile = File(...), eyebrow: str = Form(N
             try:
                 # Convert processed_image to PIL Image for Stable Diffusion
                 # แปลงภาพจาก OpenCV (BGR) -> PIL (RGB)
+
                 pil_image = Image.fromarray(cv2.cvtColor(processed_image, cv2.COLOR_BGR2RGB))
                 pil_mask = Image.fromarray(cv2.cvtColor(eyebrow_mask, cv2.COLOR_BGR2RGB))
 
                 # ใช้ Stable Diffusion เติมคิ้ว
-                generated_image = generate_eyebrow(pil_image, pil_mask)
+                generated_image = generate_eyebrow(pil_image, pil_mask, eyebrow_prompt)
 
                 # แปลง PIL Image -> NumPy Array (RGB)
                 generated_np = np.array(generated_image)
