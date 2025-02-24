@@ -11,9 +11,10 @@ import torch
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
 from tensorflow.keras.applications.inception_v3 import preprocess_input
-
+from diffusers import AutoPipelineForInpainting
 import mediapipe as mp
 from diffusers import StableDiffusionInpaintPipeline
+
 
 from fastapi import FastAPI, UploadFile, File, HTTPException, Form
 from fastapi.responses import Response
@@ -21,13 +22,19 @@ from fastapi.middleware.cors import CORSMiddleware
 
 import detect_eyebrow
 
+
 # โหลดโมเดล Inpainting
-pipe = StableDiffusionInpaintPipeline.from_pretrained(
-    "stabilityai/stable-diffusion-2-inpainting",
-    torch_dtype=torch.float16
-).to("cuda")  # ใช้ GPU เพื่อให้เร็วขึ้น
+# pipe = StableDiffusionInpaintPipeline.from_pretrained(
+#     "stabilityai/stable-diffusion-2-inpainting",
+#     torch_dtype=torch.float16
+# ).to("cuda")  # ใช้ GPU เพื่อให้เร็วขึ้น
+
+pipe = AutoPipelineForInpainting.from_pretrained("diffusers/stable-diffusion-xl-1.0-inpainting-0.1", torch_dtype=torch.float16, variant="fp16").to("cuda")
+
 
 model = load_model("C:/Users/Chits/Documents/pensook/Github/Website_DEEPBROW/model/shape_face.h5")
+
+
 # ตั้งค่า logging (ให้กำหนดครั้งเดียว)
 logging.basicConfig(level=logging.INFO)
 
@@ -61,7 +68,8 @@ def generate_eyebrow(init_image,mask_image,prompt):
     if not prompt or prompt.strip() == "":
         # Use default prompt if none provided
         #prompt = "A face with natural and realistic eyebrows, high quality, photorealistic"
-        prompt = "Face of a yellow cat, high resolution, sitting on a park bench"   
+        prompt = "Enhance the eyebrows while maintaining their original shape and color. Make them look more natural, well-groomed, and realistic with fine hair details, high quality, and photorealistic. Ensure a seamless blend with the skin and lighting."
+  
     else:
         # Add quality keywords to user prompt
         prompt = f"{prompt.strip()}"
@@ -219,12 +227,12 @@ def add_eyebrow(image_array, face_shape, eyebrow):
             "Oval": "C:/Users/Chits/Documents/pensook/Github/Website_DEEPBROW/API/Frontend/deepbrow-frontend/src/image/eyebrow/softangle-rmbg.png",
             
             # Manual Style paths
-            "Flat Brow": "C:/Users/Chits/Documents/pensook/Github/Website_DEEPBROW/API/Frontend/deepbrow-frontend/src/image/eyebrow/flat-rmbg.png",
-            "Hard Angle": "C:/Users/Chits/Documents/pensook/Github/Website_DEEPBROW/API/Frontend/deepbrow-frontend/src/image/eyebrow/hardtangle-rmbg.png",
-            "Rounded Arch": "C:/Users/Chits/Documents/pensook/Github/Website_DEEPBROW/API/Frontend/deepbrow-frontend/src/image/eyebrow/rounded-rmbg.png",
-            "Soft Angle": "C:/Users/Chits/Documents/pensook/Github/Website_DEEPBROW/API/Frontend/deepbrow-frontend/src/image/eyebrow/softangle-rmbg.png",
-            "Steep Arch": "C:/Users/Chits/Documents/pensook/Github/Website_DEEPBROW/API/Frontend/deepbrow-frontend/src/image/eyebrow/steep_arch-rmbg.png",
-            "Straight Brow": "C:/Users/Chits/Documents/pensook/Github/Website_DEEPBROW/API/Frontend/deepbrow-frontend/src/image/eyebrow/straight-rmbg.png"
+            "Flat Brow": "C:/Users/Chits/Documents/pensook/Github/Website_DEEPBROW/API/Frontend/deepbrow-frontend/src/image/eyebrow/remove_white/flat-rmbg-remove-white.png",
+            "Hard Angle": "C:/Users/Chits/Documents/pensook/Github/Website_DEEPBROW/API/Frontend/deepbrow-frontend/src/image/eyebrow/remove_white/hardtangle-rmbg-remove-white.png",
+            "Rounded Arch": "C:/Users/Chits/Documents/pensook/Github/Website_DEEPBROW/API/Frontend/deepbrow-frontend/src/image/eyebrow/remove_white/rounded-rmbg-remove-white.png",
+            "Soft Angle": "C:/Users/Chits/Documents/pensook/Github/Website_DEEPBROW/API/Frontend/deepbrow-frontend/src/image/eyebrow/remove_white/softangle-rmbg-remove-white.png",
+            "Steep Arch": "C:/Users/Chits/Documents/pensook/Github/Website_DEEPBROW/API/Frontend/deepbrow-frontend/src/image/eyebrow/remove_white/steep_arch-rmbg-remove-white.png",
+            "Straight Brow": "C:/Users/Chits/Documents/pensook/Github/Website_DEEPBROW/API/Frontend/deepbrow-frontend/src/image/eyebrow/remove_white/straight-rmbg-remove-white.png"
         }
 
         # Determine eyebrow path
@@ -286,18 +294,23 @@ def add_eyebrow(image_array, face_shape, eyebrow):
             left_y_min = max(left_brow_y - eyebrow_height // 2, 0)
             left_y_max = min(left_y_min + eyebrow_height, ih)
 
-            # Blend eyebrows onto the face
+            # Blend eyebrows onto the face with proper alpha blending
             for c in range(3):  # Blend only BGR channels
-                image_array[right_y_min:right_y_max, right_x_min:right_x_max, c] = np.where(
-                    right_eyebrow_resized[:, :, 3] > 20,
-                    cv2.addWeighted(image_array[right_y_min:right_y_max, right_x_min:right_x_max, c], 0.5, right_eyebrow_resized[:, :, c], 0.5, 0),
-                    image_array[right_y_min:right_y_max, right_x_min:right_x_max, c]
-                )
-                image_array[left_y_min:left_y_max, left_x_min:left_x_max, c] = np.where(
-                    left_eyebrow_resized[:, :, 3] > 20,
-                    cv2.addWeighted(image_array[left_y_min:left_y_max, left_x_min:left_x_max, c], 0.5, left_eyebrow_resized[:, :, c], 0.5, 0),
-                    image_array[left_y_min:left_y_max, left_x_min:left_x_max, c]
-                )
+                # Extract alpha channel and normalize
+                alpha = right_eyebrow_resized[:, :, 3] / 255.0
+                
+                # Blend channels with alpha
+                image_array[right_y_min:right_y_max, right_x_min:right_x_max, c] = (
+                    image_array[right_y_min:right_y_max, right_x_min:right_x_max, c] * (1 - alpha) + 
+                    right_eyebrow_resized[:, :, c] * alpha
+                ).astype(np.uint8)
+
+                # Same for left eyebrow
+                alpha = left_eyebrow_resized[:, :, 3] / 255.0
+                image_array[left_y_min:left_y_max, left_x_min:left_x_max, c] = (
+                    image_array[left_y_min:left_y_max, left_x_min:left_x_max, c] * (1 - alpha) + 
+                    left_eyebrow_resized[:, :, c] * alpha
+                ).astype(np.uint8)
 
         return image_array
     
@@ -342,6 +355,26 @@ async def api_remove_eyebrow(file: UploadFile = File(...), eyebrow: str = Form(N
             try:
                 face_shape = detect_face_shape(model, processed_image)
                 final_image = add_eyebrow(processed_image, face_shape, eyebrow)
+                processed_image = final_image
+
+
+                # pil_image = Image.fromarray(cv2.cvtColor(processed_image, cv2.COLOR_BGR2RGB))
+                # pil_mask = Image.fromarray(cv2.cvtColor(eyebrow_mask, cv2.COLOR_BGR2RGB))
+
+                # # ใช้ Stable Diffusion เติมคิ้ว
+                # generated_image = generate_eyebrow(pil_image, pil_mask, eyebrow_prompt)
+                #                 # แปลง PIL Image -> NumPy Array (RGB)
+                # generated_np = np.array(generated_image)
+
+                # # ตรวจสอบว่า generated_np อยู่ในช่วง 0-255 และเป็น dtype uint8
+                # if generated_np.dtype != np.uint8:
+                #     generated_np = (generated_np * 255).astype(np.uint8)  # ป้องกันปัญหาการ Normalize เป็น 0-1
+
+                # # บังคับให้ขนาดของภาพกลับไปเป็นขนาดเดิม
+                # final_image = cv2.resize(generated_np, (processed_image.shape[1], processed_image.shape[0]), interpolation=cv2.INTER_AREA)
+
+                # แปลงจาก RGB -> BGR กลับไปใช้กับ OpenCV
+                # final_image = cv2.cvtColor(final_image, cv2.COLOR_RGB2BGR)
             except Exception as face_process_error:
                 logging.error(f"Face processing error: {face_process_error}")
                 final_image = processed_image  # Fallback to processed image
@@ -349,7 +382,6 @@ async def api_remove_eyebrow(file: UploadFile = File(...), eyebrow: str = Form(N
             try:
                 # Convert processed_image to PIL Image for Stable Diffusion
                 # แปลงภาพจาก OpenCV (BGR) -> PIL (RGB)
-
                 pil_image = Image.fromarray(cv2.cvtColor(processed_image, cv2.COLOR_BGR2RGB))
                 pil_mask = Image.fromarray(cv2.cvtColor(eyebrow_mask, cv2.COLOR_BGR2RGB))
 
