@@ -61,23 +61,42 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-def generate_eyebrow(init_image,mask_image,prompt):
+def generate_eyebrow(image, mask_image, prompt):
+    try:
+        # Convert OpenCV images (BGR) to PIL Images (RGB)
+        image_pil = Image.fromarray(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
+        mask_pil = Image.fromarray(cv2.cvtColor(mask_image, cv2.COLOR_BGR2RGB))
 
+        # Check if prompt is provided and not empty
+        if not prompt or prompt.strip() == "":
+            prompt = "soft angle eyebrow and black color with natural and realistic eyebrows, high quality, photorealistic"
+        else:
+            # Add quality keywords to user prompt
+            prompt = f"{prompt.strip()}, natural and realistic eyebrows, high quality, photorealistic"
 
-    # Check if prompt is provided and not empty
-    if not prompt or prompt.strip() == "":
-        # Use default prompt if none provided
-        #prompt = "A face with natural and realistic eyebrows, high quality, photorealistic"
-        prompt = "Enhance the eyebrows while maintaining their original shape and color. Make them look more natural, well-groomed, and realistic with fine hair details, high quality, and photorealistic. Ensure a seamless blend with the skin and lighting."
-  
-    else:
-        # Add quality keywords to user prompt
-        prompt = f"{prompt.strip()}"
-    # ใช้ Stable Diffusion Inpainting เติมคิ้ว
+        # Set up generator for reproducibility
+        generator = torch.Generator(device="cuda").manual_seed(0)
 
-    output = pipe(prompt=prompt, image=init_image, mask_image=mask_image).images[0]
+        # Run the inpainting pipeline
+        output = pipe(
+            prompt=prompt,
+            image=image_pil,
+            mask_image=mask_pil,
+            guidance_scale=8.0,
+            num_inference_steps=20,
+            strength=0.99,
+            generator=generator,
+        ).images[0]
 
-    return output
+        # Convert PIL Image output back to numpy array
+        output_np = np.array(output)
+        
+        return output_np
+
+    except Exception as e:
+        logging.error(f"Error in generate_eyebrow: {str(e)}")
+        # Return original image if generation fails
+        return image
 
 # ฟังก์ชันสำหรับลบคิ้ว
 def remove_eyebrow(image_array):
@@ -382,15 +401,15 @@ async def api_remove_eyebrow(file: UploadFile = File(...), eyebrow: str = Form(N
             try:
                 # Convert processed_image to PIL Image for Stable Diffusion
                 # แปลงภาพจาก OpenCV (BGR) -> PIL (RGB)
-                pil_image = Image.fromarray(cv2.cvtColor(processed_image, cv2.COLOR_BGR2RGB))
-                pil_mask = Image.fromarray(cv2.cvtColor(eyebrow_mask, cv2.COLOR_BGR2RGB))
+                # pil_image = Image.fromarray(cv2.cvtColor(processed_image, cv2.COLOR_BGR2RGB))
+                # pil_mask = Image.fromarray(cv2.cvtColor(eyebrow_mask, cv2.COLOR_BGR2RGB))
 
                 # ใช้ Stable Diffusion เติมคิ้ว
-                generated_image = generate_eyebrow(pil_image, pil_mask, eyebrow_prompt)
+                generated_image = generate_eyebrow(processed_image, eyebrow_mask, eyebrow_prompt)
 
-                # แปลง PIL Image -> NumPy Array (RGB)
-                generated_np = np.array(generated_image)
-
+                # # แปลง PIL Image -> NumPy Array (RGB)
+                # generated_np = np.array(generated_image)
+                generated_np = generated_image
                 # ตรวจสอบว่า generated_np อยู่ในช่วง 0-255 และเป็น dtype uint8
                 if generated_np.dtype != np.uint8:
                     generated_np = (generated_np * 255).astype(np.uint8)  # ป้องกันปัญหาการ Normalize เป็น 0-1
